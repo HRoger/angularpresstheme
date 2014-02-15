@@ -116,18 +116,18 @@ VI. Note about jQuery plugins
  You will need to make a simple directive for example:
 
 ```javascript
-	angularpressApp.directive('mixitup', function () {
-		return{
-		restrict: 'A',
-		link: function (scope, element) {
-			return element.mixitup(
-				{
-				transitionSpeed: 600
-				}
-			);
+angularpressApp.directive('mixitup', function () {
+	return{
+	restrict: 'A',
+	link: function (scope, element) {
+		return element.mixitup(
+			{
+			transitionSpeed: 600
 			}
-		  };
-	});
+		);
+	  }
+   };
+});
 
 
 
