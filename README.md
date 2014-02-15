@@ -132,6 +132,7 @@ VI. Note about jQuery plugins
 
 
 
+
 VII. Known bugs
 ================
 
