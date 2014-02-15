@@ -128,7 +128,7 @@ angularpressApp.directive('mixitup', function () {
 	  }
    };
 });
-
+```javascript
 
 
 
