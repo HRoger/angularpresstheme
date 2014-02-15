@@ -1,0 +1,1609 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Reactor\n"
+"POT-Creation-Date: 2013-07-13 14:12-0600\n"
+"PO-Revision-Date: 2013-11-13 18:16+0900\n"
+"Last-Translator: Kan <kan@ika-ring.net>\n"
+"Language-Team: awtheme\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: D:\\Documents\\GitHub\n"
+
+#: D:\Documents\GitHub/reactor/404.php:25
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "お探しのページがみつかりませんでした。"
+
+#: D:\Documents\GitHub/reactor/404.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching will help."
+msgstr "検索フォームでお探しのページを見つけることができるかもしれません。"
+
+#: D:\Documents\GitHub/reactor/archive-portfolio.php:26
+#: D:\Documents\GitHub/reactor/archive.php:27
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "日別アーカイブ：%s"
+
+#: D:\Documents\GitHub/reactor/archive-portfolio.php:28
+#: D:\Documents\GitHub/reactor/archive.php:29
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "月別アーカイブ：%s"
+
+#: D:\Documents\GitHub/reactor/archive-portfolio.php:30
+#: D:\Documents\GitHub/reactor/archive.php:31
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "年別アーカイブ：%s"
+
+#: D:\Documents\GitHub/reactor/archive.php:33
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: D:\Documents\GitHub/reactor/author.php:26
+#, php-format
+msgid "Author: %s"
+msgstr "著者：%s"
+
+#: D:\Documents\GitHub/reactor/author.php:38
+#, php-format
+msgid "About %s"
+msgstr "%sの紹介"
+
+#: D:\Documents\GitHub/reactor/category.php:25
+#: D:\Documents\GitHub/reactor/taxonomy-portfolio-category.php:24
+#, php-format
+msgid "Category: %s"
+msgstr "カテゴリー：%s"
+
+#: D:\Documents\GitHub/reactor/comments.php:19
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"この投稿はパスワードで保護されています。コメントを見るにはパスワードを入力し"
+"てください。"
+
+#: D:\Documents\GitHub/reactor/comments.php:37
+msgid "&larr; Older Comments"
+msgstr "&larr; 前のコメント"
+
+#: D:\Documents\GitHub/reactor/comments.php:38
+msgid "Newer Comments &rarr;"
+msgstr "新しいコメント &rarr;"
+
+#: D:\Documents\GitHub/reactor/comments.php:43
+msgid "Comments are closed."
+msgstr "コメントはできません。"
+
+#: D:\Documents\GitHub/reactor/comments.php:61
+msgid "Logged in as"
+msgstr "ログイン中"
+
+#: D:\Documents\GitHub/reactor/comments.php:61
+msgid "Log out of this account"
+msgstr "このアカウントからログアウト"
+
+#: D:\Documents\GitHub/reactor/comments.php:61
+msgid "Log out"
+msgstr "ログアウト"
+
+#: D:\Documents\GitHub/reactor/comments.php:64
+msgid "Name "
+msgstr "名前"
+
+#: D:\Documents\GitHub/reactor/comments.php:64
+#: D:\Documents\GitHub/reactor/comments.php:66
+msgid "( required )"
+msgstr "（必須）"
+
+#: D:\Documents\GitHub/reactor/comments.php:64
+msgid "Your Name*"
+msgstr "氏名*"
+
+#: D:\Documents\GitHub/reactor/comments.php:64
+#: D:\Documents\GitHub/reactor/comments.php:66
+msgid "aria-required='true'"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/comments.php:66
+msgid "Email "
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/comments.php:66
+msgid "Your E-Mail*"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/comments.php:68
+msgid "Website "
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/comments.php:68
+msgid "URL "
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/comments.php:71
+msgid "Your Comment here..."
+msgstr "コメントをこちらにどうぞ"
+
+#: D:\Documents\GitHub/reactor/comments.php:73
+msgid "You can use these tags"
+msgstr "これらのタグは使用できます"
+
+#: D:\Documents\GitHub/reactor/comments.php:75
+msgid "Submit"
+msgstr "送信"
+
+#: D:\Documents\GitHub/reactor/image.php:32
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span class="
+"\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\" pubdate>%2$s</"
+"time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s "
+"&times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery"
+"\">%8$s</a>."
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/image.php:43
+#: D:\Documents\GitHub/reactor/library/inc/content/content-pages.php:48
+#: D:\Documents\GitHub/reactor/library/inc/content/content-posts.php:172
+#: D:\Documents\GitHub/reactor/library/inc/extensions/comments.php:23
+#: D:\Documents\GitHub/reactor/library/inc/extensions/comments.php:55
+msgid "Edit"
+msgstr "編集"
+
+#: D:\Documents\GitHub/reactor/image.php:47
+msgid "&larr; Previous"
+msgstr "&larr; 前へ"
+
+#: D:\Documents\GitHub/reactor/image.php:48
+msgid "Next &rarr;"
+msgstr "次へ &rarr;"
+
+#: D:\Documents\GitHub/reactor/image.php:98
+#: D:\Documents\GitHub/reactor/library/inc/content/content-pages.php:36
+#: D:\Documents\GitHub/reactor/post-formats/format-standard.php:25
+msgid "Pages:"
+msgstr "固定ページ："
+
+#: D:\Documents\GitHub/reactor/search.php:28
+#, php-format
+msgid "Search Results for: %s"
+msgstr "「%s」の検索結果"
+
+#: D:\Documents\GitHub/reactor/searchform.php:13
+msgid "Search for:"
+msgstr "検索："
+
+#: D:\Documents\GitHub/reactor/tag.php:25
+#: D:\Documents\GitHub/reactor/taxonomy-portfolio-tag.php:24
+#, php-format
+msgid "Tag: %s"
+msgstr "タグ：%s"
+
+#: D:\Documents\GitHub/reactor/library/inc/content/content-footer.php:75
+msgid "Powered by "
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/content/content-posts.php:37
+msgid "Featured Post"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/content/content-posts.php:57
+#: D:\Documents\GitHub/reactor/library/inc/content/content-posts.php:64
+#: D:\Documents\GitHub/reactor/library/inc/content/content-posts.php:107
+#: D:\Documents\GitHub/reactor/post-formats/format-portfolio.php:28
+#, php-format
+msgid "%s"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/content/content-posts.php:158
+msgid "Leave a Comment"
+msgstr "コメントする"
+
+#: D:\Documents\GitHub/reactor/library/inc/content/content-posts.php:158
+msgid "1 Comment"
+msgstr "1コメント"
+
+#: D:\Documents\GitHub/reactor/library/inc/content/content-posts.php:158
+msgid "% Comments"
+msgstr "%コメント"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:249
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:280
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/custom-meta.php:90
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/custom-meta.php:123
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/custom-meta.php:179
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-init.php:89
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-init.php:122
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-init.php:178
+msgid "Select"
+msgstr "選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:318
+msgid "General"
+msgstr "一般"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:329
+msgid "Site Title"
+msgstr "サイトタイトル"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:341
+msgid "Tagline"
+msgstr "タグライン"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:353
+msgid "Show Title & Tagline"
+msgstr "タイトルとタグラインを表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:365
+msgid "Site Logo"
+msgstr "サイトロゴ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:377
+msgid "Favicon"
+msgstr "ファビコン"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:390
+msgid "Footer Site Info"
+msgstr "フッターサイトインフォ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:403
+msgid "Navigation"
+msgstr "ナビゲーション"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:418
+msgid "Top Bar Title"
+msgstr "Top Barタイトル"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:431
+msgid "Top Bar Title Link"
+msgstr "Top Barタイトルリンク"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:445
+msgid "Fixed Top Bar"
+msgstr "固定Top Bar"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:459
+msgid "Contain Top Bar Width"
+msgstr "Top Barの幅をコンテントと合わせる"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:474
+msgid "Side Menu Type"
+msgstr "サイドメニュータイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:478
+msgid "Accordion"
+msgstr "アコーディオン"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:479
+msgid "Side Nav"
+msgstr "サイドナビ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:493
+msgid "Off Canvas Main Menu"
+msgstr "メインメニューをキャンバスの外に出す"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:508
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/meta-fields.php:19
+msgid "One Column"
+msgstr "1カラム"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:509
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/meta-fields.php:20
+msgid "Two Columns, Left"
+msgstr "2カラム左"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:510
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/meta-fields.php:21
+msgid "Two Columns, Right"
+msgstr "2カラム右"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:511
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/meta-fields.php:22
+msgid "Three Columns, Left"
+msgstr "3カラム左"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:512
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/meta-fields.php:23
+msgid "Three Columns, Right"
+msgstr "3カラム右"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:513
+#: D:\Documents\GitHub/reactor/library/inc/metaboxes/meta-fields.php:24
+msgid "Three Columns, Center"
+msgstr "3カラム中央"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:516
+msgid "Posts & Pages"
+msgstr "投稿と固定ページ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:526
+msgid "Default Layout"
+msgstr "初期設定レイアウト"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:540
+msgid "Page Link Type"
+msgstr "ページリンクタイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:544
+msgid "Numbered"
+msgstr "番号タイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:545
+msgid "Prev / Next"
+msgstr "前後タイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:551
+msgid "Read More"
+msgstr "つづきを読む"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:557
+msgid "Read More Text"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:570
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:993
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1073
+msgid "Show Post Meta"
+msgstr "メタ情報を表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:582
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:980
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1086
+msgid "Show Comment Link"
+msgstr "コメントリンクを表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:595
+msgid "Show Tumblog Icons"
+msgstr "Tumblogアイコンを表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:608
+msgid "Show Breadcrumbs"
+msgstr "パンくずナビを表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:616
+msgid "Background"
+msgstr "背景"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:631
+msgid "Background Color"
+msgstr "背景色"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:644
+msgid "Background Image"
+msgstr "背景画像"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:657
+msgid "Image Repeat"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:661
+msgid "Tile"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:662
+msgid "No Repeat"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:663
+msgid "Tile Horizontally"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:664
+msgid "Tile Vertically"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:676
+msgid "Image Position"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:680
+msgid "Left Top"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:681
+msgid "Left Center"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:682
+msgid "Left Bottom"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:683
+msgid "Right Top"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:684
+msgid "Right Center"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:685
+msgid "Right Bottom"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:686
+msgid "Center Top"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:687
+msgid "Center Center"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:688
+msgid "Center Bottom"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:700
+msgid "Image Attachment"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:704
+msgid "Scroll"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:705
+msgid "Fixed"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:717
+msgid "Full Window Background"
+msgstr "全画面背景"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:726
+msgid "Fonts & Colors"
+msgstr "フォントと色"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:738
+msgid "Content Font"
+msgstr "本文フォント"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:751
+msgid "Title Font"
+msgstr "タイトルフォント"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:767
+msgid "Title Color"
+msgstr "タイトルカラー"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:782
+msgid "Text Color"
+msgstr "テキストカラー"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:797
+msgid "Link Color"
+msgstr "リンクカラー"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:811
+msgid "Link Hover Color"
+msgstr "リンクホバーカラー"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:818
+msgid "Login"
+msgstr "ログイン"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:830
+msgid "Login Logo"
+msgstr "ログインロゴ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:842
+msgid "Logo Link URL"
+msgstr "ロゴのリンクURL"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:854
+msgid "Logo Title Attribute"
+msgstr "ロゴ画像のTitle属性"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:869
+msgid "Front Page"
+msgstr "トップページ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:881
+msgid "Post Category"
+msgstr "投稿カテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:895
+msgid "Exclude From Blog"
+msgstr "Blogから除外"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:908
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1028
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:178
+msgid "Slider Category"
+msgstr "スライダーカテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:922
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1042
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1156
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:194
+msgid "Post Columns"
+msgstr "投稿カラム"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:926
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1046
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1160
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:20
+msgid "1 Column"
+msgstr "1カラム"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:927
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1047
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1161
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:21
+msgid "2 Columns"
+msgstr "2カラム"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:928
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1048
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1162
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:22
+msgid "3 Columns"
+msgstr "3カラム"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:929
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1163
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:23
+msgid "4 Columns"
+msgstr "4カラム"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:941
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1060
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1175
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:202
+msgid "Number of Posts"
+msgstr "表示する投稿数"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:954
+msgid "Show Post Titles"
+msgstr "投稿タイトルを表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:967
+msgid "Link Post Titles"
+msgstr "投稿タイトルにリンクを設定"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1006
+msgid "Show Page Links"
+msgstr "ページリンクを表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1016
+msgid "News Page"
+msgstr "Newsページ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1096
+msgid "Contact Page"
+msgstr "Contactページ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1108
+msgid "Email Address"
+msgstr "Eメールアドレス"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1115
+#: D:\Documents\GitHub/reactor/page-templates/contact.php:14
+msgid " - Contact Form Message"
+msgstr " - お問い合わせフォームからのメッセージ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1121
+msgid "Email Subject"
+msgstr "Eメールタイトル"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1128
+#: D:\Documents\GitHub/reactor/page-templates/contact.php:15
+msgid "Thank you! Your email was sent successfully."
+msgstr "ありがとうございました！メッセージは正常に送信されました。"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1134
+msgid "Send Successful Message"
+msgstr "送信完了メッセージ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1144
+msgid "Portfolio Page"
+msgstr "ポートフォリオページ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1188
+msgid "Filter Type"
+msgstr "フィルタータイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1192
+msgid "jQuery Filtering"
+msgstr "jQueryフィルタリング"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1193
+msgid "Category Pages"
+msgstr "カテゴリーページ"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1205
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:215
+msgid "Show Titles"
+msgstr "タイトルを表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1218
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:216
+msgid "Link Titles"
+msgstr "タイトルにリンクを設定"
+
+#: D:\Documents\GitHub/reactor/library/inc/customizer/customize.php:1231
+msgid "Show Meta"
+msgstr "メタ情報を表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/comments.php:23
+msgid "Pingback:"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/comments.php:38
+msgid "Post author"
+msgstr "投稿者"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/comments.php:44
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/comments.php:50
+msgid "Your comment is awaiting moderation."
+msgstr "コメントは承認待ちの状態です。"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/comments.php:58
+msgid "Reply"
+msgstr "返信"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/menus.php:31
+msgid "Top Bar Left"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/menus.php:35
+msgid "Top Bar Right"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/menus.php:39
+msgid "Main Menu"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/menus.php:43
+msgid "Side Menu"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/menus.php:47
+msgid "Footer Links"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:35
+msgid "Slideshow"
+msgstr "スライドショー"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:36
+msgid "Slide"
+msgstr "スライド"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:37
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:125
+msgid "Add New"
+msgstr "新規追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:38
+msgid "Add New Slide"
+msgstr "新規スライド追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:39
+msgid "Edit Slide"
+msgstr "スライド編集"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:40
+msgid "New Slide"
+msgstr "新規スライド"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:41
+msgid "All Slides"
+msgstr "スライド一覧"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:42
+msgid "View Slide"
+msgstr "スライドを見る"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:43
+msgid "Search Slides"
+msgstr "スライドを検索"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:44
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:132
+msgid "Nothing found"
+msgstr "みつかりませんでした。"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:45
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:133
+msgid "Nothing found in Trash"
+msgstr "ゴミ箱にはみつかりませんでした。"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:47
+msgid "Slides"
+msgstr "スライド"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:65
+msgid "slideshow-post"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:87
+msgid "Slide Categories"
+msgstr "スライドカテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:88
+msgid "Slide Category"
+msgstr "スライドカテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:89
+msgid "Search Slide Categories"
+msgstr "スライドカテゴリーを検索"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:90
+msgid "All Slide Categories"
+msgstr "スライドカテゴリー一覧"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:91
+msgid "Parent Slide Category"
+msgstr "親スライドカテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:92
+msgid "Parent Slide Category:"
+msgstr "親スライドカテゴリー："
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:93
+msgid "Edit Slide Category"
+msgstr "スライドカテゴリー編集"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:94
+msgid "Update Slide Category"
+msgstr "スライドカテゴリー更新"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:95
+msgid "Add New Slide Category"
+msgstr "新規スライドカテゴリー追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:96
+msgid "New Slide Category Name"
+msgstr "新規スライドカテゴリー名"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:97
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:191
+msgid "Categories"
+msgstr "カテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:123
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:135
+msgid "Portfolio"
+msgstr "ポートフォリオ"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:124
+msgid "Portfolio Post"
+msgstr "ポートフォリオ投稿"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:126
+msgid "Add New Portfolio Post"
+msgstr "新規ポートフォリオ追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:127
+msgid "Edit Portfolio Post"
+msgstr "ポートフォリオ投稿編集"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:128
+msgid "New Portfolio Post"
+msgstr "新規ポートフォリオ投稿"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:129
+msgid "All Portfolio Posts"
+msgstr "ポートフォリオ投稿一覧"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:130
+msgid "View Portfolio Post"
+msgstr "ポートフォリオ投稿を見る"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:131
+msgid "Search Portfolio"
+msgstr "ポートフォリオを検索"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:153
+msgid "portfolio-post"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:181
+msgid "Portfolio Categories"
+msgstr "ポートフォリオカテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:182
+msgid "Portfolio Category"
+msgstr "ポートフォリオカテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:183
+msgid "Search Portfolio Categories"
+msgstr "ポートフォリオカテゴリーを検索"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:184
+msgid "All Portfolio Categories"
+msgstr "ポートフォリオカテゴリー一覧"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:185
+msgid "Parent Portfolio Category"
+msgstr "親ポートフォリオカテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:186
+msgid "Parent Portfolio Category:"
+msgstr "親ポートフォリオカテゴリー："
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:187
+msgid "Edit Portfolio Category"
+msgstr "親ポートフォリオカテゴリー編集"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:188
+msgid "Update Portfolio Category"
+msgstr "親ポートフォリオカテゴリー更新"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:189
+msgid "Add New Portfolio Category"
+msgstr "新規親ポートフォリオカテゴリー追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:190
+msgid "New Portfolio Category Name"
+msgstr "新規親ポートフォリオカテゴリー名"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:205
+msgid "Portfolio Tags"
+msgstr "ポートフォリオタグ"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:206
+msgid "Tag"
+msgstr "タグ"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:207
+msgid "Search Portfolio Tags"
+msgstr "ポートフォリオタグを検索"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:208
+msgid "Popular Portfolio Tags"
+msgstr "人気のポートフォリオタグ"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:209
+msgid "All Portfolio Tags"
+msgstr "ポートフォリオタグ一覧"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:212
+msgid "Edit Tag"
+msgstr "タグ編集"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:213
+msgid "Update Tag"
+msgstr "タグ更新"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:214
+msgid "Add New Tag"
+msgstr "新規タグ追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:215
+msgid "New Tag Name"
+msgstr "新規タグ名"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:216
+msgid "Separate Portfolio Tags with commas"
+msgstr "ポートフォリオタグを半角コンマで区切る"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:217
+msgid "Add or remove Portfolio Tags"
+msgstr "ポートフォリオタグを追加/削除"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:218
+msgid "Choose from the most used Portfolio Tags"
+msgstr "よく使うポートフォリオタグから選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/post-types.php:219
+msgid "Tags"
+msgstr "タグ"
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/sidebars.php:24
+msgid "Primary Sidebar"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/sidebars.php:37
+msgid "Secondary Sidebar"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/sidebars.php:50
+msgid "Front Page Primary"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/sidebars.php:63
+msgid "Front Page Secondary"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/sidebars.php:79
+msgid "Footer"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/extensions/sidebars.php:108
+msgid "Invalid sidebar ID"
+msgstr "無効なsidebar ID"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:42
+msgid "Home"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:216
+#: D:\Documents\GitHub/reactor/library/inc/functions/post-meta.php:44
+#: D:\Documents\GitHub/reactor/library/inc/functions/post-meta.php:50
+#, php-format
+msgid "View all posts in %s"
+msgstr "%sの投稿をすべて見る"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:309
+msgid "g:i a"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:311
+#, php-format
+msgid "Minute %1$s"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:311
+msgid "i"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:313
+msgid "g a"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:326
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:330
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:333
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:336
+msgid "Y"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:327
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:334
+msgid "F"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:328
+msgid "d"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:331
+#, php-format
+msgid "Week %1$s"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:342
+#, php-format
+msgid "Search results for &quot;%1$s&quot;"
+msgstr "「%1$s」の検索結果"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/breadcrumbs.php:347
+msgid "404 Not Found"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/helpers.php:274
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/page-links.php:42
+msgid "Older posts"
+msgstr "前の投稿"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/page-links.php:45
+msgid "Newer posts"
+msgstr "新しい投稿"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/page-links.php:72
+msgid "&laquo; Previous"
+msgstr "&laquo; 前へ"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/page-links.php:73
+msgid "Next &raquo;"
+msgstr "次へ &raquo;"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/page-links.php:121
+msgid "&hellip;"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/post-meta.php:68
+#, php-format
+msgid "View all posts from %s %s"
+msgstr "%s %sからの投稿をすべて見る"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/post-meta.php:75
+#, php-format
+msgid "View all posts by %s"
+msgstr "%sの投稿をすべて見る"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/post-meta.php:94
+msgid "by"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/post-meta.php:95
+msgid "in"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/post-meta.php:96
+msgid "Tags:"
+msgstr "タグ："
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/post-meta.php:99
+msgid "Posted: "
+msgstr "投稿日時："
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/taxonomy-subnav.php:18
+msgid "All"
+msgstr "すべて"
+
+#: D:\Documents\GitHub/reactor/library/inc/functions/taxonomy-subnav.php:30
+msgid "Categories: "
+msgstr "カテゴリー："
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:21
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:287
+msgid "Alert's Text"
+msgstr "アラートテキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:22
+msgid "Add the alert's text"
+msgstr "アラートテキスト追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:26
+msgid "Alert Style"
+msgstr "アラートスタイル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:27
+msgid "Select the alert's style, ie the alert's colour"
+msgstr "アラートスタイルを選択（アラートの色）"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:37
+msgid "Alert Type"
+msgstr "アラートタイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:38
+msgid "Select the alert's type"
+msgstr "アラートタイプを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:47
+msgid "Closing X"
+msgstr "とじるX"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:48
+msgid "Display a X on the alert to close it"
+msgstr "アラートをとじるためにXを表示"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:56
+msgid "Insert Alert Shortcode"
+msgstr "Alertショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:68
+msgid "Button's Text"
+msgstr "ボタンテキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:69
+msgid "Add the button's text"
+msgstr "ボタンテキスト追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:74
+msgid "Button URL"
+msgstr "ボタンURL"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:75
+msgid "Add the button's url eg http://example.com"
+msgstr "ボタンURL追加（例：http://example.com）"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:79
+msgid "Button Style"
+msgstr "ボタンスタイル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:80
+msgid "Select the button's style, ie the button's colour"
+msgstr "ボタンスタイルを選択（ボタンの色）"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:90
+msgid "Button Size"
+msgstr "ボタンサイズ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:91
+msgid "Select the button's size"
+msgstr "ボタンサイズを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:101
+msgid "Button Type"
+msgstr "ボタンタイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:102
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:334
+msgid "Select the button's type"
+msgstr "ボタンタイプを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:111
+msgid "Expand"
+msgstr "拡張"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:112
+msgid "Expands the button to full width"
+msgstr "ボタンを全幅に拡張"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:120
+msgid "Disabled"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:121
+msgid "Button will be in a disabled state"
+msgstr "ボタンが押せなくなります"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:129
+msgid "Insert Button Shortcode"
+msgstr "Buttonショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:138
+msgid "Insert Columns Shortcode"
+msgstr "Columnsショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:145
+msgid "First or Last"
+msgstr "最初か最後"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:146
+msgid "Select if this column is the first or last in the row"
+msgstr "このカラムが行内で最初もしくは最後のとき選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:155
+msgid "Large Grid"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:156
+msgid "Select the number of columns for the large screen grid"
+msgstr "大きなスクリーンサイズのときのカラム数を選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:174
+msgid "Small Grid"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:175
+msgid "Select the number of columns for the small screen grid"
+msgstr "小さなスクリーンサイズのときのカラム数を選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:194
+msgid "Column Content"
+msgstr "カラムコンテント"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:195
+msgid "Add the column content."
+msgstr "カラムコンテント追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:199
+msgid "Add Column"
+msgstr "カラム追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:211
+msgid "Widescreen"
+msgstr "ワイドスクリーン"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:212
+msgid "Select if the video widescreen"
+msgstr "動画がワイドスクリーンのとき選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:220
+msgid "Vimeo"
+msgstr ""
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:221
+msgid "Select if the video is vimeo to remove padding"
+msgstr "動画がvimeoのとき選択すると余白がなくなります"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:230
+msgid "Video Embed Code"
+msgstr "動画の埋め込みコード"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:231
+msgid "Enter the code to embed the video"
+msgstr "動画を埋め込むためのコードを入力してください"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:235
+msgid "Insert Flex Video Shortcode"
+msgstr "Flex Videoショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:246
+msgid "Icon Cateogry"
+msgstr "アイコンカテゴリー"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:247
+msgid "Select the category for the icon"
+msgstr "アイコンのカテゴリーを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:258
+msgid "Icon"
+msgstr "アイコン"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:259
+msgid ""
+"Enter the name of the icon from http://zurb.com/playground/foundation-icons"
+msgstr "http://zurb.com/playground/foundation-iconsよりアイコン名を入力"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:264
+msgid "Styles"
+msgstr "スタイル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:265
+msgid "Enter any styles for the icon as inline CSS ( ie. color: #000; )"
+msgstr "アイコンに設定するインラインCSSを入力（例：color: #000; ）"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:270
+msgid "Text"
+msgstr "テキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:271
+msgid "Enter any text to be displayed with the icon"
+msgstr "アイコンと一緒に表示するテキストを入力"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:275
+msgid "Insert Glyph Icon Shortcode"
+msgstr "Glyph Iconショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:288
+msgid "Add the label's text"
+msgstr "ラベルのテキストを追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:292
+msgid "Label Style"
+msgstr "ラベルスタイル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:293
+msgid "Select the label's style, ie the label's colour"
+msgstr "ラベルのスタイルを選択（ラベル色）"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:303
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:333
+msgid "Label Type"
+msgstr "ラベルタイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:304
+msgid "Select the label's type"
+msgstr "ラベルタイプを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:313
+msgid "Insert Label Shortcode"
+msgstr "Labelショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:324
+msgid "Callout Style"
+msgstr "Calloutスタイル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:325
+msgid "Callout style is a brighter panel"
+msgstr "Calloutスタイルは明るいパネルです"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:343
+msgid "Panel's Text"
+msgstr "パネルのテキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:344
+msgid "Add the panel's text"
+msgstr "パネルのテキストを追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:348
+msgid "Insert Panel Shortcode"
+msgstr "Panelショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:359
+msgid "Title"
+msgstr "タイトル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:360
+msgid "Title of the price table"
+msgstr "価格表のタイトル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:365
+msgid "Price"
+msgstr "価格"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:366
+msgid "Price for the price table"
+msgstr "価格表の価格"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:371
+msgid "Description"
+msgstr "説明"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:372
+msgid "Description of the price table"
+msgstr "価格表の説明"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:377
+msgid "Button Text"
+msgstr "ボタンテキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:378
+msgid "Text for the button on the price table"
+msgstr "価格表のボタンテキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:383
+msgid "Insert Price Table Shortcode"
+msgstr "Price Tableショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:390
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:547
+msgid "Section Content"
+msgstr "セクションコンテント"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:391
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:548
+msgid "Add the tabs content"
+msgstr "タブコンテントを追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:395
+msgid "Add Price Table Item"
+msgstr "価格表アイテムを追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:407
+msgid "Progress Bar Style"
+msgstr "プログレスバースタイル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:408
+msgid "Select the progress bar's style, ie the progress bar's colour"
+msgstr "プログレスバースタイルを選択（プログレスバーの色）"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:418
+msgid "Progress Bar Type"
+msgstr "プログレスバータイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:419
+msgid "Select the progress bar's type"
+msgstr "プログレスバータイプを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:428
+msgid "Progress Bar Length"
+msgstr "プログレスバーの長さ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:429
+msgid "Select the progress bar's length in columns"
+msgstr "プログレスバーの長さを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:448
+msgid "Progress Bar Fill"
+msgstr "プログレスバーの進捗"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:449
+msgid "Enter the progress bar's fill amount"
+msgstr "プログレスバーの進捗率を入力"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:454
+msgid "Progress Bar's Text"
+msgstr "プログレスバーのテキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:455
+msgid "Add the progress bar's text"
+msgstr "プログレスバーのテキストを追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:459
+msgid "Insert Progress Bar Shortcode"
+msgstr "Progress Barショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:470
+msgid "Open Modal Text"
+msgstr "モーダルを開くテキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:471
+msgid "Add the link that will open the modal window"
+msgstr "モーダルウィンドウを開くリンクを追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:476
+msgid "Modal Size"
+msgstr "モーダルサイズ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:477
+msgid "Select the size of the modal window"
+msgstr "モーダルウィンドウのサイズを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:488
+msgid "Button Link"
+msgstr "ボタンリンク"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:489
+msgid "Select if the link that opens the modal is a button"
+msgstr "モーダルを開くリンクがボタンのときに選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:498
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:587
+msgid "Modal Content"
+msgstr "モーダルコンテント"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:499
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:588
+msgid "Add the content for the modal. Will accept HTML"
+msgstr "モーダルのコンテントを追加（HTMLタグ使用可）"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:504
+msgid "Insert Reveal Modal Shortcode"
+msgstr "Reveal Modalショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:514
+msgid "Sections Type"
+msgstr "セクションタイプ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:515
+msgid "Select the type of sections to use"
+msgstr "セクションタイプを選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:525
+msgid "Insert Sections Shortcode"
+msgstr "Sectionsショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:532
+msgid "Section Title"
+msgstr "セクションタイトル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:533
+msgid "Title of the section"
+msgstr "セクションのタイトル"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:537
+msgid "Active"
+msgstr "アクティブ"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:538
+msgid "Select if this section is active on page load"
+msgstr "ページが開かれたときにこのセクションをアクティブにする"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:552
+msgid "Add Section"
+msgstr "セクションを追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:564
+msgid "Tip Text"
+msgstr "ツールチップのテキスト"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:565
+msgid "Add the text that will be in the tooltip"
+msgstr "ツールチップに表示するテキストを追加"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:570
+msgid "Tooltip Position"
+msgstr "ツールチップポジション"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:571
+msgid "Select where the tooltip should be displayed"
+msgstr "ツールチップをどこに表示するか選択"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:581
+msgid "Tooltip Width"
+msgstr "ツールチップの幅"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:582
+msgid "Add a specific width for the tip. Only a number."
+msgstr "ツールチップに特定の幅を指定（半角数字のみ）"
+
+#: D:\Documents\GitHub/reactor/library/inc/shortcodes/tinymce/config.php:593
+msgid "Insert a Tooltip Shortcode"
+msgstr "Tooltipショートコードを挿入"
+
+#: D:\Documents\GitHub/reactor/library/inc/widgets/recent-posts.php:11
+msgid "The most recent posts on your site"
+msgstr "最新の投稿"
+
+#: D:\Documents\GitHub/reactor/library/inc/widgets/recent-posts.php:12
+#: D:\Documents\GitHub/reactor/library/inc/widgets/recent-posts.php:37
+msgid "Recent Posts"
+msgstr "最新の投稿"
+
+#: D:\Documents\GitHub/reactor/library/inc/widgets/recent-posts.php:86
+msgid "Title:"
+msgstr "タイトル："
+
+#: D:\Documents\GitHub/reactor/library/inc/widgets/recent-posts.php:89
+msgid "Number of posts to show:"
+msgstr "表示する投稿数："
+
+#: D:\Documents\GitHub/reactor/library/inc/widgets/recent-posts.php:93
+msgid "Exclude Category(s):"
+msgstr "除外するカテゴリー："
+
+#: D:\Documents\GitHub/reactor/library/inc/widgets/recent-posts.php:95
+msgid "Category IDs, separated by commas."
+msgstr "カテゴリーID（半角コンマ区切り）"
+
+#: D:\Documents\GitHub/reactor/post-formats/format-none.php:13
+msgid "Nothing Found"
+msgstr "見つかりませんでした。"
+
+#: D:\Documents\GitHub/reactor/post-formats/format-none.php:17
+msgid ""
+"Apologies, but no results were found. Perhaps searching will help find a "
+"related post."
+msgstr ""
+"申しわけありませんが、ページが見つかりませんでした。検索フォームでみつかるか"
+"もしれません。"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:11
+msgid "No Sidebars"
+msgstr "サイドバーなし"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:12
+msgid "1 Sidebar - Content Left"
+msgstr "1サイドバー - コンテント左"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:13
+msgid "1 Sidebar - Content Right"
+msgstr "1サイドバー - コンテント右"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:14
+msgid "2 Sidebars - Content Left"
+msgstr "2サイドバー - コンテント左"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:15
+msgid "2 Sidebars - Content Right"
+msgstr "2サイドバー - コンテント右"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:16
+msgid "2 Sidebars - Content Middle"
+msgstr "2サイドバー - コンテント中央"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:170
+msgid "Posts Category"
+msgstr "投稿カテゴリー"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:171
+msgid "Select a category of posts"
+msgstr "投稿のカテゴリーを選択"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:179
+msgid "Select a category of slides"
+msgstr "スライドのカテゴリーを選択"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:186
+msgid "Page Layout"
+msgstr "ページレイアウト"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:187
+msgid "Select a layout for content"
+msgstr "コンテントのレイアウトを選択"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:195
+msgid "The number of columns for posts"
+msgstr "投稿のカラム数"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:203
+msgid "The number posts to display"
+msgstr "表示する投稿数"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:210
+msgid "Post Titles"
+msgstr "投稿タイトル"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:211
+msgid "Show the post titles / Link title to the post"
+msgstr "投稿タイトルを表示 / タイトルに記事へのリンクを設定"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:221
+msgid "Post Meta"
+msgstr "投稿メタ情報"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:222
+msgid "Show post author, date, and categories"
+msgstr "投稿者、投稿日時とカテゴリーを表示"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:228
+msgid "Comments Link"
+msgstr "コメントリンク"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:229
+msgid "Show link to comments"
+msgstr "コメントへのリンクを表示"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:235
+msgid "Page Links"
+msgstr "ページリンク"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:236
+msgid "Show post pagination or next/prev links"
+msgstr "ページネーションもしくは前後リンクを表示"
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:242
+msgid "Call To Action"
+msgstr ""
+
+#: D:\Documents\GitHub/Reusable-Custom-WordPress-Meta-Boxes/metaboxes/meta-fields.php:243
+msgid "Add some content to display the Call to Action area"
+msgstr "Call to Actionエリアを表示するコンテントを追加する"

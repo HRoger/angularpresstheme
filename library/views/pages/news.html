@@ -1,0 +1,136 @@
+
+	<div id="primary" class="site-content">
+
+				<editpagelink  name="{{menuId}}"></editpagelink>
+	
+		<div id="content" role="main">
+			<div class="row">
+
+				<div class="large-8 columns">
+
+																<div class="slideshow-wrapper"><div class="preloader"></div><ul id="slider-news-page" data-orbit><li><img src="http://sample.localhost/wp-content/uploads/2014/02/31907-magic-landscape.jpg" alt="" /></li><li><img src="http://sample.localhost/wp-content/uploads/2014/02/31942-magic-landscape.jpg" alt="" /></li><li><img src="http://sample.localhost/wp-content/uploads/2014/02/47826-autumn-beautiful-computer-desktop-wallpaper.jpg" alt="" /></li></ul></div>
+						
+
+	
+		
+		
+        <article id="post-9" class="post-9 page type-page status-publish hentry">
+            <div class="entry-body">
+            
+            	                        
+                <div class="entry-content">
+                    <!--	                <div ng-bind-html="item.content"></div>-->
+                </div><!-- .entry-content -->
+                
+                <footer class="entry-footer">
+					                </footer><!-- .entry-footer -->
+                
+            </div><!-- .entry-body -->
+        </article><!-- #post -->
+		
+	
+	
+
+						
+
+
+
+																						
+
+	
+	<ul  class="multi-column large-block-grid-2">
+	<!--	-->	
+				<!--loop-newspage.php. Loop for the news-page template-->
+		<div data-spinner-post></div>
+			<li   data-ng-repeat="item in posts">
+			<article id="post-1" class="post-1 post type-post status-publish format-standard hentry category-uncategorized">
+
+	<div class="entry-body">
+		<header class="entry-header">
+								<h2 class="entry-title" ng-if="item.categories.length===0">
+
+				<a
+					ng-href="{{siteUrl}}/uncategorized/{{item.slug}}/"
+					title="{{item.title}}" rel="bookmark" ng-bind="item.title"></a>
+			</h2>
+			<h2 class="entry-title">
+
+              <span ng-repeat="category in item.categories "
+                    ng-if="$last">
+				<a
+					ng-href="{{siteUrl}}/{{category.slug}}/{{item.slug}}/"
+					title="{{item.title}}" rel="bookmark" ng-bind="item.title"></a>
+              </span>
+			</h2>
+			            <!--see content.posts.php-->
+		</header>
+
+
+				<!-- Only display Excerpts for Search -->
+			<div class="entry-summary">
+				<div ng-bind-html="item.excerpt"></div>
+			</div>
+
+		
+		<footer class="entry-footer">
+			<div class="entry-meta">Posted: <a ng-href="{{siteUrl}}" title="View all posts from Feb 2014" rel="bookmark"><time class="entry-date" datetime="2014-02-03T19:50:12+00:00" pubdate ng-bind-html="item.date"></time></a> by <span class="by-author"><span class="author"><a class="url fn n" ng-href="{{siteUrl}}/author/{{item.author.slug}}" title="View all posts by {{item.author.name}}" rel="author" ng-bind-html="item.author.name"></a></span></span> in <span ng-repeat="category in item.categories"><a ng-href="{{siteUrl}}/category/{{category.slug}}/" title="View all posts in {{category.title}}" ng-bind-html="category.title+','"></a></span></div>
+		<div class="comments-link">
+			<i class="icon social foundicon-chat" title="Comments"></i>
+
+			<span class="entry-title" ng-if="item.categories.length===0">
+				<a
+					ng-href="{{siteUrl}}/uncategorized/{{item.slug}}/"
+					title="{{item.title}}" rel="bookmark" >
+					<span class="leave-comment">Leave a Comment</span>
+				</a>
+			</span>
+
+            <span ng-repeat="category in item.categories " ng-if="$last">
+				<a
+					ng-href="{{siteUrl}}/{{category.slug}}/{{item.slug}}/"
+					title="{{item.title}}" rel="bookmark" >
+					<span class="leave-comment">Leave a Comment</span>
+
+				</a>
+			</span>
+
+		</div>
+		<!-- .comments-link -->
+				  <!--see content.posts.php-->
+		</footer>
+
+	</div>
+
+</article>
+
+
+			</li>
+		
+		<!--	-->
+	</ul>
+	
+										
+				</div>
+				<!-- .columns -->
+
+				
+
+	
+	<div id="sidebar" class="sidebar large-4 columns"
+	     role="complementary">
+
+		<widget-sidebar  name="sidebar"></widget-sidebar>
+
+	</div>
+	<!-- #sidebar -->
+
+
+
+			</div>
+			<!-- .row -->
+		</div>
+		<!-- #content -->
+
+		
+	</div><!-- #primary -->
+

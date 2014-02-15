@@ -1,0 +1,533 @@
+@charset "utf-8";
+/* Reactor - Anthony Wilhelm - http://awtheme.com/ */
+
+/* Main ---------------------- */
+
+
+/* WP Classes */
+.alignleft {
+  float : left
+  }
+
+.alignright {
+  float : right
+  }
+
+.aligncenter {
+  display : block;
+  margin  : 0 auto
+  }
+
+.bypostauthor, .gallery-caption {
+  display : inherit
+  }
+
+.wp-caption-text {
+  position  : relative;
+  font-size : 0.9em
+  }
+
+.sticky { }
+
+/* Responsive Images */
+.wp-caption {
+  max-width : 100%;
+  padding   : 0.25em
+  }
+
+img[class*=align], img[class*=wp-image-], img[class*=attachment-] {
+  height : auto
+  }
+
+img.size-full, img.size-large, img.header-image, img.wp-post-image {
+  height    : auto;
+  max-width : 100%
+  }
+
+.entry-content .twitter-tweet-rendered {
+  max-width : 100% !important
+  }
+
+.entry-content img, .comment-content img, .widget img, embed, iframe, object, video {
+  max-width : 100%
+  }
+
+/* Misc Styles */
+ul, ol, dl {
+  margin-left : 1.125em;
+  }
+
+
+
+.gallery dl {
+  margin-left : 0
+  }
+
+#slider-front-page {
+  padding : 1.063em 0 0
+  }
+
+/* fix for textarea height */
+textarea {
+  height : auto
+  }
+
+/* fix for gallery spacing */
+.gallery [data-clearing] li {
+  margin-right : 0;
+  padding-left : 0
+  }
+
+/*  fix for h1 in top bar causing SEO nightmare */
+.top-bar .name p {
+  font-size   : 1.0625em;
+  line-height : 45px;
+  margin      : 0
+  }
+
+.top-bar .name p a {
+  font-weight : bold;
+  color       : white;
+  width       : 50%;
+  display     : block;
+  padding     : 0 15px
+  }
+
+/* fix for margin on top bar */
+.top-bar, .contain-to-grid .top-bar {
+  margin-bottom : 0
+  }
+
+/* Header ---------------------- */
+.inner-header {
+  border-bottom : none;
+  margin        : 0 0 1.25em;
+  padding       : 0.438em 0 0
+  }
+
+.site-header .site-title {
+  font-size      : 2.75em;
+  font-weight    : bold;
+  line-height    : 1.4;
+  margin-bottom  : 0;
+  text-rendering : optimizeLegibility
+  }
+
+.site-header .site-title a {
+  color : #222
+  }
+
+.site-header .site-description {
+  color          : #222;
+  font-size      : 1.688em;
+  margin-bottom  : 0;
+  text-rendering : optimizeLegibility
+  }
+
+.site-header .site-logo {
+  float  : left;
+  margin : 0 0.625em 1.25em 0
+  }
+
+.site-header hgroup:after {
+  clear : both
+  }
+
+#mobile-menu-button .button {
+  margin-bottom : 0;
+  padding       : 0.75em 0.5em;
+  width         : auto
+  }
+
+.mobile-menu-icon {
+  background    : #777;
+  border-radius : 0.063em;
+  box-shadow    : 0 0.063em 0 rgba(0, 0, 0, 0.25);
+  display       : block;
+  height        : 0.125em;
+  width         : 1.25em
+  }
+
+.mobile-menu-icon + .mobile-menu-icon {
+  margin : 0.188em 0 0
+  }
+
+#mobile-menu-button {
+  float : left
+  }
+
+.site-header {
+  border-bottom : 0.063em solid #ddd;
+  margin        : 0 0 1.25em
+  }
+
+.top-bar .title-area {
+  margin-left : 0
+  }
+
+@media only screen and (min-width : 48em) {
+  .site-header {
+	border-bottom : none;
+	margin        : 0
+	}
+
+  .inner-header {
+	border-bottom : 0.063em solid #ddd
+	}
+
+  .top-bar-section .search-form {
+	padding : 0 15px
+	}
+  }
+
+/* Footer ---------------------- */
+.inner-footer {
+  border-top : 0.063em solid #ddd;
+  clear      : both
+  }
+
+.site-info {
+  padding : 1.063em 0 0
+  }
+
+#colophon {
+  text-align : left
+  }
+
+#colophon, .footer-links li {
+  font-size : 0.75em
+  }
+
+.footer-links li {
+  margin-left : 0.625em
+  }
+
+.footer-links .inline-list {
+  margin-left : 0
+  }
+
+@media only screen and (min-width : 48em) {
+  #colophon {
+	text-align : right
+	}
+  }
+
+/* Posts & Pages ---------------------- */
+.entry-icon {
+  font-size : 2.5em;
+  position  : static
+  }
+
+@media only screen and (min-width : 48em) {
+  .entry-icon {
+	left     : -8.33333%;
+	position : absolute;
+	}
+  }
+
+.entry-featured {
+  float : right
+  }
+
+.entry-body {
+  border-bottom  : 0.063em solid #ddd;
+  margin-bottom  : 1.25em;
+  padding-bottom : 1.25em
+  }
+
+.multi-column .entry-body, .type-page .entry-body {
+  border         : none;
+  margin-bottom  : 0;
+  padding-bottom : 0
+  }
+
+.entry-meta {
+  margin-bottom : 0.625em
+  }
+
+.entry-tags {
+  margin-top : 0.625em
+  }
+
+.nav-single {
+  margin : 1.063em 0 0
+  }
+
+.flex-map iframe {
+  width : 100%
+  }
+
+.entry-footer .panel {
+  margin-bottom : 0
+  }
+
+.entry-footer {
+  clear : both
+  }
+
+.entry-footer .edit-link {
+  margin : 1.063em 0
+  }
+
+/* Post Formats ---------------------- */
+.post.format-chat .entry-content {
+  border  : 0.063em solid #ddd;
+  padding : 0.625em
+  }
+
+.post.format-chat .entry-content p {
+  margin : 0
+  }
+
+.post.format-chat .entry-content p:nth-child(2n) {
+  background : #eee
+  }
+
+.post.format-chat .entry-footer {
+  margin : 1.063em 0 0
+  }
+
+.post.format-video .flex-video {
+  margin-bottom : 0
+  }
+
+.post.format-gallery .gallery-item {
+  clear : none
+  }
+
+.post.format-audio .entry-title, .post.format-image .entry-title, .post.format-video .entry-title, .post.format-gallery .entry-title {
+  font-size : 1.125em
+  }
+
+.post.format-audio p, .post.format-gallery p, .post.format-image p, .post.format-link p, .post.format-video p {
+  line-height   : 0;
+  margin-bottom : 0
+  }
+
+/* Portfolio ---------------------- */
+.single-portfolio {
+  margin : 0 0 1.063em
+  }
+
+h2.entry-title.portfolio {
+  margin    : 0.313em 0;
+  font-size : 1.25em
+  }
+
+.portfolio .entry-tags {
+  font-size : 0.75em
+  }
+
+.filterable-grid {
+  width : auto !important;
+  }
+
+#Grid .mix {
+  opacity : 0;
+  display : none
+  }
+
+/* Comments ---------------------- */
+ol.commentlist {
+  margin          : 0;
+  padding         : 0;
+  list-style-type : none
+  }
+
+ol.commentlist ol {
+  list-style-type : none
+  }
+
+ol.commentlist li {
+  margin : 0
+  }
+
+.comment-author {
+  text-decoration : none;
+  padding         : 0
+  }
+
+#comments, p.nocomments {
+  clear   : both;
+  padding : 1.063em 0
+  }
+
+.commentlist li.comment .comment-entry {
+  background    : #f2f2f2;
+  border        : 0.063em solid #e6e6e6;
+  clear         : both;
+  margin-bottom : 1.063em;
+  padding       : 0.625em;
+  position      : relative
+  }
+
+.commentlist li.comment .comment-content {
+  background : #fff;
+  border     : 0.063em solid #e6e6e6;
+  clear      : both;
+  margin     : 0.625em 0;
+  padding    : 0.625em;
+  position   : relative
+  }
+
+.comments-area article header {
+  margin-top : 1.063em
+  }
+
+.comments-area article header img {
+  float : left
+  }
+
+.comments-area article header cite, .comments-area article header time {
+  display     : block;
+  margin-left : 3.750em
+  }
+
+/* Widgets ---------------------- */
+.widget {
+  overflow : hidden
+  }
+
+.widget .textwidget {
+  margin : 0 0 1.063em
+  }
+
+.tagcloud {
+  padding : 0.313em 0
+  }
+
+/* Breadcrumbs ---------------------- */
+ul.breadcrumbs {
+  margin : 1.063em 0
+  }
+
+/* Pagination ---------------------- */
+ul.pagination {
+  clear  : both;
+  margin : 1.063em 0 1.25em
+  }
+
+/* Horizontal Nav ---------------------- */
+#menu .section-container.horizontal-nav .section,
+#mobile-menu .section-container.accordion .section {
+  position : relative;
+  }
+
+#menu .section-container.horizontal-nav .section .title.has-dropdown > a:after,
+#mobile-menu .section-container.accordion .section .title.has-dropdown > a:after {
+  content      : "";
+  display      : block;
+  width        : 0;
+  height       : 0;
+  border       : solid 5px;
+  border-color : #333 transparent transparent transparent;
+  margin-top   : -2.5px;
+  position     : absolute;
+  right        : 1em;
+  top          : 1.688em
+  }
+
+#menu .section-container .section .content,
+#mobile-menu .section-container .section .content {
+  padding : 0.9375em 0;
+  }
+
+#menu .section-container.horizontal-nav .side-nav li,
+#mobile-menu .section-container.accordion .side-nav li {
+  margin : 0;
+  }
+
+#menu .section-container.horizontal-nav .side-nav li a,
+#mobile-menu .section-container.accordion .side-nav li a {
+  padding : 0.25em 0.9375em;
+  }
+
+#menu .section-container.horizontal-nav .side-nav li:hover a,
+#mobile-menu .section-container.accordion .side-nav li:hover a {
+  background : #efefef
+  }
+
+#menu .section-container.horizontal-nav .section .title.active a,
+#menu .section-container.horizontal-nav.auto .section .title.active a {
+  background : #d5d5d5;
+  }
+
+#menu .section-container.horizontal-nav .section:hover .content {
+  border    : 1px solid #ccc;
+  display   : block;
+  min-width : 12.5em;
+  position  : absolute;
+  z-index   : 999;
+  }
+
+@media only screen and (min-width : 48em) {
+  #menu .section-container.horizontal-nav .section .title.has-dropdown > a:after {
+	top : 50%
+	}
+
+  #menu .section-container.horizontal-nav .section .title.has-dropdown > a {
+	padding-right : 2.813em
+	}
+  }
+
+/* Off-Canvas ---------------------- */
+#main:before {
+  content  : " ";
+  position : absolute;
+  z-index  : -1;
+  top      : 0;
+  left     : -100%;
+  width    : 100%;
+  height   : 100%
+  }
+
+#page {
+  overflow : hidden
+  }
+
+#mobile-menu, #main {
+  display            : block;
+  position           : relative;
+  width              : 100%;
+  -webkit-transition : all 0.3s ease;
+  -moz-transition    : all 0.3s ease;
+  -ms-transition     : all 0.3s ease;
+  -o-transition      : all 0.3s ease;
+  transition         : all 0.3s ease
+  }
+
+.js #mobile-menu {
+  margin-left : -100%;
+  padding     : 0 0.938em;
+  position    : absolute;
+  width       : 80%;
+  z-index     : 1
+  }
+
+.js #main {
+  margin-left : 0;
+  position    : relative;
+  z-index     : 0
+  }
+
+.active #mobile-menu {
+  margin-left : 0
+  }
+
+.active #main {
+  margin-left : 80%
+  }
+
+@media only screen and (min-width : 48em) {
+  .js #main {
+	position : static
+	}
+
+  .active #mobile-menu {
+	margin-left : -100%;
+	}
+
+  .active #main {
+	margin-left : 0
+	}
+  }

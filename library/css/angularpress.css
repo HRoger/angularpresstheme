@@ -1,0 +1,109 @@
+body {
+  overflow-y : scroll;
+  overflow-x : hidden;
+  }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display : none !important;
+  }
+
+
+div#content {
+  min-height : 500px !important;
+  }
+
+div.ng-isolate-scope ul {
+  list-style-type : none;
+  }
+
+div.ng-isolate-scope ul li div.widget ul {
+  margin-bottom : 40px;
+  }
+
+div.ng-isolate-scope ul li div.widget ul li {
+  list-style-type : disc !important;
+  }
+
+/*orbit*/
+div.orbit-container {
+  height : 400px;
+  }
+
+div.slideshow-wrapper {
+  margin-top    : 15px;
+  margin-bottom : 35px;
+  }
+
+ol.orbit-bullets {
+  display : none !important;
+  }
+
+/*widgets sidebar*/
+ul.multi-column {
+  list-style-type : none;
+  }
+
+/*pagination ui.boostrap*/
+.nav, .pagination, .carousel, .panel-title a { cursor : pointer; }
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background-color : #2795b6;
+  border-color     : #428bca;
+  color            : #fff;
+  cursor           : default;
+  z-index          : 2;
+  }
+
+/*LOADING-BAR*/
+#loading-bar .bar {
+  background : #b22222;
+  z-index    : 100000; /*work on admin area*/
+  height     : 3px;
+  }
+
+#loading-bar .peg {
+  box-shadow : 0 0 10px #b22222, 0 0 5px #b22222;
+  opacity    : 1.0;
+  }
+
+#loading-bar-spinner {
+  top  : 15px;
+  left : 10px;
+  }
+
+/*postArticle partial*/
+.entry-body {
+  border-bottom : none;
+  /*related: dtPostArticle*/
+  }
+
+.top-bar-section ul li.active a {
+  background-color : #2795b6 !important;
+  }
+
+
+/*Top Bar*/
+a:focus {
+  outline : none;
+  }
+
+
+.wpcf7-form-control-wrap input{
+
+  width: 400px;
+
+  }
+
+
+
+.site-header .site-title a {
+  font-weight: normal;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+
+  font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+
+  font-weight: normal;
+
+  }

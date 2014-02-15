@@ -1,0 +1,92 @@
+
+			
+
+				<div id="primary" class="site-content">
+		<div id="content" role="main">
+		<div class="row">
+	
+<!--{{asyncSelected}}-->
+<!--		<pre>Model: {{searchText |json}}</pre>-->
+	<div data-ng-cloak data-ng-controller="angpPaginationCtrl">
+
+		<ul class="multi-column">
+						<!--loop.php. Reading settings posts page-->
+			<div class="loading-spinner-posts"></div>
+			<li data-ng-repeat="item in posts" >			<article id="post-118" class="post-118 post type-post status-publish format-standard hentry category-dance">
+
+	<div class="entry-body">
+		<header class="entry-header">
+								<h2 class="entry-title" ng-if="item.categories.length===0">
+
+				<a
+					ng-href="{{siteUrl}}/uncategorized/{{item.slug}}/"
+					title="{{item.title}}" rel="bookmark" ng-bind="item.title"></a>
+			</h2>
+			<h2 class="entry-title">
+
+              <span ng-repeat="category in item.categories "
+                    ng-if="$last">
+				<a
+					ng-href="{{siteUrl}}/{{category.slug}}/{{item.slug}}/"
+					title="{{item.title}}" rel="bookmark" ng-bind="item.title"></a>
+              </span>
+			</h2>
+			            <!--see content.posts.php-->
+		</header>
+
+
+				<!-- Only display Excerpts for Search -->
+			<div class="entry-summary">
+				<div ng-bind-html="item.excerpt"></div>
+			</div>
+
+		
+		<footer class="entry-footer">
+			<div class="entry-meta">Posted: <a ng-href="{{siteUrl}}" title="View all posts from Feb 2014" rel="bookmark"><time class="entry-date" datetime="2014-02-05T03:12:53+00:00" pubdate ng-bind-html="item.date"></time></a> by <span class="by-author"><span class="author"><a class="url fn n" ng-href="{{siteUrl}}/author/{{item.author.slug}}" title="View all posts by {{item.author.name}}" rel="author" ng-bind-html="item.author.name"></a></span></span> in <span ng-repeat="category in item.categories"><a ng-href="{{siteUrl}}/category/{{category.slug}}/" title="View all posts in {{category.title}}" ng-bind-html="category.title+','"></a></span></div>
+		<div class="comments-link">
+			<i class="icon social foundicon-chat" title="Comments"></i>
+
+			<span class="entry-title" ng-if="item.categories.length===0">
+				<a
+					ng-href="{{siteUrl}}/uncategorized/{{item.slug}}/"
+					title="{{item.title}}" rel="bookmark" >
+					<span class="leave-comment">Leave a Comment</span>
+				</a>
+			</span>
+
+            <span ng-repeat="category in item.categories " ng-if="$last">
+				<a
+					ng-href="{{siteUrl}}/{{category.slug}}/{{item.slug}}/"
+					title="{{item.title}}" rel="bookmark" >
+					<span class="leave-comment">Leave a Comment</span>
+
+				</a>
+			</span>
+
+		</div>
+		<!-- .comments-link -->
+				  <!--see content.posts.php-->
+		</footer>
+
+	</div>
+
+</article>
+
+			</li>		</ul>
+
+		<pagination ng-hide="is_link_visible" total-items="totalItems" page="currentPage" max-size="maxSize"
+		            on-select-page="pageChanged(page)" class="pagination"
+		            items-per-page="itemsPerPage" boundary-links="true"
+		            rotate="false" num-pages="numPages">
+		</pagination>
+
+	</div>
+
+
+
+			</div>
+		</div>
+		</div>
+	
+
+		

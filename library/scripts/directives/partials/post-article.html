@@ -1,0 +1,65 @@
+<div>
+	<a class="ab-item" data-ng-show="is_visible"
+	   ng-href="{{siteurl}}/wp-admin/post.php?post={{postId}}&action=edit">Edit Post</a>
+
+	<article
+			class="post-{{postId}} post type-{{postType}} status-{{postStatus}} format-standard hentry category-uncategorized single"
+			id="post-{{postId}}">
+
+		<div class="entry-body">
+
+			<header class="entry-header">
+				<h1 class="entry-title" ng-bind="postTitle"></h1>
+			</header>
+
+			<div class="entry-content" ng-bind-html="postContent"></div>
+
+			<footer class="entry-footer" ng-hide="is_link_visible">
+
+				<div class="entry-meta">
+
+					Posted: <a rel="bookmark"
+					           title="View all posts from "
+					           href="">
+
+					<time pubdate=""
+					      datetime=""
+					      class="entry-date" ng-bind="postDate">
+					</time>
+
+				</a> by <span class="by-author"><span class="author">
+					<a rel="author"
+					   title="View all posts by Roger"
+					   ng-href="{{siteUrl}}/author/{{postAuthor}}/"
+					   class="url fn n" ng-bind="postAuthor"></a></span></span>
+				</div>
+
+				<div class="comments-link">
+					<i title="Comments" class="icon social foundicon-chat"></i>
+					<a title="Comment on {{postTitle}}"
+					   ng-href="{{postUrl}}#respond">
+						<span class="leave-comment">Leave a Comment</span>
+					</a></div>
+
+			</footer>
+
+		</div>
+
+	</article>
+
+	<nav class="nav-single">
+            <span data-ng-show="is_previous_visible" class="nav-previous alignleft">
+            <a rel="prev" ng-href="{{postPreviousUrl}}">
+	            <span class="meta-nav">←</span>
+	            <span ng-bind="postPreviousUrl | fromUrlSlugToTitle"></span>
+            </a>
+            </span>
+
+		    <span data-ng-show="is_next_visible" class="nav-next alignright">
+		    <a rel="next" ng-href="{{postNextUrl}}">
+			    <span ng-bind="postNextUrl | fromUrlSlugToTitle"></span>
+			    <span class="meta-nav">→</span>
+		    </a>
+		    </span>
+	</nav>
+</div>

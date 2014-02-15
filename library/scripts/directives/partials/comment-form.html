@@ -1,0 +1,65 @@
+<div>
+	<div class="comments-area" id="comments">
+
+		<div id="respond-form">
+			<div id="cancel-comment-reply">
+				<p class="small">
+					<a style="display:none;" ng-href="{{postUrl}}#respond"
+					   class="cancel-comment-reply-link"
+					   rel="nofollow">Click here to cancel reply.</a>
+				</p>
+			</div>
+
+			<div class="comment-respond" id="respond">
+				<h3 class="comment-reply-title" id="reply-title">Leave a Reply
+					<small>
+						<a style="display:none;"
+						   ng-href="{{postUrl}}#respond"
+						   class="cancel-comment-reply-link"
+						   rel="nofollow">Cancel reply</a>
+					</small>
+				</h3>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<form class="comment-form" id="commentform" method="post"
+	      action="http://angularpress.localhost/wp-comments-post.php">
+		<p class="comments-logged-in-as">Logged in as <a
+				href="/wp-admin/profile.php">Roger</a>. <a
+				title="Log out of this account"
+				href="http://angularpress.localhost/wp-login.php?action=logout&amp;redirect_to=http%3A%2F%2Fangularpress.localhost%2Funcategorized%2Fkiki-swalows%2F&amp;_wpnonce=b1b437397a">Log out»</a>
+		</p>
+		<div class="row">
+			<p class="comment-form-comment twelve columns"><textarea
+					tabindex="4" rows="8" placeholder="Your Comment here..."
+					id="comment" name="comment"></textarea></p>
+			<div class="alert info">
+				<p class="form-allowed-tags small twelve columns"
+				   id="allowed_tags">
+					<strong>XHTML: </strong>You can use these tags
+					<code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;strike&gt; &lt;strong&gt; </code>
+				</p>
+			</div>
+		</div>
+		<p class="form-submit">
+			<input type="submit" value="Submit" id="submit" name="submit"
+			       class="button small">
+			<input type="hidden" id="comment_post_ID" value="395"
+			       name="comment_post_ID">
+			<input type="hidden" value="0" id="comment_parent"
+			       name="comment_parent">
+		</p>
+		<input type="hidden" value="4ce8c83361"
+		       name="_wp_unfiltered_html_comment"
+		       id="_wp_unfiltered_html_comment_disabled">
+		<script>(function () {
+			if (window === window.parent) {
+				document.getElementById('_wp_unfiltered_html_comment_disabled').name = '_wp_unfiltered_html_comment';
+			}
+		})();</script>
+	</form>
+</div>
