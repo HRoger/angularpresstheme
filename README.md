@@ -167,7 +167,7 @@ VIII. Todo
 * Use ob_start instead of HTTP_API
 * Reading Settings: date and time format
 * Responsive design: Work on phones
-* SEO with Phantonjs
+* SEO with [Phantonjs](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 * Page formats
 * Splash Screen for index
 * Security
