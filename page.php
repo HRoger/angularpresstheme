@@ -21,7 +21,7 @@
 					<?php reactor_inner_content_before(); ?>
 
 					<?php // get the page loop
-					echo 'oi from page template';
+
 					get_template_part('loops/loop', 'page'); ?>
 
 					<?php reactor_inner_content_after(); ?>
