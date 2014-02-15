@@ -181,7 +181,8 @@ VIII. Todo
 IX. License
 ===========
 
-Reactor by awtheme is GPLv2  - http://www.gnu.org/licenses/gpl-2.0.html<br/>
+Angularpresstheme is GPLv2  - http://www.gnu.org/licenses/gpl-2.0.html<br/>
+Reactor by awtheme is also GPLv2  - http://www.gnu.org/licenses/gpl-2.0.html<br/>
 Foundation by ZURB is MIT - http://opensource.org/licenses/MIT<br/>
 MixItUp by Barrel LLC is CC BY-ND 3.0 - http://creativecommons.org/licenses/by-nd/3.0/<br/>
 
