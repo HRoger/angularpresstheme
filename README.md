@@ -109,7 +109,7 @@ VI. Note about jQuery plugins
 ==============================
 
 ###Foundation jQuery components
- Most of them won't work at all. I will replace them with an angulajs bootstrap-ui version.
+ Most of them won't work at all. They will be replaced by an angulajs bootstrap-ui version.
 
 ###Mixitup and others
 
