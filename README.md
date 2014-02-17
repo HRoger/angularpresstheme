@@ -168,6 +168,7 @@ VIII. Todo
 * Use ob_start instead of HTTP_API
 * Reading Settings: date and time format
 * Responsive design: Work on phones
+* Google Analytics and WP SlimStat plugin
 * SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 * Page formats
 * Splash Screen for index
