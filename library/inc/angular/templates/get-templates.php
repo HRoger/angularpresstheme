@@ -39,6 +39,8 @@ function angp_get_template_content($new_status, $old_status) {
 	}
 }
 
+
+
 if ($_SERVER['REQUEST_URI'] == '/wp-admin/nav-menus.php'
 	|| (isset($_POST['action']) && $_POST['action'] == 'add-menu-item')
 	|| (@$_POST['post_type'] == 'post')

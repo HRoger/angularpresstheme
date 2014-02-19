@@ -49,12 +49,12 @@ function reactor_register_scripts() {
 
 
 
-	wp_register_script('angular-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular.js', false, '1.2.9', true);
-	wp_register_script('angular-resource-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-resource.js', false, '1.2.9', true);
-	wp_register_script('angular-route-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-route.js', false, '1.2.9', true);
-	wp_register_script('angular-sanitize-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-sanitize.js', false, '1.2.9', true);
-	wp_register_script('angular-animate-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-animate.js', false, '1.2.9', true);
-	wp_register_script('angular-cookies-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.9/angular-cookies.js', false, '1.2.9', true);
+	wp_register_script('angular-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js', false, '1.2.13', true);
+	wp_register_script('angular-resource-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.js', false, '1.2.13', true);
+	wp_register_script('angular-route-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js', false, '1.2.13', true);
+	wp_register_script('angular-sanitize-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-sanitize.js', false, '1.2.13', true);
+	wp_register_script('angular-animate-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js', false, '1.2.13', true);
+	wp_register_script('angular-cookies-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-cookies.js', false, '1.2.13', true);
 	wp_register_script('ui-bootstrap-js', get_template_directory_uri() . '/library/scripts/modules/ui-bootstrap-tpls-0.10.0.js', array(), false, true);
 
 	wp_register_script('angular-ui-utils-js', get_template_directory_uri() . '/library/js/angular-ui-utils.min.js', false, '0.0.4', true);

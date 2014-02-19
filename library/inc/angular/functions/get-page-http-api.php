@@ -7,7 +7,9 @@
  */
 if (!function_exists('angp_get_page_http_api')) {
 	function angp_get_page_http_api($url, $slug) {
-
+/*
+ * request a page extract content between tags <content></content> or <homenewsloop></homenewsloop>
+ * */
 		$response = wp_remote_get($url);
 
 		if (is_wp_error($response) || (200 != wp_remote_retrieve_response_code($response))) {
@@ -16,11 +18,11 @@ if (!function_exists('angp_get_page_http_api')) {
 		}
 
 		try {
-
 			$result = wp_remote_retrieve_body($response);
-
+			//extract content and pass it to a html template_generator
 			if ($url !== site_url()) {
 				preg_match_all('/<content[^>]*>(.*?)<\/content>/is', $result, $t);
+
 				angp_wp_to_angular_template_generator($slug, $t[1][0]);
 
 			} else {
@@ -28,7 +30,6 @@ if (!function_exists('angp_get_page_http_api')) {
 				angp_wp_to_angular_template_generator($slug, $t[1][0]);
 
 			}
-
 
 		} catch (Exception $ex) {
 			return $ex;
