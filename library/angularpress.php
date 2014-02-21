@@ -15,6 +15,7 @@ class Angularpress extends Reactor {
 		$angularpress = new stdClass();
 
 		if (!session_id() and !ini_get('register_globals') and !is_admin()) {
+			session_set_cookie_params(604800);
 			session_start();
 		}
 
