@@ -11,7 +11,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 			$http(
 				{
 					method: 'GET',
-					cache : true,
+//					cache : true,
 					url   : wpAjax.themeLocation.siteUrl + '/api/get_post/',
 					params: {
 						slug       : slug,
@@ -35,7 +35,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 			$http(
 				{
 					method: 'GET',
-					cache : true,
+//					cache : true,
 					url   : wpAjax.themeLocation.siteUrl + '/api/get_posts/',
 					params: {
 						date_format: 'F j, Y'
@@ -57,7 +57,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 			$http(
 				{
 					method: 'GET',
-					cache : true,
+//					cache : true,
 					url   : wpAjax.themeLocation.siteUrl + '/api/',
 					params: {
 						json       : 'get_posts',

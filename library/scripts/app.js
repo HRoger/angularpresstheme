@@ -1,9 +1,10 @@
 'use strict';
 
 var angularpressApp = angular.module('angularpressApp',
-['ngResource', 'ngRoute', 'ngSanitize', 'jmdobry.angular-cache', 'chieffancypants.loadingBar', 'ngAnimate', 'ui.bootstrap', 'ngCookies']);
+['ngResource', 'ngRoute', 'ngSanitize', 'jmdobry.angular-cache', 'chieffancypants.loadingBar', 'ngAnimate', 'ui.bootstrap', 'ngCookies','lodash']);
 
 angularpressApp.config(['$routeProvider', '$locationProvider', 'cfpLoadingBarProvider', function ($routeProvider, $locationProvider, cfpLoadingBarProvider) {
+
 
 	cfpLoadingBarProvider.includeSpinner = false;
 
@@ -35,7 +36,7 @@ angularpressApp.run(['$rootScope', '$route', '$angularCacheFactory', '$http', '$
 
 	/*$angularCacheFactory('defaultCache', {storageMode: 'localStorage', recycleFreq: 60000, verifyIntegrity: true, capacity: 10  });
 	 $http.defaults.cache = $angularCacheFactory.get('defaultCache');*/
-
+//	console.info($httpDefaultCache.get(wpAjax.themeLocation.siteUrl + '/api/widgets/get_sidebar/?sidebar_id=sidebar-2'	));
 	//	$rootScope.$apply(angular.element("content").contents().unwrap());
 	//	$rootScope.$apply(angular.element("homenewsloop").contents().unwrap());
 
@@ -52,7 +53,5 @@ angularpressApp.run(['$rootScope', '$route', '$angularCacheFactory', '$http', '$
 	$rootScope.$apply(angular.element($window.document).foundation());
 
 	$rootScope.$log = $log;
-
-
 
 }]);

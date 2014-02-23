@@ -10,12 +10,12 @@
 <?php get_header(); ?>
 
 <!--NG-VIEW-->
-<div data-ng-view ></div>
+<div data-ng-view></div>
 <!--NG-VIEW-->
 
 <!--WP-READING-SETTINGS-->
 <div data-ng-controller="angpReadingSettingsCtrl">
-	<div ng-cloak data-ng-show="is_home_visible">
+	<div  data-ng-if="is_home_visible">
 		<homenewsloop>
 			<?php
 			global $angp_slug_page_on_front;
@@ -45,13 +45,17 @@
 
 		?>
 
-		<div data-ng-cloak data-ng-hide="true" data-ng-show="is_include_visible"
-		     data-ng-include="templateDir+'/library/views/loops/newsloop.html'"></div>
+		<div ng-if="is_include_visible">
+			<div
+			     data-ng-include="templateDir+'/library/views/loops/newsloop.html'"></div>
+		</div>
 
 	<?php } else { ?>
-		<!--When we  load a page other than the index and we set in reading options to static page(front page,posts page). Then on changing route  from any page to the index, it should display the front page on the index page-->
-		<div data-ng-cloak data-ng-show="is_include_visible"
-		     data-ng-include="templateDir+'/library/views/pages/<?php echo $angp_slug_page_on_front . '.html'; ?>'"></div>
+		<!--When we  load a page other than the index and we set in reading options to static page(ex:front page,posts page). Then on changing route  from any page to the index, it should display the front page on the index page-->
+		<div ng-if="is_include_visible">
+			<div
+			     data-ng-include="templateDir+'/library/views/pages/<?php echo $angp_slug_page_on_front . '.html'; ?>'"></div>
+		</div>
 
 	<?php } ?>
 
@@ -71,24 +75,24 @@
 		</div>
 	</div>
 
-<!--	<div class="row">
-		<div class="small-6 small-offset-1">
-			<pre>$location.path() = {{$location.path() }}</pre>
-			<pre>$location.url() = {{ $location.url() }}</pre>
-			<pre>$location.absUrl() = {{ $location.absUrl() }}</pre>
-			<pre>$route.current.locals = {{$route.current.locals}}</pre>
-			<pre>$route.current.params = {{$route.current.params}}</pre>
-			<pre>$route.current.scope= {{$route.current.scope}}</pre>
-			<pre>$route.current.controller= {{$route.current.controller}}</pre>
-			<pre>$route.current.templateUrl= {{$route.current.templateUrl}}</pre>
-			<pre>$routeParams = {{$routeParams}}</pre>
-			<pre>$routeParams.primaryNav = {{$routeParams.primaryNav}}</pre>
-			<pre>$routeParams.secondaryNav = {{$routeParams.secondaryNav}}</pre>
-			<pre>$route.current: {{$route.current}}</pre>
-			<pre>siteUrl: {{siteUrl}}</pre>
-			<pre>templateDir: {{templateDir}}</pre>
-		</div>
-	</div>-->
+	<!--	<div class="row">
+			<div class="small-6 small-offset-1">
+				<pre>$location.path() = {{$location.path() }}</pre>
+				<pre>$location.url() = {{ $location.url() }}</pre>
+				<pre>$location.absUrl() = {{ $location.absUrl() }}</pre>
+				<pre>$route.current.locals = {{$route.current.locals}}</pre>
+				<pre>$route.current.params = {{$route.current.params}}</pre>
+				<pre>$route.current.scope= {{$route.current.scope}}</pre>
+				<pre>$route.current.controller= {{$route.current.controller}}</pre>
+				<pre>$route.current.templateUrl= {{$route.current.templateUrl}}</pre>
+				<pre>$routeParams = {{$routeParams}}</pre>
+				<pre>$routeParams.primaryNav = {{$routeParams.primaryNav}}</pre>
+				<pre>$routeParams.secondaryNav = {{$routeParams.secondaryNav}}</pre>
+				<pre>$route.current: {{$route.current}}</pre>
+				<pre>siteUrl: {{siteUrl}}</pre>
+				<pre>templateDir: {{templateDir}}</pre>
+			</div>
+		</div>-->
 </div>
 <!--WP-READING-SETTINGS-->
 

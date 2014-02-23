@@ -193,6 +193,7 @@ function custom_meta_box_field( $field, $meta = null, $repeatable = null ) {
 							foreach ( $terms as $term)
 								echo '<input type="checkbox" value="' . $term->slug . '" name="' . $id . '[]" id="' . $term->slug . '"' . checked( $checked, $term->slug, false ) . ' /> <label for="' . $term->slug . '">' . $term->name . '</label><br />';
 							$tax = get_taxonomy( $taxonomy );
+							//change this wp-admin to options
 							echo '<span class="description">' . $desc . ' <a href="'.get_bloginfo( 'url' ) . '/wp-admin/edit-tags.php?taxonomy=' . $taxonomy . '&post_type=' . $page . '">' . __('Manage ', 'reactor') . $tax->label . '</a></span>';
 						break;
 						// date

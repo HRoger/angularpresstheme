@@ -2,6 +2,8 @@
  * Created by ROGER on 26.11.13.
  */
 'use strict';
+angular.module('lodash', []).constant('lodash', window._);
+
 angularpressApp.value('siteUrl', Angularpress.url);
 angularpressApp.value('templateDir', Angularpress.dir);
 angularpressApp.value('loggedout', Angularpress._wpnonce);

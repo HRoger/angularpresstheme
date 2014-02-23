@@ -4,10 +4,10 @@
 
 'use strict';
 angularpressApp.directive('abItem', function ($window) {
-//Defaults menubar buttons:new,home,wp
+	//Defaults menubar buttons:new,home,wp
 	return{
 		restrict: 'C',
-		scope:true,
+		scope   : true,
 
 		link: function (scope, element, attr) {
 
@@ -22,7 +22,7 @@ angularpressApp.directive('abItem', function ($window) {
 });
 
 angularpressApp.directive('editpage', function (page, wpAjax, $location) {
-
+	//admin menu button Edit Page
 	return{
 		restrict   : 'E',
 		replace    : true,
@@ -96,6 +96,7 @@ angularpressApp.directive('editpagelink', function (page, wpAjax) {
 });
 
 angularpressApp.directive('editpost', function (post, wpAjax, $location) {
+	//admin menu button Edit Page
 	//related files: dtPostArticle.js and ctRoutes.js
 	return{
 		restrict   : 'E',

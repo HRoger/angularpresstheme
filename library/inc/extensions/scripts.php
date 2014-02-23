@@ -20,7 +20,6 @@
  */
 
 
-
 add_action('wp_enqueue_scripts', 'reactor_register_scripts', 1);
 add_action('wp_enqueue_scripts', 'reactor_enqueue_scripts');
 
@@ -48,7 +47,6 @@ function reactor_register_scripts() {
 	wp_register_script('fancybox-thumbs-js', get_template_directory_uri() . '/library/js/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"', array(), false, true);
 
 
-
 	wp_register_script('angular-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js', false, '1.2.13', true);
 	wp_register_script('angular-resource-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.js', false, '1.2.13', true);
 	wp_register_script('angular-route-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js', false, '1.2.13', true);
@@ -58,6 +56,10 @@ function reactor_register_scripts() {
 	wp_register_script('ui-bootstrap-js', get_template_directory_uri() . '/library/scripts/modules/ui-bootstrap-tpls-0.10.0.js', array(), false, true);
 
 	wp_register_script('angular-ui-utils-js', get_template_directory_uri() . '/library/js/angular-ui-utils.min.js', false, '0.0.4', true);
+
+	wp_register_script('lodash-js', get_template_directory_uri() . '/library/js/lodash.js',
+		array(), false, true);
+
 
 	wp_register_script('app-js', get_template_directory_uri() . '/library/scripts/app.js', array(), false, true);
 	wp_register_script('services-values-js', get_template_directory_uri() .
@@ -98,7 +100,6 @@ function reactor_register_scripts() {
 	wp_register_script('directives-navMarker-js', get_template_directory_uri() . '/library/scripts/directives/dtNavMarker.js', array(), false, true);
 
 
-
 	wp_register_script('angular-cache-js', get_template_directory_uri() . '/library/scripts/modules/angularCache.js', array(), false, true);
 
 	wp_register_script('infiniteScroll-js', get_template_directory_uri() . '/library/scripts/modules/infiniteScroll.js', array(), false, true);
@@ -106,11 +107,7 @@ function reactor_register_scripts() {
 	wp_register_script('loadingBar-js', get_template_directory_uri() . '/library/scripts/modules/loading-bar.js', array(), false, true);
 
 
-
-
 }
-
-
 
 
 function reactor_enqueue_scripts() {
@@ -146,6 +143,7 @@ function reactor_enqueue_scripts() {
 		wp_enqueue_script('angular-animate-js');
 		wp_enqueue_script('angular-cookies-js');
 		wp_enqueue_script('ui-bootstrap-js');
+		wp_enqueue_script('lodash-js');
 //		wp_enqueue_script('angular-ui-utils-js');
 
 		wp_enqueue_script('app-js');
@@ -191,9 +189,10 @@ function reactor_enqueue_scripts() {
 }
 
 
+
+
 function angularpress_localize_scripts($script) {
 	global $angpress_session_onload;
-
 
 
 //	FB::info(isset($_SESSION['template_req_onload']),'template_req_onload');

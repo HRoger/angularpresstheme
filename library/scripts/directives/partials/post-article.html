@@ -1,5 +1,5 @@
 <div>
-	<a class="ab-item" data-ng-show="is_visible"
+	<a class="ab-item" data-ng-if="is_visible"
 	   ng-href="{{siteurl}}/wp-admin/post.php?post={{postId}}&action=edit">Edit Post</a>
 
 	<article
@@ -14,7 +14,7 @@
 
 			<div class="entry-content" ng-bind-html="postContent"></div>
 
-			<footer class="entry-footer" ng-hide="is_link_visible">
+			<footer class="entry-footer" data-ng-hide="is_link_visible">
 
 				<div class="entry-meta">
 
@@ -48,14 +48,14 @@
 	</article>
 
 	<nav class="nav-single">
-            <span data-ng-show="is_previous_visible" class="nav-previous alignleft">
+            <span data-ng-if="is_previous_visible" class="nav-previous alignleft">
             <a rel="prev" ng-href="{{postPreviousUrl}}">
 	            <span class="meta-nav">←</span>
 	            <span ng-bind="postPreviousUrl | fromUrlSlugToTitle"></span>
             </a>
             </span>
 
-		    <span data-ng-show="is_next_visible" class="nav-next alignright">
+		    <span data-ng-if="is_next_visible" class="nav-next alignright">
 		    <a rel="next" ng-href="{{postNextUrl}}">
 			    <span ng-bind="postNextUrl | fromUrlSlugToTitle"></span>
 			    <span class="meta-nav">→</span>

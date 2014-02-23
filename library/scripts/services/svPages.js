@@ -10,7 +10,7 @@ angularpressApp.factory('page', function ($http, $angularCacheFactory, wpAjax) {
 			$http(
 				{
 					method: 'GET',
-					cache : pageIDCache,
+//					cache : pageIDCache,
 					url   : wpAjax.themeLocation.siteUrl + '/api/get_page/',
 					params: {slug: slug}
 				})
