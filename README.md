@@ -144,7 +144,6 @@ VIII. Todo
 ==========
 
 * Breadcrumbs
-* Redirection improvements
 * Filters: category & archives
 * Searchbar
 * Publish page bulk action
