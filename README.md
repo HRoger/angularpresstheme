@@ -136,13 +136,9 @@ VII. Known bugs
 ================
 
 * When embeding youtube videon on posts causes full page reload
-* When post or page is new preview not working
-* Rename post/page slug should not renaming angular template file
-* Main Menu and Sidebar menu not working
-* Reactor menu dont disappear when set visibility to private or state to pending or draft
 * Cant go back from admin area to preview page/posts
-* After close browser, sometimes redirection don't work anymore
-
+* Reactor menu dont disappear when set visibility to private or state to pending or draft
+* Bug Alo Newsletter confirmation page
 
 VIII. Todo
 ==========
@@ -158,24 +154,27 @@ VIII. Todo
 * Update foundation components and shortcodes to boostrap-ui
 * Title tag
 * Gmail and Youtube like routing
-* **WIP**- work in progress. Work offline and synch when back on. See John Papa's concept: [Code Camper](http://cc-ng-z.azurewebsites.net/#/sessions)
+* Splash Screen for index
+* Main Menu and Sidebar reactor menu
+* Security
+* Grunt
+* Woocommerce compatible
+* Requirejs and r.js on theme build
+* Use ob_start instead of HTTP_API
+* Reading Settings: date and time format
+* Responsive design: Work on mobile
+* Google Analytics and WP SlimStat plugin
+* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
+* Views folder on a CDN
 * Multisite compatible
 * Update to foundation 5
-* Views folder on a CDN
+* Make preview for post or page
+* Rename post/page slug should rename angular template file
 * WP option for angularjs routing: admin, login, category base etc
 * States: pending & draft
 * Visibility: set private & set password
-* Use ob_start instead of HTTP_API
-* Reading Settings: date and time format
-* Responsive design: Work on phones
-* Google Analytics and WP SlimStat plugin
-* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
+* **WIP**- work in progress. Work offline and synch when back on. See John Papa's concept: [Code Camper](http://cc-ng-z.azurewebsites.net/#/sessions)
 * Page formats
-* Splash Screen for index
-* Security
-* Grunt
-* Requirejs and r.js on theme build
-* Woocommerce compatible
 * Accessibility
 * Child Theme
 
