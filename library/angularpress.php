@@ -15,8 +15,12 @@ class Angularpress extends Reactor {
 		$angularpress = new stdClass();
 
 		if (!session_id() and !ini_get('register_globals') and !is_admin()) {
-			session_set_cookie_params(604800);
+
+//			session_cache_limiter('private');
+//			session_cache_expire(10080);
+//			session_set_cookie_params(time()+604800);
 			session_start();
+			setcookie(session_name(),session_id(),time()+2*7*24*60*60);
 		}
 
 		parent::__construct();
@@ -59,6 +63,8 @@ class Angularpress extends Reactor {
 	public function angular_admin() {
 		/** @noinspection PhpIncludeInspection */
 		require_once locate_template('/library/inc/angular/admin/admin-bar.php');
+		/** @noinspection PhpIncludeInspection */
+		require_once locate_template('/library/inc/angular/admin/cache-post.php');
 
 	}
 

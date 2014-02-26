@@ -37,8 +37,11 @@ function reactor_register_scripts() {
 	wp_register_script('foundation-topbar-js', get_template_directory_uri() . '/library/js/vendor/foundation/foundation.topbar.js', array(), false, true);
 
 	wp_register_script('angularpress-js', get_template_directory_uri() . '/library/js/angularpress.js', array(), false, true);
-	wp_register_script('mixitup-js', get_template_directory_uri() . '/library/js/mixitup.min.js', array(), false, true);
-	wp_register_script('spinjs-js', get_template_directory_uri() . '/library/js/spinjs.min.js', array(), false, true);
+	wp_register_script('mixitup-js', get_template_directory_uri() . '/library/js/vendor/mixitup.min
+	.js', array(), false, true);
+	wp_register_script('spinjs-js', get_template_directory_uri() . '/library/js/vendor/spinjs.min
+	.js', array(), false, true);
+
 
 	wp_register_script('mousewheel-js', get_template_directory_uri() . '/library/js/vendor/fancybox/lib/jquery.mousewheel-3.0.6.pack.js', array(), false, true);
 	wp_register_script('fancybox-js', get_template_directory_uri() . '/library/js/vendor/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"', array(), false, true);
@@ -55,9 +58,9 @@ function reactor_register_scripts() {
 	wp_register_script('angular-cookies-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-cookies.js', false, '1.2.13', true);
 	wp_register_script('ui-bootstrap-js', get_template_directory_uri() . '/library/scripts/modules/ui-bootstrap-tpls-0.10.0.js', array(), false, true);
 
-	wp_register_script('angular-ui-utils-js', get_template_directory_uri() . '/library/js/angular-ui-utils.min.js', false, '0.0.4', true);
+	wp_register_script('angular-ui-utils-js', get_template_directory_uri() . '/library/js/vendor/angular-ui-utils.min.js', false, '0.0.4', true);
 
-	wp_register_script('lodash-js', get_template_directory_uri() . '/library/js/lodash.js',
+	wp_register_script('lodash-js', get_template_directory_uri() . '/library/js/vendor/lodash.js',
 		array(), false, true);
 
 
@@ -130,6 +133,7 @@ function reactor_enqueue_scripts() {
 		wp_enqueue_script('mixitup-js');
 		wp_enqueue_script('spinjs-js');
 
+
 		wp_enqueue_script('mousewheel-js');
 		wp_enqueue_script('fancybox-js');
 		wp_enqueue_script('fancybox-buttons-js');
@@ -186,13 +190,23 @@ function reactor_enqueue_scripts() {
 			wp_enqueue_script('comment-reply');
 		}
 	}
+
+
 }
 
+function my_enqueue($hook) {
+	if ('widgets.php' != $hook) return;
+	wp_enqueue_script('my_custom_script', get_template_directory_uri() .
+		'/library/js/widgetCacheAdmin.js', array(), false, true);
+	angularpress_localize_admin_scripts('my_custom_script');
 
+}
+
+add_action('admin_enqueue_scripts', 'my_enqueue');
 
 
 function angularpress_localize_scripts($script) {
-	global $angpress_session_onload;
+	global $angpress_session_onload, $angp_session_delete_post_cache_key;
 
 
 //	FB::info(isset($_SESSION['template_req_onload']),'template_req_onload');
@@ -204,6 +218,12 @@ function angularpress_localize_scripts($script) {
 		$angpress_session_onload = $_SESSION['template_req_onload'];
 	}
 
+	if (isset($_SESSION['delete_post_cache_key'])) {
+		FB::info($_SESSION['delete_post_cache_key'], 'delete_post_cache_key');
+		$angp_session_delete_post_cache_key = $_SESSION['delete_post_cache_key'];
+	}
+
+
 	wp_localize_script(
 		$script,
 		'Angularpress',
@@ -213,8 +233,21 @@ function angularpress_localize_scripts($script) {
 			'page_title' => get_the_title(),
 			'_wpnonce' => wp_logout_url(),
 			'on_first_page_load' => $angpress_session_onload,
+			'angp_session_delete_post_cache_key' => $angp_session_delete_post_cache_key,
 			'page_for_posts' => get_option('page_for_posts'),
 			'posts_per_page' => get_option('posts_per_page')
+		)
+	);
+}
+
+
+function angularpress_localize_admin_scripts($script) {
+
+	wp_localize_script(
+		$script,
+		'Angularpress',
+		array(
+			'url' => get_bloginfo('wpurl')
 		)
 	);
 }

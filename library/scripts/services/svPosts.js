@@ -4,14 +4,30 @@
 'use strict';
 
 angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
-	var postCache = $angularCacheFactory('postCache', {storageMode: 'localStorage'});
+
+	if (wpAjax.sessions.on_first_page_load === null) {
+
+		var postCache = $angularCacheFactory('postCache', {
+			maxAge         : 900000,
+			deleteOnExpire : 'aggressive',
+			storageMode    : 'localStorage',
+			verifyIntegrity: true
+		});
+
+		if (wpAjax.sessions.angp_session_delete_post_cache_key !== null) {
+			postCache.removeAll();
+
+		}
+
+	}
+
 	return{
 
 		get_post_ID: function (successcb, slug) {
 			$http(
 				{
 					method: 'GET',
-//					cache : true,
+					cache : postCache,
 					url   : wpAjax.themeLocation.siteUrl + '/api/get_post/',
 					params: {
 						slug       : slug,
@@ -25,7 +41,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				.error(function () {
 					if (wpAjax.sessions.on_first_page_load === null)
 					//if something went wrong after the first page load throw error
-					throw new Error('Network error. PageID factory not loaded.');
+						throw new Error('Network error. PageID factory not loaded.');
 
 				})
 		},
@@ -35,7 +51,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 			$http(
 				{
 					method: 'GET',
-//					cache : true,
+					cache : postCache,
 					url   : wpAjax.themeLocation.siteUrl + '/api/get_posts/',
 					params: {
 						date_format: 'F j, Y'
@@ -48,7 +64,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				})
 				.error(function () {
 					if (wpAjax.sessions.on_first_page_load === null)
-					throw new Error('Network error. Post factory not loaded.');
+						throw new Error('Network error. Post factory not loaded.');
 				})
 
 		},
@@ -57,7 +73,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 			$http(
 				{
 					method: 'GET',
-//					cache : true,
+					cache : postCache,
 					url   : wpAjax.themeLocation.siteUrl + '/api/',
 					params: {
 						json       : 'get_posts',
@@ -72,7 +88,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				})
 				.error(function () {
 					if (wpAjax.sessions.on_first_page_load === null)
-					throw new Error('Network error. Post pagination not loaded.');
+						throw new Error('Network error. Post pagination not loaded.');
 				})
 
 		},
@@ -81,7 +97,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 			$http(
 				{
 					method: 'GET',
-					cache : true,
+					cache : postCache,
 					url   : wpAjax.themeLocation.siteUrl + '/api/',
 					params: {
 						json       : 'get_category_posts',
@@ -96,7 +112,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				})
 				.error(function () {
 					if (wpAjax.sessions.on_first_page_load === null)
-					throw new Error('Network error. Post pagination not loaded.');
+						throw new Error('Network error. Post pagination not loaded.');
 				})
 
 		}

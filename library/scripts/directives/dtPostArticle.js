@@ -13,7 +13,7 @@ angularpressApp.directive('postArticle', function (post, wpAjax, $location, $roo
 				scope.appendAdminBarEditPostButton();
 
 
-
+            //$http request
 			post.get_post_ID(
 
 				function (data) {

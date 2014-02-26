@@ -8,10 +8,11 @@ angularpressApp.value('siteUrl', Angularpress.url);
 angularpressApp.value('templateDir', Angularpress.dir);
 angularpressApp.value('loggedout', Angularpress._wpnonce);
 angularpressApp.value('on_first_page_load', Angularpress.on_first_page_load);
+angularpressApp.value('angp_session_delete_post_cache_key', Angularpress.angp_session_delete_post_cache_key);
 angularpressApp.value('page_for_posts', Angularpress.page_for_posts);
 angularpressApp.value('posts_per_page', Angularpress.posts_per_page);
 
-angularpressApp.service('wpAjax', function (siteUrl, templateDir, loggedout, on_first_page_load, page_for_posts, posts_per_page) {
+angularpressApp.service('wpAjax', function (siteUrl, templateDir, loggedout, on_first_page_load, page_for_posts, posts_per_page,angp_session_delete_post_cache_key) {
 
 	return {
 		themeLocation  : {
@@ -22,7 +23,8 @@ angularpressApp.service('wpAjax', function (siteUrl, templateDir, loggedout, on_
 			loggedout: loggedout
 		},
 		sessions       : {
-			on_first_page_load: on_first_page_load
+			on_first_page_load: on_first_page_load,
+			angp_session_delete_post_cache_key : angp_session_delete_post_cache_key
 		},
 		readingSettings: {
 			page_for_posts: page_for_posts,

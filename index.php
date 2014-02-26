@@ -15,7 +15,7 @@
 
 <!--WP-READING-SETTINGS-->
 <div data-ng-controller="angpReadingSettingsCtrl">
-	<div  data-ng-if="is_home_visible">
+	<div data-ng-if="is_home_visible">
 		<homenewsloop>
 			<?php
 			global $angp_slug_page_on_front;
@@ -40,21 +40,18 @@
 	</div>
 
 	<?php
-
 	if (get_option('show_on_front') !== 'page') {
-
 		?>
 
 		<div ng-if="is_include_visible">
-			<div
-			     data-ng-include="templateDir+'/library/views/loops/newsloop.html'"></div>
+			<div data-ng-include="templateDir+'/library/views/loops/newsloop.html'"></div>
 		</div>
 
 	<?php } else { ?>
 		<!--When we  load a page other than the index and we set in reading options to static page(ex:front page,posts page). Then on changing route  from any page to the index, it should display the front page on the index page-->
 		<div ng-if="is_include_visible">
 			<div
-			     data-ng-include="templateDir+'/library/views/pages/<?php echo $angp_slug_page_on_front . '.html'; ?>'"></div>
+				data-ng-include="templateDir+'/library/views/pages/<?php echo $angp_slug_page_on_front . '.html'; ?>'"></div>
 		</div>
 
 	<?php } ?>

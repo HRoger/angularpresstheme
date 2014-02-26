@@ -7,9 +7,11 @@
  */
 if (!function_exists('angp_get_page_http_api')) {
 	function angp_get_page_http_api($url, $slug) {
-/*
- * request a page extract content between tags <content></content> or <homenewsloop></homenewsloop>
- * */
+
+		/*
+		 * request a page extract content between tags <content></content> or <homenewsloop></homenewsloop>
+		 * */
+
 		$response = wp_remote_get($url);
 
 		if (is_wp_error($response) || (200 != wp_remote_retrieve_response_code($response))) {

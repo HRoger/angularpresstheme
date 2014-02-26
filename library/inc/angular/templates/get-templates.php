@@ -16,6 +16,7 @@ function angp_get_template_content($new_status, $old_status) {
 	if (isset($post->post_name)) {
 		$post_slug = $post->post_name;
 
+
 		$file = get_template_directory() . '/library/views/pages/' . $post_slug . '.html';
 
 		if (($old_status != 'trash' && $new_status == 'trash')) {
@@ -51,7 +52,7 @@ if ($_SERVER['REQUEST_URI'] == '/wp-admin/nav-menus.php'
 ) return;
 
 
-add_action('quick_edit_custom_box', 'angp_get_template_content', 10,2);
+add_action('quick_edit_custom_box', 'angp_get_template_content', 10, 2);
 add_action('wp_insert_post', 'angp_get_template_content', 20, 2);
 add_action('transition_post_status', 'angp_get_template_content', 20, 2);
 add_action('wp_restore_post_revision', 'angp_get_template_content', 10, 2);

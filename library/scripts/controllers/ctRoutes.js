@@ -5,9 +5,9 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 
 	if (!angular.element('body').hasClass('wp-admin')) {
 
-		 if (wpAjax.sessions.on_first_page_load !== null && $location.path() !== '/') {
+		if (wpAjax.sessions.on_first_page_load !== null && $location.path() !== '/') {
 			//when page other than front-page loads for the first time
-				$window.location.href = wpAjax.themeLocation.siteUrl +  $location.url();
+			$window.location.href = wpAjax.themeLocation.siteUrl + $location.url();
 
 		}
 		/** @namespace $routeParams.primaryNav */
@@ -56,7 +56,14 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 
 				$scope.menuId = '' + $routeParams.primaryNav;
 				$scope.pageId = 'mainNav ';
-				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
+
+				if ($routeParams.primaryNav === 'wp-admin') {
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/splash-screen.html';
+
+				} else {
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
+
+				}
 
 				$rootScope.$on('$routeChangeError', function () {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
@@ -122,7 +129,6 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 			$scope.params = $routeParams;
 			$scope.menuId = '' + $routeParams.primaryNav;
 			$scope.pageId = 'subNav ' + $routeParams.secondaryNav;
-
 
 			if ($routeParams.secondaryNav !== '') {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/single.html';

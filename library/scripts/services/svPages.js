@@ -3,14 +3,14 @@
 
 angularpressApp.factory('page', function ($http, $angularCacheFactory, wpAjax) {
 
-	var pageIDCache = $angularCacheFactory('pageIDCache', {storageMode: 'localStorage'});
+	var pageIDCache = $angularCacheFactory('pageIDCache', {storageMode: 'localStorage',verifyIntegrity: true});
 	return{
 
 		get_page_ID: function (successcb, slug) {
 			$http(
 				{
 					method: 'GET',
-//					cache : pageIDCache,
+					cache : pageIDCache,
 					url   : wpAjax.themeLocation.siteUrl + '/api/get_page/',
 					params: {slug: slug}
 				})

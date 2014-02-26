@@ -3,14 +3,25 @@
  */
 	//'use strict';
 
-angularpressApp.factory('widgetData', function ($http, wpAjax) {
+angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, wpAjax) {
+
+	if (wpAjax.sessions.on_first_page_load === null) {
+		var widgetCache = $angularCacheFactory('widgetCache', {
+			maxAge:90000,
+			deleteOnExpire: 'aggressive',
+			storageMode: 'localStorage',
+			verifyIntegrity: true
+		});
+
+
+	}
 
 	return{
 
 		getWidget: function (successcb, sidebar_id) {
 			$http({
 				method: 'GET',
-				cache : true,
+				cache : widgetCache,
 				url   : wpAjax.themeLocation.siteUrl + '/api/widgets/get_sidebar/',
 				params: {
 					sidebar_id: sidebar_id
@@ -18,6 +29,7 @@ angularpressApp.factory('widgetData', function ($http, wpAjax) {
 			})
 				.success(function (data) {
 					return successcb(data);
+
 
 				})
 				.error(function () {
