@@ -10,11 +10,11 @@ angularpressApp.config(['$routeProvider', '$locationProvider', 'cfpLoadingBarPro
 	$routeProvider.
 		when('/', {
 			controller: 'PrimaryNavCtrl',
-			template  : '<div ng-include="templateUrl"  ng-cloak></div>'
+			template  : '<div ng-include="templateUrl"  ng-cloak>Loading...</div>'
 		}).
 		when('/:primaryNav/', {
 			controller: 'PrimaryNavCtrl',
-			template  : '<div ng-include="templateUrl"  ng-cloak></div>'
+			template  : '<div ng-include="templateUrl"  ng-cloak>Loading...</div>'
 
 		}).
 		when('/:primaryNav/:secondaryNav/', {

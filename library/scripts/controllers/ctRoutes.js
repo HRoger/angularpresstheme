@@ -130,8 +130,11 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 			$scope.menuId = '' + $routeParams.primaryNav;
 			$scope.pageId = 'subNav ' + $routeParams.secondaryNav;
 
-			if ($routeParams.secondaryNav !== '') {
+			if ($routeParams.primaryNav  !== 'wp-admin' && $routeParams.secondaryNav !== '') {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/single.html';
+
+			} else if ($routeParams.primaryNav === 'wp-admin' ) {
+				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/splash-screen.html';
 
 			} else {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.secondaryNav + '.html';

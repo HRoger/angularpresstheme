@@ -10,6 +10,7 @@
 
 <?php // get the options
 $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
+
 /** @noinspection PhpParamsInspection */
 $filter_type = reactor_option('portfolio_filter_type', 'jquery');
 /** @noinspection PhpParamsInspection */
