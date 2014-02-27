@@ -21,12 +21,12 @@
 		<?php if (!is_search() || !is_archive()) :?>
 		<!-- Only display Excerpts for Search -->
 			<div class="entry-summary">
-				<div ng-bind-html="item.excerpt"></div>
+				<div data-ng-bind-html="item.excerpt | unsafe"></div>
 			</div>
 
 		<?php elseif (is_single()) : ?>
 			<div class="entry-content">
-				<div ng-bind-html="item.content |filter:searchText"></div>
+				<div data-ng-bind-html="item.content |filter:searchText | unsafe"></div>
 				<?php wp_link_pages(array('before' => '<div class="page-links">' . __('Pages:', 'reactor'), 'after' => '</div>')); ?>
 
 			</div>
@@ -34,7 +34,7 @@
 		<?php
 		else : ?>
 			<div class="entry-content">
-				<div ng-bind-html="item.content | unsafe"></div>
+				<div data-ng-bind-html="item.content | unsafe"></div>
 			</div>
 		<?php endif; ?>
 

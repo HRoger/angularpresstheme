@@ -19,7 +19,7 @@ angularpressApp.directive('widgetFooter', function (widgetData, wpAjax) {
 
 				function (data) {
 					element.find('.loading-spinner').spin(false);
-					scope.widgets = data.widgets;
+					scope.widgets =  data.widgets;
 
 				}, attrs.name);
 

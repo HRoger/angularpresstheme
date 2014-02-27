@@ -7,12 +7,13 @@ angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, wpA
 
 	if (wpAjax.sessions.on_first_page_load === null) {
 		var widgetCache = $angularCacheFactory('widgetCache', {
-			maxAge:90000,
-			deleteOnExpire: 'aggressive',
-			storageMode: 'localStorage',
-			verifyIntegrity: true
+			maxAge            : 90000,
+			deleteOnExpire    : 'aggressive',
+			storageMode       : 'localStorage',
+			recycleFreq       : 10000,
+			cacheFlushInterval: 3600000,
+			verifyIntegrity   : true
 		});
-
 
 	}
 
@@ -29,7 +30,6 @@ angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, wpA
 			})
 				.success(function (data) {
 					return successcb(data);
-
 
 				})
 				.error(function () {

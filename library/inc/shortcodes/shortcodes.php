@@ -163,7 +163,7 @@ function reactor_add_flex_video( $atts, $content = null ) {
 	$class_array = array_filter( $class_array );
 	$classes = implode( ' ', $class_array );	
 	
-	$output  = '<div class="flex-video' . $classes . '">';
+	$output  = '<div class="flex-video ' . $classes . '">';
 	$output .= $content;
 	$output .= '</div>';
 		

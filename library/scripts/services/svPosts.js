@@ -8,10 +8,12 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 	if (wpAjax.sessions.on_first_page_load === null) {
 
 		var postCache = $angularCacheFactory('postCache', {
-			maxAge         : 900000,
-			deleteOnExpire : 'aggressive',
-			storageMode    : 'localStorage',
-			verifyIntegrity: true
+			maxAge            : 900000,
+			deleteOnExpire    : 'aggressive',
+			storageMode       : 'localStorage',
+			recycleFreq       : 10000,
+			cacheFlushInterval: 3600000,
+			verifyIntegrity   : true
 		});
 
 		if (wpAjax.sessions.angp_session_delete_post_cache_key !== null) {

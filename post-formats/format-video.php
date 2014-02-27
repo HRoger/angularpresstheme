@@ -16,8 +16,6 @@
             </header><!-- .entry-header -->
             
             <div class="entry-content">
-<!--                --><?php //the_content(); ?>
-	            <div  youtube code=""></div>
 	            <div data-ng-bind-html="item.content | unsafe "></div>
             </div><!-- .entry-content -->
     

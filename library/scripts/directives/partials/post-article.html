@@ -9,10 +9,10 @@
 		<div class="entry-body">
 
 			<header class="entry-header">
-				<h1 class="entry-title" ng-bind="postTitle"></h1>
+				<h1 class="entry-title" data-ng-bind="postTitle"></h1>
 			</header>
 
-			<div class="entry-content" ng-bind-html="postContent"></div>
+			<div class="entry-content" data-ng-bind-html="postContent | unsafe"></div>
 
 			<footer class="entry-footer" data-ng-hide="is_link_visible">
 
@@ -31,7 +31,7 @@
 					<a rel="author"
 					   title="View all posts by Roger"
 					   ng-href="{{siteUrl}}/author/{{postAuthor}}/"
-					   class="url fn n" ng-bind="postAuthor"></a></span></span>
+					   class="url fn n" data-ng-bind="postAuthor"></a></span></span>
 				</div>
 
 				<div class="comments-link">

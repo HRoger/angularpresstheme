@@ -60,11 +60,12 @@ class ReactorShortcodes {
 		$arr[] = REACTOR_TINYMCE_URI . '/langs/wp-langs.php';
 		return $arr;
 	}
-	
+
 	/**
 	 * Defins TinyMCE rich editor js plugin
 	 *
-	 * @return	void
+	 * @param $plugin_array
+	 * @return    void
 	 */
 	function add_rich_plugins( $plugin_array )
 	{
@@ -73,11 +74,12 @@ class ReactorShortcodes {
 	}
 	
 	// --------------------------------------------------------------------------
-	
+
 	/**
 	 * Adds TinyMCE rich editor buttons
 	 *
-	 * @return	void
+	 * @param $buttons
+	 * @return    void
 	 */
 	function register_rich_buttons( $buttons )
 	{

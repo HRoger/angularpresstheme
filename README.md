@@ -135,7 +135,6 @@ angularpressApp.directive('mixitup', function () {
 VII. Known bugs
 ================
 
-* When embeding youtube videon on posts causes full page reload
 * Cant go back from admin area to preview page/posts
 * Reactor menu dont disappear when set visibility to private or state to pending or draft
 * Bug Alo Newsletter confirmation page

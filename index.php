@@ -72,6 +72,7 @@
 		</div>
 	</div>
 
+
 	<!--	<div class="row">
 			<div class="small-6 small-offset-1">
 				<pre>$location.path() = {{$location.path() }}</pre>
