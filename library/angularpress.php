@@ -14,13 +14,13 @@ class Angularpress extends Reactor {
 		global $angularpress;
 		$angularpress = new stdClass();
 
-		if (!session_id() and !ini_get('register_globals') and !is_admin()) {
+		session_regenerate_id();
+		setcookie(session_name('angpSession'), session_id(), time() + 2 * 7 * 24 * 60 * 60);
 
-			session_cache_limiter('private');
-			session_cache_expire(10080);
-			session_set_cookie_params(time()+604800);
+		if (!session_id() and !ini_get('register_globals') and !is_admin()) {
 			session_start();
-			setcookie(session_name(),session_id(),time()+2*7*24*60*60);
+			session_regenerate_id();
+			setcookie(session_name('angpSession'), session_id(), time() + 2 * 7 * 24 * 60 * 60);
 		}
 
 		parent::__construct();
@@ -31,7 +31,6 @@ class Angularpress extends Reactor {
 		add_action('after_setup_theme', array(&$this, 'angular_admin'), 17);
 
 	}
-
 
 
 	public function angular_functions() {
