@@ -1,5 +1,4 @@
 'use strict';
-
 angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $location, $compile, $element, $window, wpAjax) {
 	//	window.scope = $scope;
 
@@ -144,4 +143,3 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 		}
 	}
 );
-
