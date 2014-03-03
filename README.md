@@ -138,40 +138,44 @@ VII. Known bugs
 * Cant go back from admin area to preview page/posts
 * Reactor menu dont disappear when set visibility to private or state to pending or draft
 * Bug Alo Newsletter confirmation page
+* When opening browser after some hours routing not working anymore
 
 VIII. Todo
 ==========
 
+* When admin login or logout should delete cachefactory
 * Breadcrumbs
+* WP option for angularjs routing: admin, login and register page
 * Searchbar
-* Publish page bulk action
-* Comments form
-* Contact form
-* Porfolio subpages
-* Update foundation components and shortcodes to boostrap-ui
+* Reading Settings: set warning label to user update edit.php
 * Title tag
+* Comments form
+* Porfolio subpages
+* Google Analytics and WP SlimStat plugin
+* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 * Gmail and Youtube like routing
+* Contact form
+* Update foundation components and shortcodes to boostrap-ui
+* Update to foundation 5
+* Woocommerce compatible
 * Splash Screen design
+* WP option for angularjs routing: category base etc
 * Main Menu and Sidebar reactor menu
 * Security
+* Blog "posted" Date Href and Time tag (datetime)
+* Publish page bulk action
 * Grunt
-* Woocommerce compatible
 * Requirejs and r.js on theme build
 * Use ob_start instead of HTTP_API
 * Reading Settings: date and time format
 * Responsive design: Work on mobile
-* Google Analytics and WP SlimStat plugin
-* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 * Views folder on a CDN
 * Multisite compatible
-* Update to foundation 5
 * Make preview for post or page
 * Rename post/page slug should rename angular template file
-* WP option for angularjs routing: admin, login, category base etc
 * States: pending & draft
 * Visibility: set private & set password
 * **WIP**- work in progress. Work offline and synch when back on. See John Papa's concept: [Code Camper](http://cc-ng-z.azurewebsites.net/#/sessions)
-* Page formats
 * Accessibility
 * Child Theme
 
