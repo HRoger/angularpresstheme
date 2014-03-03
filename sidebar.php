@@ -20,7 +20,7 @@ if (is_active_sidebar('sidebar') && '1c' != $layout) : ?>
 	<?php reactor_sidebar_before(); ?>
 
 	<div id="sidebar" class="sidebar <?php reactor_columns('', true, true, 1); ?>"
-	     role="complementary">
+	     role="complementary" data-ng-controller="SidebarCtrl">
 
 		<widget-sidebar  name="sidebar"></widget-sidebar>
 
@@ -31,7 +31,7 @@ if (is_active_sidebar('sidebar') && '1c' != $layout) : ?>
 else : if ('1c' != $layout) : ?>
 
 	<div id="sidebar" class="sidebar <?php reactor_columns('', true, true, 1); ?>"
-	     role="complementary">
+	     role="complementary" data-ng-controller="SidebarCtrl">
 		<div class="alert-box secondary">
 			<p>Add some widgets to this area!</p>
 		</div>
@@ -48,7 +48,7 @@ if (is_active_sidebar('sidebar-2') && ('3c-l' == $layout || '3c-r' == $layout ||
 	<?php reactor_sidebar_before(); ?>
 
 	<div id="sidebar-2" class="sidebar <?php reactor_columns('', true, true, 2); ?>"
-	     role="complementary">
+	     role="complementary" data-ng-controller="SidebarCtrl">
 
 		<widget-sidebar  name="sidebar-2"></widget-sidebar>
 
@@ -59,7 +59,7 @@ if (is_active_sidebar('sidebar-2') && ('3c-l' == $layout || '3c-r' == $layout ||
 else : if ('3c-l' == $layout || '3c-r' == $layout || '3c-c' == $layout) : ?>
 
 	<div id="sidebar-2" class="sidebar <?php reactor_columns('', true, true, 2); ?>"
-	     role="complementary">
+	     role="complementary" >
 		<div class="alert-box secondary">
 			<p>Add some widgets to this area!</p>
 		</div>

@@ -2,7 +2,6 @@
  * Created by ROGER on 26.11.13.
  */
 'use strict';
-
 angularpressApp.directive('widgetFooter', function (widgetData, wpAjax) {
 
 	return{
@@ -19,7 +18,7 @@ angularpressApp.directive('widgetFooter', function (widgetData, wpAjax) {
 
 				function (data) {
 					element.find('.loading-spinner').spin(false);
-					scope.widgets =  data.widgets;
+					scope.widgets = data.widgets;
 
 				}, attrs.name);
 
@@ -27,7 +26,7 @@ angularpressApp.directive('widgetFooter', function (widgetData, wpAjax) {
 	};
 
 });
-
+'use strict';
 angularpressApp.directive('widgetSidebar', function (widgetData, wpAjax) {
 
 	return{
@@ -52,22 +51,21 @@ angularpressApp.directive('widgetSidebar', function (widgetData, wpAjax) {
 	};
 
 });
-
-
-angularpressApp.directive('tooltip', function () {
+'use strict';
+angularpressApp.directive('tooltip', function ($document) {
 	return {
 
 		restrict: 'A',
 
-		link: function (scope, element, attrs) {
+		link: function () {
 
-			return angular.element(document).foundation('tooltips');
+			return angular.element($document).foundation('tooltips');
 
 		}
 	};
 });
-
-angularpressApp.directive('orbit', function () {
+'use strict';
+angularpressApp.directive('orbit', function ($document) {
 	return {
 
 		restrict: 'A',
@@ -75,28 +73,23 @@ angularpressApp.directive('orbit', function () {
 			style: '@'
 		},
 
-		link: function (scope, element, attrs) {
+		link: function () {
 
-			return angular.element(document).foundation('orbit');
+			return angular.element($document).foundation('orbit');
 
 		}
 	};
 });
-
-angularpressApp.directive('dropdown', function () {
+'use strict';
+angularpressApp.directive('dropdown', function ($document) {
 	return {
 
 		restrict: 'A',
 
-		link: function (scope, element, attrs) {
+		link: function () {
 
-			return angular.element(document).foundation('dropdown');
+			return angular.element($document).foundation('dropdown');
 
 		}
 	};
 });
-
-
-
-
-

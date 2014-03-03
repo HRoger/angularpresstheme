@@ -39,8 +39,8 @@ angularpressApp.run(['$rootScope', '$route', '$http', '$log', '$window', '$cooki
 	$cookies.is_page_loaded = "pageLoaded";//see page-loading.php
 
 	angular.element('.fancybox').fancybox({
-		openEffect : 'fade',
-		closeEffect: 'fade',
+		openEffect : 'elastic',
+		closeEffect: 'elastic',
 		nextEffect : 'none',
 		prevEffect : 'none',
 		arrows     : 'true'

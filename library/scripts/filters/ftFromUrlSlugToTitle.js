@@ -31,3 +31,4 @@ angularpressApp.filter('fromUrlSlugToTitle', function () {
 
 	};
 });
+

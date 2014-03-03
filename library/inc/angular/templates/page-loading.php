@@ -31,7 +31,10 @@ function destroy_session_index_onload() {
 	//cookie set in app.js
 	if (isset($_COOKIE['is_page_loaded']) || isset($_SESSION['page_loaded'])) {
 		unset($_SESSION['template_req_onload']);
-
+		unset($_COOKIE['is_page_loaded']);
+		unset($_SESSION['page_loaded']);
+		angp_set_session('index.php', 'template_req');
+		angp_set_session('index.php', 'template_req_pages');
 	}
 }
 

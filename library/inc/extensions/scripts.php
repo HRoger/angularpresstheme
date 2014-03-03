@@ -50,12 +50,12 @@ function reactor_register_scripts() {
 	wp_register_script('fancybox-thumbs-js', get_template_directory_uri() . '/library/js/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"', array(), false, true);
 
 
-	wp_register_script('angular-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js', false, '1.2.13', true);
-	wp_register_script('angular-resource-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-resource.js', false, '1.2.13', true);
-	wp_register_script('angular-route-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js', false, '1.2.13', true);
-	wp_register_script('angular-sanitize-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-sanitize.js', false, '1.2.13', true);
-	wp_register_script('angular-animate-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js', false, '1.2.13', true);
-	wp_register_script('angular-cookies-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-cookies.js', false, '1.2.13', true);
+	wp_register_script('angular-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.js', false, '1.2.14', true);
+	wp_register_script('angular-resource-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-resource.js', false, '1.2.14', true);
+	wp_register_script('angular-route-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-route.js', false, '1.2.14', true);
+	wp_register_script('angular-sanitize-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-sanitize.js', false, '1.2.14', true);
+	wp_register_script('angular-animate-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-animate.js', false, '1.2.14', true);
+	wp_register_script('angular-cookies-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular-cookies.js', false, '1.2.14', true);
 	wp_register_script('ui-bootstrap-js', get_template_directory_uri() . '/library/scripts/modules/ui-bootstrap-tpls-0.10.0.js', array(), false, true);
 
 	wp_register_script('angular-ui-utils-js', get_template_directory_uri() . '/library/js/vendor/angular-ui-utils.min.js', false, '0.0.4', true);
@@ -81,13 +81,17 @@ function reactor_register_scripts() {
 	wp_register_script('controllers-readingSettings-js', get_template_directory_uri() .
 		'/library/scripts/controllers/ctReadingSettings.js', array(), false, true);
 	wp_register_script('controllers-pagination-js', get_template_directory_uri() .
-		'/library/scripts/controllers/ctPaginationCtrl.js', array(), false, true);
+		'/library/scripts/controllers/ctPagination.js', array(), false, true);
+	wp_register_script('controllers-sidebars-js', get_template_directory_uri() .
+		'/library/scripts/controllers/ctSidebars.js', array(), false, true);
 
 
 	wp_register_script('filters-unsafe-js', get_template_directory_uri() .
 		'/library/scripts/filters/ftUnsafe.js', array(), false, true);
 	wp_register_script('filters-fromUrlSlugToTitle-js', get_template_directory_uri() .
 		'/library/scripts/filters/ftFromUrlSlugToTitle.js', array(), false, true);
+	wp_register_script('filters-convertToMonthYear-js', get_template_directory_uri() .
+		'/library/scripts/filters/ftConvertToMonthYear.js', array(), false, true);
 
 	wp_register_script('directives-mixitup-js', get_template_directory_uri() . '/library/scripts/directives/dtMixitup.js', array(), false, true);
 	wp_register_script('directives-fancybox-js', get_template_directory_uri() . '/library/scripts/directives/dtFancybox.js', array(), false, true);
@@ -96,6 +100,7 @@ function reactor_register_scripts() {
 	wp_register_script('directives-adminbar-buttons-js', get_template_directory_uri() . '/library/scripts/directives/dtAdminbar.js', array(), false, true);
 	wp_register_script('directives-widgets-js', get_template_directory_uri() . '/library/scripts/directives/dtWidgets.js', array(), false, true);
 	wp_register_script('directives-media-js', get_template_directory_uri() . '/library/scripts/directives/dtMedia.js', array(), false, true);
+	wp_register_script('directives-angRepeatFinished-js', get_template_directory_uri() . '/library/scripts/directives/dtAngRepeatFinished.js', array(), false, true);
 	wp_register_script('directives-spinnerPost-js', get_template_directory_uri() . '/library/scripts/directives/dtSpinnerPost.js', array(), false, true);
 	wp_register_script('directives-displayFooter-js', get_template_directory_uri() . '/library/scripts/directives/dtDisplayFooter.js', array(), false, true);
 	wp_register_script('directives-postArticle-js', get_template_directory_uri() . '/library/scripts/directives/dtPostArticle.js', array(), false, true);
@@ -161,9 +166,11 @@ function reactor_enqueue_scripts() {
 		wp_enqueue_script('controllers-routes-js');
 		wp_enqueue_script('controllers-readingSettings-js');
 		wp_enqueue_script('controllers-pagination-js');
+		wp_enqueue_script('controllers-sidebars-js');
 
 		wp_enqueue_script('filters-unsafe-js');
 		wp_enqueue_script('filters-fromUrlSlugToTitle-js');
+		wp_enqueue_script('filters-convertToMonthYear-js');
 
 		wp_enqueue_script('directives-mixitup-js');
 		wp_enqueue_script('directives-contactform7-js');
@@ -172,6 +179,7 @@ function reactor_enqueue_scripts() {
 		wp_enqueue_script('directives-postArticle-js');
 		wp_enqueue_script('directives-widgets-js');
 		wp_enqueue_script('directives-media-js');
+		wp_enqueue_script('directives-angRepeatFinished-js');
 		wp_enqueue_script('directives-spinnerPost-js');
 		wp_enqueue_script('directives-displayFooter-js');
 		wp_enqueue_script('directives-commentForm-js');
@@ -208,18 +216,25 @@ add_action('admin_enqueue_scripts', 'my_enqueue');
 function angularpress_localize_scripts($script) {
 	global $angpress_session_onload, $angp_session_delete_post_cache_key;
 
-
-//	FB::info(isset($_SESSION['template_req_onload']),'template_req_onload');
-//	FB::info(isset($_SESSION['template_req']),'template_req');
-//	FB::info(isset($_SESSION['template_req_pages']),'template_req_pages');
-//	FB::info(isset($_COOKIE['is_page_loaded']),'cookie page loaded');
+	/*FB::info(isset($_SESSION['template_req']),'template_req is here?');
+	FB::info(isset($_SESSION['template_req_pages']),'template_req_pages is here?');
+	FB::info(isset($_COOKIE['is_page_loaded']),'cookie page loaded');
+	FB::info(isset($_SESSION['page_loaded']),'session page_loaded');
+	FB::info(session_id(),'session_id');
+	var_dump(isset($_SESSION['template_req']),'template_req is here?');
+	var_dump(isset($_SESSION['template_req_pages']),'template_req_pages is here?');
+	var_dump(isset($_COOKIE['is_page_loaded']),'cookie page loaded');
+	var_dump(isset($_SESSION['page_loaded']),'session page_loaded');
+	echo "</br>";
+	var_dump(session_id(),'session_id');
+	echo "</br>";*/
 
 	if (isset($_SESSION['template_req_onload'])) {
 		$angpress_session_onload = $_SESSION['template_req_onload'];
 	}
 
 	if (isset($_SESSION['delete_post_cache_key'])) {
-		FB::info($_SESSION['delete_post_cache_key'], 'delete_post_cache_key');
+//		FB::info($_SESSION['delete_post_cache_key'], 'delete_post_cache_key');
 		$angp_session_delete_post_cache_key = $_SESSION['delete_post_cache_key'];
 	}
 

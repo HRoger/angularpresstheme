@@ -65,7 +65,7 @@ if ( !function_exists('reactor_post_meta') ) {
 //			$count = 0;
 			$categories_list = '';
 //			$categories = get_the_category();
-			$categories_list .= '<span ng-repeat="category in item.categories"><a ng-href="{{siteUrl}}/category/{{category.slug}}/" title="View all posts in {{category.title}}" ng-bind-html="category.title+\',\'"></a></span>';
+			$categories_list .= '<span data-ng-repeat="category in item.categories"><a ng-href="{{siteUrl}}/category/{{category.slug}}/" title="View all posts in {{category.title}}" data-ng-bind-html="category.title+\',\'"></a></span>';
 		/*	foreach ( $categories as $category ) {
 				$count++;
 				if ( $args['show_uncategorized'] ) {
@@ -97,7 +97,7 @@ if ( !function_exists('reactor_post_meta') ) {
 			esc_attr( get_the_date('c') ),
 			esc_html( get_the_date() )
 		 );*/
-		$date = sprintf('<a ng-href="{{siteUrl}}" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate ng-bind-html="item.date"></time></a>',
+		$date = sprintf('<a ng-href="{{siteUrl}}" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate data-ng-bind-html="item.date"></time></a>',
 			esc_url( get_month_link( get_the_time('Y'), get_the_time('m') ) ),
 			esc_attr( sprintf( __('View all posts from %s %s', 'reactor'), get_the_time('M'), get_the_time('Y') ) ),
 			esc_attr( get_the_date('c') ),
@@ -110,12 +110,12 @@ if ( !function_exists('reactor_post_meta') ) {
 			get_the_author()
 		);*/
 
-		$author = sprintf('<span class="author"><a class="url fn n" ng-href="{{siteUrl}}/author/{{item.author.slug}}" title="%2$s" rel="author" ng-bind-html="item.author.name"></a></span>',
+		$author = sprintf('<span class="author"><a class="url fn n" data-ng-href="{{siteUrl}}/author/{{item.author.slug}}" title="%2$s" rel="author" data-ng-bind-html="item.author.name"></a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta('ID') ) ),
 			esc_attr( sprintf( __('View all posts by {{item.author.name}}', 'reactor'), get_the_author() ) ),
 			get_the_author()
 		 );
-	
+
 		/**
 		 * 1 is category, 2 is tag, 3 is the date and 4 is the author's name
 		 */
@@ -146,7 +146,7 @@ if ( !function_exists('reactor_post_meta') ) {
 		}*/
 
 
-		if ( $date || $categories_list || $author || $tag_list ) {
+		if ( $date || $categories_list  || $tag_list ) {
 			if ( $args['show_icons'] ) {
 				$meta .= ( $author && $args['show_author'] ) ? '<i class="social foundicon-torso" title="Written by"></i> <span class="by-author">%4$s</span>' : '';
 				$meta .= ( $date && $args['show_date'] ) ? '<i class="general foundicon-calendar" title="Publish on"></i> %3$s' : '';
@@ -158,7 +158,7 @@ if ( !function_exists('reactor_post_meta') ) {
 				}
 			} else {
 				$meta .= ( $date && $args['show_date'] ) ? '%3$s ' : '';
-				$meta .= ( $author && $args['show_author'] ) ? __('by', 'reactor') . ' <span class="by-author">%4$s</span> ' : '';
+//				$meta .= ( $author && $args['show_author'] ) ? __('by', 'reactor') . ' <span class="by-author">%4$s</span> ' : '';
 				$meta .= ( $categories_list && $args['show_cat'] ) ? __('in', 'reactor') . ' %1$s' : '';
 				$meta .= ( $tag_list && $args['show_tag'] ) ? '<div class="entry-tags">' . __('Tags:', 'reactor') . ' %2$s</div>' : '';
 
@@ -167,7 +167,8 @@ if ( !function_exists('reactor_post_meta') ) {
 				}
 			}
 
-			$post_meta = sprintf( $output, $categories_list, $tag_list, $date, $author );
+//			$post_meta = sprintf( $output, $categories_list, $tag_list, $date, $author );
+			$post_meta = sprintf( $output, $categories_list, $tag_list, $date );
 
 			echo apply_filters('reactor_post_meta', $post_meta, $defaults);
 		}

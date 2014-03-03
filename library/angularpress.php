@@ -28,6 +28,8 @@ class Angularpress extends Reactor {
 		if (!session_id() && !is_admin()) {
 			session_set_cookie_params(time() + 2 * 7 * 24 * 60 * 60);
 			session_start();
+//			session_name('angpSession');
+//			session_regenerate_id(true);
 //			setcookie(session_name('angpSession'), session_id(), time() + 2 * 7 * 24 * 60 * 60);
 		}
 

@@ -96,6 +96,7 @@ function reactor_register_sidebars() {
  * Count the number of widgets to add dynamic column class
  *
  * @param string $sidebar_id id of sidebar
+ * @return float|int|mixed|string|void
  * @since 1.0.0
  */
 function reactor_get_widget_columns( $sidebar_id ) {

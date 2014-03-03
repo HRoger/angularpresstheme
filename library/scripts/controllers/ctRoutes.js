@@ -27,12 +27,18 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 				})
 			}
 		}
+
+
 	}
 });
 'use strict';
 angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $location, $window, $route, $compile, $rootScope, wpAjax) {
 
 		if (!angular.element('body').hasClass('wp-admin')) {
+
+			var isNumeric = function (n) {
+				return !isNaN(parseFloat(n)) && isFinite(n);
+			};
 
 			if ($routeParams.action === 'logout') {
 				$window.location.href = wpAjax.authentication.loggedout;
@@ -59,7 +65,22 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 				if ($routeParams.primaryNav === 'wp-admin') {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/splash-screen.html';
 
-				} else {
+				}
+				else if ($routeParams.primaryNav !== 'wp-admin' && isNumeric($routeParams.primaryNav)) {
+					//see SecondaryNavCtrl for second option
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/archive.html';
+
+				}
+				else if ($routeParams.primaryNav === 'category') {
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
+
+				}
+				else if ($routeParams.primaryNav === 'tag') {
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
+
+				}
+
+				else {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
 
 				}
@@ -112,6 +133,14 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 
 		if (!angular.element('body').hasClass('wp-admin')) {
 
+
+
+
+			//refactor this
+			var isNumeric = function (n) {
+				return !isNaN(parseFloat(n)) && isFinite(n);
+			};
+
 			if ($routeParams.action === 'logout') {
 				//Logout
 				$window.location.href = wpAjax.authentication.loggedout;
@@ -129,13 +158,27 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 			$scope.menuId = '' + $routeParams.primaryNav;
 			$scope.pageId = 'subNav ' + $routeParams.secondaryNav;
 
-			if ($routeParams.primaryNav  !== 'wp-admin' && $routeParams.secondaryNav !== '') {
+			if ($routeParams.primaryNav !== 'wp-admin' && $routeParams.primaryNav !== 'category' && $routeParams.primaryNav !== 'tag' && !isNumeric($routeParams.primaryNav) && $routeParams.secondaryNav !== '') {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/single.html';
 
-			} else if ($routeParams.primaryNav === 'wp-admin' ) {
+			}
+			else if ($routeParams.primaryNav !== 'wp-admin' && isNumeric($routeParams.primaryNav) && isNumeric($routeParams.secondaryNav)) {
+				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/archive.html';
+
+			}
+			else if ($routeParams.primaryNav === 'category' && $routeParams.secondaryNav !== '') {
+				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/category.html';
+
+			}
+			else if ($routeParams.primaryNav === 'tag' && $routeParams.secondaryNav !== '') {
+				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/tag.html';
+
+			}
+			else if ($routeParams.primaryNav === 'wp-admin') {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/splash-screen.html';
 
-			} else {
+			}
+			else {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.secondaryNav + '.html';
 
 			}

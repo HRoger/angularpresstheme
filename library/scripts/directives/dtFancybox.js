@@ -5,9 +5,11 @@
 angularpressApp.directive('fancybox', function () {
 	return{
 		restrict: 'C',
-		link: function (scope, element) {
+		link    : function (scope, element) {
 
-			element.fancybox();
+			 element.fancybox();
+
+
 		}
 	};
 });

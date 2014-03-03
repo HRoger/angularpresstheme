@@ -17,8 +17,9 @@ function angp_set_index_for_redirect() {
 
 	if (!is_front_page()) return;
 
-	angp_set_session('index.php', 'template_req');
-
+	if (!isset($_SESSION['template_req'])) {
+		angp_set_session('index.php', 'template_req');
+	}
 }
 
 add_action('template_redirect', 'angp_set_index_for_redirect', 10);
@@ -34,8 +35,12 @@ add_action('template_redirect', 'angp_set_index_for_redirect', 10);
 function angp_set_index_for_pages_redirect() {
 
 	if (is_front_page()) return;
-	angp_set_session('index.php', 'template_req_pages');
+
+	if (!isset($_SESSION['template_req_pages'])) {
+		angp_set_session('index.php', 'template_req_pages');
+	}
 
 }
+
 add_action('wp_head', 'angp_set_index_for_pages_redirect');
 add_action('get_header', 'angp_set_index_for_pages_redirect', 10);

@@ -18,7 +18,6 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 
 		if (wpAjax.sessions.angp_session_delete_post_cache_key !== null) {
 			postCache.removeAll();
-
 		}
 
 	}
@@ -30,8 +29,9 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				{
 					method: 'GET',
 					cache : postCache,
-					url   : wpAjax.themeLocation.siteUrl + '/api/get_post/',
+					url   : wpAjax.themeLocation.siteUrl + '/api/',
 					params: {
+						json       : 'get_post',
 						slug       : slug,
 						date_format: 'F j, Y'
 					}
@@ -48,14 +48,15 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				})
 		},
 
-		get_all_posts      : function (successcb) {
+		get_all_posts               : function (successcb) {
 
 			$http(
 				{
 					method: 'GET',
 					cache : postCache,
-					url   : wpAjax.themeLocation.siteUrl + '/api/get_posts/',
+					url   : wpAjax.themeLocation.siteUrl + '/api/',
 					params: {
+						json       : 'get_posts',
 						date_format: 'F j, Y'
 					}
 
@@ -70,7 +71,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				})
 
 		},
-		get_post_pagination: function (successcb, status, page) {
+		get_post_pagination         : function (successcb, status, page) {
 
 			$http(
 				{
@@ -94,7 +95,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				})
 
 		},
-		get_post_category  : function (successcb, status, slug) {
+		get_post_pagination_category: function (successcb, status, slug, page) {
 
 			$http(
 				{
@@ -105,6 +106,7 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 						json       : 'get_category_posts',
 						status     : status,
 						slug       : slug,
+						page       : page,
 						date_format: 'F j, Y'
 					}
 				})
@@ -114,7 +116,57 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 				})
 				.error(function () {
 					if (wpAjax.sessions.on_first_page_load === null)
-						throw new Error('Network error. Post pagination not loaded.');
+						throw new Error('Network error. Post category not loaded.');
+				})
+
+		},
+		get_post_pagination_tag     : function (successcb, status, slug, page) {
+
+			$http(
+				{
+					method: 'GET',
+					cache : postCache,
+					url   : wpAjax.themeLocation.siteUrl + '/api/',
+					params: {
+						json       : 'get_tag_posts',
+						status     : status,
+						slug       : slug,
+						page       : page,
+						date_format: 'F j, Y'
+					}
+				})
+				.success(function (data) {
+					return successcb(data);
+
+				})
+				.error(function () {
+					if (wpAjax.sessions.on_first_page_load === null)
+						throw new Error('Network error. Post tag not loaded.');
+				})
+
+		},
+		get_post_pagination_archive : function (successcb, status, year, date, page) {
+
+			$http(
+				{
+					method: 'GET',
+					cache : postCache,
+					url   : wpAjax.themeLocation.siteUrl + '/api/',
+					params: {
+						json       : 'get_date_posts',
+						status     : status,
+						date       : '/' + year + '/' + date + '/',
+						page       : page,
+						date_format: 'F j, Y'
+					}
+				})
+				.success(function (data) {
+					return successcb(data);
+
+				})
+				.error(function () {
+					if (wpAjax.sessions.on_first_page_load === null)
+						throw new Error('Network error. Post date not loaded.');
 				})
 
 		}
