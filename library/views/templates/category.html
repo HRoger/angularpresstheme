@@ -1,0 +1,125 @@
+<div id="primary" class="site-content">
+
+	<div id="content" role="main">
+		<div class="row">
+			<div class="large-8 columns">
+				<div data-ng-cloak data-ng-controller="angpPaginationCategoryCtrl">
+
+					<h2>Category:
+						<span data-ng-hide="is_link_visible" data-ng-bind-html="title"></span>
+					</h2>
+
+					<ul class="multi-column">
+						<!--loop.php. Reading settings posts page-->
+						<div class="loading-spinner-posts"></div>
+						<!--NGREPEAT LOOP-->
+						<li  data-ng-repeat="item in posts">
+							<article id="post-188"
+							         class="post-188 post type-post status-publish format-standard  entry category-{{title}} ">
+								<div class="entry-body">
+									<header class="entry-header">
+										<h2 class="entry-title"
+										    data-ng-if="item.categories.length===0">
+
+											<a
+													data-ng-href="{{siteUrl}}/uncategorized/{{item.slug}}/"
+													title="{{item.title}}" rel="bookmark"
+													data-ng-bind="item.title"></a>
+										</h2>
+
+										<h2 class="entry-title">
+
+              <span data-ng-repeat="category in item.categories "
+                    data-ng-if="$last">
+				<a data-ng-href="{{siteUrl}}/{{category.slug}}/{{item.slug}}/"
+				   title="{{item.title}}" rel="bookmark" data-ng-bind="item.title"></a>
+              </span>
+										</h2>
+										<!--see content.posts.php-->
+									</header>
+
+									<!-- Only display Excerpts for Search -->
+									<div class="entry-summary">
+										<div data-ng-bind-html="item.excerpt | unsafe"></div>
+									</div>
+
+									<footer class="entry-footer">
+										<div class="entry-meta">Posted: <a
+												data-ng-href="{{siteUrl}}"
+												title="View all posts from Feb 2014"
+												rel="bookmark">
+											<time class="entry-date"
+											      datetime="2014-02-25T02:22:31+00:00" pubdate
+											      data-ng-bind-html="item.date"></time>
+										</a> <!--by
+											<span class="by-author"><span class="author"><a
+													class="url fn n"
+													ng-href="{{siteUrl}}/author/{{item.author.slug}}"
+													title="View all posts by {{item.author.name}}"
+													rel="author"
+													ng-bind-html="item.author.name"></a></span></span>-->
+										                        in
+											<span data-ng-repeat="category in item.categories"><a
+													data-ng-href="{{siteUrl}}/category/{{category.slug}}/"
+													title="View all posts in {{category.title}}"
+													data-ng-bind-html="category.title+','"></a></span>
+										</div>
+										<div class="comments-link">
+											<i class="icon social foundicon-chat"
+											   title="Comments"></i>
+
+			<span class="entry-title" data-ng-if="item.categories.length===0">
+				<a
+						data-ng-href="{{siteUrl}}/uncategorized/{{item.slug}}/"
+						title="{{item.title}}" rel="bookmark">
+					<span class="leave-comment">Leave a Comment</span>
+				</a>
+			</span>
+
+            <span data-ng-repeat="category in item.categories " data-ng-if="$last">
+				<a
+						data-ng-href="{{siteUrl}}/{{category.slug}}/{{item.slug}}/"
+						title="{{item.title}}" rel="bookmark">
+					<span class="leave-comment">Leave a Comment</span>
+
+				</a>
+			</span>
+
+										</div>
+										<!-- .comments-link -->
+										<!--see content.posts.php-->
+									</footer>
+
+								</div>
+
+							</article>
+						</li>
+						<!--NGREPEAT LOOP-->
+					</ul>
+
+					<pagination data-ng-hide="is_link_visible" total-items="totalItems"
+					            page="currentPage" max-size="maxSize"
+					            on-select-page="pageChanged(page)" class="pagination"
+					            items-per-page="itemsPerPage" boundary-links="true"
+					            rotate="false" num-pages="numPages">
+					</pagination>
+
+				</div>
+			</div>
+
+			<!-- .columns -->
+
+			<div id="sidebar" class="sidebar large-4 columns"
+			     role="complementary" data-ng-controller="SidebarCtrl">
+
+				<widget-sidebar name="sidebar"></widget-sidebar>
+
+			</div>
+			<!-- #sidebar -->
+
+		</div>
+		<!-- .row -->
+	</div>
+	<!-- #content -->
+
+</div><!-- #primary -->
