@@ -143,7 +143,6 @@ VIII. Todo
 ==========
 
 * Breadcrumbs
-* Filters: category & archives
 * Searchbar
 * Publish page bulk action
 * Comments form
@@ -152,7 +151,7 @@ VIII. Todo
 * Update foundation components and shortcodes to boostrap-ui
 * Title tag
 * Gmail and Youtube like routing
-* Splash Screen for index
+* Splash Screen design
 * Main Menu and Sidebar reactor menu
 * Security
 * Grunt
