@@ -1,8 +1,12 @@
 'use strict';
-angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $location, $compile, $element, $window, wpAjax) {
+angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $location, $compile, $element, $window, wpAjax, $rootScope, $anchorScroll) {
 	//	window.scope = $scope;
 
 	if (!angular.element('body').hasClass('wp-admin')) {
+
+		$rootScope.$on('$routeChangeSuccess', function () {
+			$anchorScroll();
+		});
 
 		if (wpAjax.sessions.on_first_page_load !== null && $location.path() !== '/') {
 			//when page other than front-page loads for the first time
@@ -27,7 +31,6 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 				})
 			}
 		}
-
 
 	}
 });

@@ -36,6 +36,10 @@ angularpressApp.run(['$rootScope', '$route', '$http', '$log', '$window', '$cooki
 	//	$rootScope.$apply(angular.element("content").contents().unwrap());
 	//	$rootScope.$apply(angular.element("homenewsloop").contents().unwrap());
 
+
+
+
+
 	$cookies.is_page_loaded = "pageLoaded";//see page-loading.php
 
 	angular.element('.fancybox').fancybox({
