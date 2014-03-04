@@ -23,8 +23,17 @@ if (current_theme_supports('reactor-breadcrumbs')) {
 			<div id="breadcrumbs">
 				<div class="row">
 					<div class="<?php reactor_columns(12); ?>">
-						<?php reactor_breadcrumbs(); ?>
-
+						<ul class="breadcrumbs" >
+							<li class=""><a
+									data-ng-href="{{siteUrl}}">Home</a></li>
+							<li class=""><a
+									data-ng-href="{{siteUrl}}/{{$route.current.params
+									.primaryNav}}/" data-ng-bind="$route.current.params.primaryNav"></a>
+							</li>
+							<li class=""><a
+									data-ng-href="{{siteUrl}}/{{$route.current.params.primaryNav}}/{{$route.current.params.secondaryNav}}/" data-ng-bind="$route.current.params.secondaryNav"></a>
+							</li>
+						</ul>
 					</div>
 					<!-- .columns -->
 				</div>

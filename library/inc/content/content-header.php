@@ -129,7 +129,7 @@ function reactor_do_nav_bar() {
 		if (reactor_option('mobile_menu', 1)) {
 			?>
 			<div id="mobile-menu-button" class="show-for-small">
-				<button class="secondary button" id="mobileMenuButton" href="#mobile-menu">
+				<button class="secondary button" id="mobileMenuButton" data-ng-href="#mobile-menu">
 					<span class="mobile-menu-icon"></span>
 					<span class="mobile-menu-icon"></span>
 					<span class="mobile-menu-icon"></span>

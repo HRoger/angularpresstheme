@@ -73,9 +73,9 @@
 	</div>
 
 
-		<div class="row">
+	<!--	<div class="row">
 			<div class="small-6 small-offset-1">
-			<!--	<pre>$location.path() = {{$location.path() }}</pre>
+				<pre>$location.path() = {{$location.path() }}</pre>
 				<pre>$location.url() = {{ $location.url() }}</pre>
 				<pre>$location.absUrl() = {{ $location.absUrl() }}</pre>
 				<pre>$route.current.locals = {{$route.current.locals}}</pre>
@@ -88,9 +88,9 @@
 				<pre>$routeParams.secondaryNav = {{$routeParams.secondaryNav}}</pre>
 				<pre>$route.current: {{$route.current}}</pre>
 				<pre>siteUrl: {{siteUrl}}</pre>
-				<pre>templateDir: {{templateDir}}</pre>-->
+				<pre>templateDir: {{templateDir}}</pre>
 				<?php
-				/*echo "<pre>".var_dump(isset($_SESSION['template_req']),'template_req').
+/*				echo "<pre>".var_dump(isset($_SESSION['template_req']),'template_req').
 					"</pre>";
 				echo "<pre>".var_dump(isset($_SESSION['template_req_pages']),'template_req_pages').
 					"</pre>";
@@ -103,10 +103,10 @@
 					"</pre>";
 				echo "<pre>".var_dump(session_name()).
 					"</pre>";
-				echo "</br>";*/
-				?>
+				echo "</br>";
+				*/?>
 			</div>
-		</div>
+		</div>-->
 </div>
 <!--WP-READING-SETTINGS-->
 

@@ -4,7 +4,6 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 
 	if (!angular.element('body').hasClass('wp-admin')) {
 
-
 		if (wpAjax.sessions.on_first_page_load !== null && $location.path() !== '/') {
 			//when page other than front-page loads for the first time
 			$window.location.href = wpAjax.themeLocation.siteUrl + $location.url();
@@ -79,7 +78,6 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
 				}
-
 				else {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
 
@@ -132,9 +130,6 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $window, $location, $compile, $rootScope, wpAjax, post) {
 
 		if (!angular.element('body').hasClass('wp-admin')) {
-
-
-
 
 			//refactor this
 			var isNumeric = function (n) {

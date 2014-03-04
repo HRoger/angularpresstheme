@@ -47,5 +47,5 @@ body_class('{{$route.current.scope.menuId}} {{$route.current.scope.pageId}}'.$pa
 
 	<?php reactor_header_after(); ?>
 
-	<div   id="main" class="wrapper">
+	<div id="main" class="wrapper">
 		<content>
