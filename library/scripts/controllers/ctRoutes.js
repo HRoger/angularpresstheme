@@ -61,7 +61,7 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 				$scope.menuId = '' + $routeParams.primaryNav;
 				$scope.pageId = 'mainNav ';
 
-				if ($routeParams.primaryNav === 'wp-admin') {
+				if ($routeParams.primaryNav === 'wp-admin' || $routeParams.primaryNav === 'wp-login.php') {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/splash-screen.html';
 
 				}
@@ -169,7 +169,7 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/tag.html';
 
 			}
-			else if ($routeParams.primaryNav === 'wp-admin') {
+			else if ($routeParams.primaryNav === 'wp-admin' ) {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/splash-screen.html';
 
 			}
