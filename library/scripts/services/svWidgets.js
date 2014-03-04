@@ -3,19 +3,28 @@
  */
 	//'use strict';
 
-angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, wpAjax) {
+angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, $cacheFactory,wpAjax) {
 
-	if (wpAjax.sessions.on_first_page_load === null) {
-		var widgetCache = $angularCacheFactory('widgetCache', {
-			maxAge            : 90000,
-			deleteOnExpire    : 'aggressive',
-			storageMode       : 'localStorage',
-			recycleFreq       : 10000,
-			cacheFlushInterval: 3600000,
-			verifyIntegrity   : true
-		});
+	//when first page load or user is logged in don't use cache for sidebar widgets
+	if(wpAjax.authentication.is_user_logged_in === ''){
+
+		if (wpAjax.sessions.on_first_page_load === null ) {
+			var widgetCache = $angularCacheFactory('widgetCache', {
+				maxAge            : 90000,
+				deleteOnExpire    : 'aggressive',
+				storageMode       : 'localStorage',
+				recycleFreq       : 10000,
+				cacheFlushInterval: 3600000,
+				verifyIntegrity   : true
+			});
+
+		}
+
+	}else{
+		widgetCache = $cacheFactory('widgetCache');
 
 	}
+
 
 	return{
 

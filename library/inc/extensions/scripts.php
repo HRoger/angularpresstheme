@@ -239,6 +239,7 @@ function angularpress_localize_scripts($script) {
 	}
 
 
+
 	wp_localize_script(
 		$script,
 		'Angularpress',
@@ -250,7 +251,8 @@ function angularpress_localize_scripts($script) {
 			'on_first_page_load' => $angpress_session_onload,
 			'angp_session_delete_post_cache_key' => $angp_session_delete_post_cache_key,
 			'page_for_posts' => get_option('page_for_posts'),
-			'posts_per_page' => get_option('posts_per_page')
+			'posts_per_page' => get_option('posts_per_page'),
+		    'is_user_logged_in' =>  is_user_logged_in()
 		)
 	);
 }

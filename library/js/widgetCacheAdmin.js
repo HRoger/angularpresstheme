@@ -6,6 +6,7 @@
 
 	$(document).ready(function () {
 
+		
 		$('div.widgets-sortables').bind('sortstop', function (event, ui) {
 
 			var localStorageKey = "angular-cache.caches.widgetCache.data." + Angularpress.url + "/api/widgets/get_sidebar/?sidebar_id=" + $(this).attr('id');
