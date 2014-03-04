@@ -143,7 +143,6 @@ VII. Known bugs
 VIII. Todo
 ==========
 
-* When admin login or logout should delete cachefactory
 * Breadcrumbs
 * WP option for angularjs routing: admin, login and register page
 * Searchbar
