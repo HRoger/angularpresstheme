@@ -24,17 +24,18 @@ if (current_theme_supports('reactor-breadcrumbs')) {
 			<div id="breadcrumbs">
 				<div class="row">
 					<div class="<?php reactor_columns(12); ?>">
-						<ul class="breadcrumbs" data-ng-controller="BreadcrumbsCtrl">
-							<li ng-class="{current:isActive('/')}"><a
+						<ul data-ng-cloak class="breadcrumbs" data-ng-controller="BreadcrumbsCtrl">
+							<li  ng-class="{current:isActive('/')}"><a
 									data-ng-href="{{siteUrl}}">Home</a></li>
-							<li data-ng-if="!isActive('/') && isActive($location.path())"
+							<li data-ng-if="!isActive('/') && isActive($location.path
+							())"
 							    ng-class="{current:isActive('/'+$route.current.params.primaryNav+'/')}">
 								<a
 									data-ng-href="{{siteUrl}}/{{$route.current.params
 									.primaryNav}}/"
 									data-ng-bind="$route.current.params.primaryNav"></a>
 							</li>
-							<li data-ng-if="!isActive('/') && !isActive('/'+$route.current.params.primaryNav+'/') && isActive($location.path()) "
+							<li  data-ng-if="!isActive('/') && !isActive('/'+$route.current.params.primaryNav+'/') && isActive($location.path()) "
 							    ng-class="{current:isActive($location.path())}"><a
 									data-ng-href="{{siteUrl}}/{{$route.current.params.primaryNav}}/{{$route.current.params.secondaryNav}}/"
 									data-ng-bind="$route.current.params.secondaryNav"></a>

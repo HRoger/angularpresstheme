@@ -10,7 +10,7 @@
 </content>
         <?php reactor_footer_before(); ?>
         
-        <footer id="footer" class="site-footer" role="contentinfo">
+        <footer data-ng-cloak id="footer" class="site-footer" role="contentinfo">
         
         	<?php reactor_footer_inside(); ?>
   

@@ -79,7 +79,8 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 
 				}
 				else {
-					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
+					//$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.primaryNav + '.html';
 
 				}
 
@@ -127,7 +128,7 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 	}
 );
 'use strict';
-angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $window, $location, $compile, $rootScope, wpAjax, post) {
+angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $window, $location, $compile, $rootScope, wpAjax, post, $route) {
 
 		if (!angular.element('body').hasClass('wp-admin')) {
 
@@ -174,7 +175,8 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 
 			}
 			else {
-				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.secondaryNav + '.html';
+				//$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.secondaryNav + '.html';
+				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.secondaryNav + '.html';
 
 			}
 
