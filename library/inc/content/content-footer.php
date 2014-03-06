@@ -18,20 +18,26 @@
  */
 if (current_theme_supports('reactor-breadcrumbs')) {
 	function reactor_do_breadcrumbs() {
+		/** @noinspection PhpParamsInspection */
 		if (reactor_option('breadcrumbs', 1)) {
 			?>
 			<div id="breadcrumbs">
 				<div class="row">
 					<div class="<?php reactor_columns(12); ?>">
-						<ul class="breadcrumbs" >
-							<li class=""><a
+						<ul class="breadcrumbs" data-ng-controller="BreadcrumbsCtrl">
+							<li ng-class="{current:isActive('/')}"><a
 									data-ng-href="{{siteUrl}}">Home</a></li>
-							<li class=""><a
+							<li data-ng-if="!isActive('/') && isActive($location.path())"
+							    ng-class="{current:isActive('/'+$route.current.params.primaryNav+'/')}">
+								<a
 									data-ng-href="{{siteUrl}}/{{$route.current.params
-									.primaryNav}}/" data-ng-bind="$route.current.params.primaryNav"></a>
+									.primaryNav}}/"
+									data-ng-bind="$route.current.params.primaryNav"></a>
 							</li>
-							<li class=""><a
-									data-ng-href="{{siteUrl}}/{{$route.current.params.primaryNav}}/{{$route.current.params.secondaryNav}}/" data-ng-bind="$route.current.params.secondaryNav"></a>
+							<li data-ng-if="!isActive('/') && isActive($location.path())"
+							    ng-class="{current:isActive($location.path())}"><a
+									data-ng-href="{{siteUrl}}/{{$route.current.params.primaryNav}}/{{$route.current.params.secondaryNav}}/"
+									data-ng-bind="$route.current.params.secondaryNav"></a>
 							</li>
 						</ul>
 					</div>
@@ -123,7 +129,9 @@ function reactor_do_footer_content() {
 			<div class="<?php reactor_columns(6); ?>">
 				<div id="colophon">
 
-					<?php if (reactor_option('footer_siteinfo')) :
+					<?php /** @noinspection PhpParamsInspection */
+					if (reactor_option('footer_siteinfo')) :
+						/** @noinspection PhpParamsInspection */
 						echo reactor_option('footer_siteinfo');
 					else : ?>
 						<p>

@@ -84,6 +84,8 @@ function reactor_register_scripts() {
 		'/library/scripts/controllers/ctPagination.js', array(), false, true);
 	wp_register_script('controllers-sidebars-js', get_template_directory_uri() .
 		'/library/scripts/controllers/ctSidebars.js', array(), false, true);
+	wp_register_script('controllers-breadcrumbs-js', get_template_directory_uri() .
+		'/library/scripts/controllers/ctBreadcrumbs.js', array(), false, true);
 
 
 	wp_register_script('filters-unsafe-js', get_template_directory_uri() .
@@ -167,6 +169,7 @@ function reactor_enqueue_scripts() {
 		wp_enqueue_script('controllers-readingSettings-js');
 		wp_enqueue_script('controllers-pagination-js');
 		wp_enqueue_script('controllers-sidebars-js');
+		wp_enqueue_script('controllers-breadcrumbs-js');
 
 		wp_enqueue_script('filters-unsafe-js');
 		wp_enqueue_script('filters-fromUrlSlugToTitle-js');

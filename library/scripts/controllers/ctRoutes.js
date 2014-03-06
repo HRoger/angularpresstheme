@@ -169,7 +169,7 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/tag.html';
 
 			}
-			else if ($routeParams.primaryNav === 'wp-admin' ) {
+			else if ($routeParams.primaryNav === 'wp-admin') {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/splash-screen.html';
 
 			}
@@ -181,3 +181,4 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 		}
 	}
 );
+

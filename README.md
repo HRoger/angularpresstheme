@@ -143,7 +143,6 @@ VII. Known bugs
 VIII. Todo
 ==========
 
-* Breadcrumbs
 * WP option for angularjs routing: admin, login and register page
 * Searchbar
 * Reading Settings: set warning label to user update edit.php

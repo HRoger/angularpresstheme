@@ -72,41 +72,41 @@
 		</div>
 	</div>
 
-
-	<!--	<div class="row">
-			<div class="small-6 small-offset-1">
-				<pre>$location.path() = {{$location.path() }}</pre>
-				<pre>$location.url() = {{ $location.url() }}</pre>
-				<pre>$location.absUrl() = {{ $location.absUrl() }}</pre>
-				<pre>$route.current.locals = {{$route.current.locals}}</pre>
-				<pre>$route.current.params = {{$route.current.params}}</pre>
-				<pre>$route.current.scope= {{$route.current.scope}}</pre>
-				<pre>$route.current.controller= {{$route.current.controller}}</pre>
-				<pre>$route.current.templateUrl= {{$route.current.templateUrl}}</pre>
-				<pre>$routeParams = {{$routeParams}}</pre>
-				<pre>$routeParams.primaryNav = {{$routeParams.primaryNav}}</pre>
-				<pre>$routeParams.secondaryNav = {{$routeParams.secondaryNav}}</pre>
-				<pre>$route.current: {{$route.current}}</pre>
-				<pre>siteUrl: {{siteUrl}}</pre>
-				<pre>templateDir: {{templateDir}}</pre>
-				<?php
-/*				echo "<pre>".var_dump(isset($_SESSION['template_req']),'template_req').
-					"</pre>";
-				echo "<pre>".var_dump(isset($_SESSION['template_req_pages']),'template_req_pages').
-					"</pre>";
-				echo "<pre>".var_dump(isset($_COOKIE['is_page_loaded']),'cookie page loaded').
-					"</pre>";
-				echo "<pre>".var_dump(isset($_SESSION['page_loaded']),'session page_loaded').
-					"</pre>";
-				echo "</br>";
-				echo "<pre>".var_dump(session_id(),'session_id').
-					"</pre>";
-				echo "<pre>".var_dump(session_name()).
-					"</pre>";
-				echo "</br>";
-				*/?>
-			</div>
-		</div>-->
+<!--	<div class="row">
+		<div class="small-6 small-offset-1">
+			<pre>$location.path() = {{$location.path() }}</pre>
+			<pre>$location.url() = {{ $location.url() }}</pre>
+			<pre>$location.absUrl() = {{ $location.absUrl() }}</pre>
+			<pre>$route.current.locals = {{$route.current.locals}}</pre>
+			<pre>$route.current.params = {{$route.current.params}}</pre>
+			<pre>$route.current.params = {{$route.current.params.primaryNav===''}}</pre>
+			<pre>$route.current.scope= {{$route.current.scope}}</pre>
+			<pre>$route.current.controller= {{$route.current.controller}}</pre>
+			<pre>$route.current.templateUrl= {{$route.current.templateUrl}}</pre>
+			<pre>$routeParams = {{$routeParams}}</pre>
+			<pre>$routeParams.primaryNav = {{$routeParams.primaryNav}}</pre>
+			<pre>$routeParams.secondaryNav = {{$routeParams.secondaryNav}}</pre>
+			<pre>$route.current: {{$route.current}}</pre>
+			<pre>siteUrl: {{siteUrl}}</pre>
+			<pre>templateDir: {{templateDir}}</pre>
+			<?php
+/*			echo "<pre>" . var_dump(isset($_SESSION['template_req']), 'template_req') .
+				"</pre>";
+			echo "<pre>" . var_dump(isset($_SESSION['template_req_pages']), 'template_req_pages') .
+				"</pre>";
+			echo "<pre>" . var_dump(isset($_COOKIE['is_page_loaded']), 'cookie page loaded') .
+				"</pre>";
+			echo "<pre>" . var_dump(isset($_SESSION['page_loaded']), 'session page_loaded') .
+				"</pre>";
+			echo "</br>";
+			echo "<pre>" . var_dump(session_id(), 'session_id') .
+				"</pre>";
+			echo "<pre>" . var_dump(session_name()) .
+				"</pre>";
+			echo "</br>";
+			*/?>
+		</div>
+	</div>-->
 </div>
 <!--WP-READING-SETTINGS-->
 
