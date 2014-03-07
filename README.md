@@ -1,7 +1,8 @@
 I. Angularpresstheme: Angularjs + Wordpress + Zurb Foundation
 =============================================================
 
-Angularjs, Wordpress and Zurb Foundation. This theme turns Wordpress into a Single Page Application.
+Angularjs, Wordpress and Zurb Foundation. This theme turns Wordpress into a Single Page
+Application CMS.
 
 II. Demo
 ========
@@ -10,8 +11,8 @@ II. Demo
 
 ###Note
 
->Search Bar, categories, archive, some Foundation components, site title, responsive design,
->breadcrumbs are not working at this moment. See **Todo**.
+>Search Bar, some Foundation components, site title, responsive design,
+> are not working at this moment. See **Todo**.
 
 
 III. Configuration

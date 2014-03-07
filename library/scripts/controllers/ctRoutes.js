@@ -183,4 +183,3 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 		}
 	}
 );
-
