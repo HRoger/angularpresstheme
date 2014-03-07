@@ -7,7 +7,6 @@ body {
   display : none !important;
   }
 
-
 div#content {
   min-height : 500px !important;
   }
@@ -81,34 +80,52 @@ ul.multi-column {
   background-color : #2795b6 !important;
   }
 
-
 /*Top Bar*/
 a:focus {
   outline : none;
   }
 
-
-.wpcf7-form-control-wrap input{
-
-  width: 400px;
-
+.wpcf7-form-control-wrap input {
+  width : 400px;
   }
 
-
-
 .site-header .site-title a {
-  font-weight: normal;
+  font-weight : normal;
+  }
+
+.site-description {
+  font-size : 18px !important;
   }
 
 h1, h2, h3, h4, h5, h6 {
-
-  font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-
-  font-weight: normal;
-
+  font-family : "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-weight : normal;
   }
 
+h1 {
+  font-size : 26px;
+  }
+
+h2 {
+  font-size : 24px;
+  }
+
+h3 {
+  font-size : 22px;
+  }
+
+h4 {
+  font-size : 20px;
+  }
+
+h5 {
+  font-size : 18px;
+  }
+
+h6 {
+  font-size : 16px;
+  }
 
 ul.breadcrumbs li {
-  white-Space: nowrap!important;
+  white-Space : nowrap !important;
   }

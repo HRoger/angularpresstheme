@@ -32,7 +32,7 @@ function reactor_do_reactor_head() {
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
-<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+	<!--	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
 
 	<?php /** @noinspection PhpParamsInspection */
 	$favicon_uri = reactor_option('favicon_image') ? reactor_option('favicon_image') : get_template_directory_uri() . '/favicon.ico'; ?>
@@ -90,9 +90,15 @@ function reactor_do_title_logo() {
 					</div><!-- .site-logo -->
 				<?php endif; // end if logo ?>
 				<div class="title-area">
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>"
-					                         title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
-					                         rel="home"><?php bloginfo('name'); ?></a></p>
+					<p class="site-title">
+						<a href="<?php echo esc_url(home_url('/')); ?>"
+						   title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
+						   rel="home"><?php bloginfo('name'); ?></a>
+						<iframe style="float:right;" width="60%" height="95" scrolling="no"
+						        frameborder="no"
+						        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/23712435&amp;auto_play=false&amp;hide_related=false&amp;visual=false"></iframe>
+					</p>
+
 					<p class="site-description"><?php bloginfo('description'); ?></p>
 				</div>
 			</div>

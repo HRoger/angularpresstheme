@@ -865,21 +865,7 @@ if (!function_exists('reactor_customize_register')) {
 			'type' => 'text',
 		));
 
-		/*$wp_customize->add_control('reactor_options[login_logo_url]', array(
-			'label' => __('Site Login Url', 'reactor'),
-			'section' => 'reactor_customizer_login',
-			'type' => 'text',
-		));*/
-	/*	$wp_customize->add_control('reactor_options[register_url]', array(
-			'label' => __('Site Register Url', 'reactor'),
-			'section' => 'reactor_customizer_login',
-			'type' => 'text',
-		));
-		$wp_customize->add_control('reactor_options[admin_url]', array(
-			'label' => __('Site Admin Url', 'reactor'),
-			'section' => 'reactor_customizer_login',
-			'type' => 'text',
-		));*/
+
 		$templates = get_theme_support('reactor-page-templates');
 
 		if (!is_array($templates[0])) {

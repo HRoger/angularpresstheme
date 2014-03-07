@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 
 <!--[if gt IE 8]><!-->
-<html <?php language_attributes(); ?> class="no-js"   data-ng-cloak data-ng-app="angularpressApp"   >
+<html <?php language_attributes(); ?> class="no-js" data-ng-cloak data-ng-app="angularpressApp">
 <!--<![endif]-->
 
 <head>
@@ -21,9 +21,9 @@
 	<?php reactor_head(); ?>
 </head>
 
-<body  data-ng-cloak id="{{$route.current.scope.menuId}}" <?php
-(get_option('page_for_posts')!=0) ? $page_for_posts_class = ' page_for_posts': $page_for_posts_class ='';
-body_class('{{$route.current.scope.menuId}} {{$route.current.scope.pageId}}'.$page_for_posts_class);
+<body data-ng-cloak id="{{$route.current.scope.menuId}}" <?php
+(get_option('page_for_posts') != 0) ? $page_for_posts_class = ' page_for_posts' : $page_for_posts_class = '';
+body_class('{{$route.current.scope.menuId}} {{$route.current.scope.pageId}}' . $page_for_posts_class);
 ?> data-ng-controller="MainCtrl">
 
 <?php reactor_body_inside(); ?>
@@ -32,8 +32,10 @@ body_class('{{$route.current.scope.menuId}} {{$route.current.scope.pageId}}'.$pa
 
 	<?php reactor_header_before(); ?>
 
-	<header   id="header" class="site-header" role="banner">
+	<header id="header" class="site-header" role="banner">
+
 		<div class="row">
+
 			<div class="<?php reactor_columns(12); ?>">
 
 				<?php reactor_header_inside(); ?>
