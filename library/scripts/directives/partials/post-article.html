@@ -1,6 +1,6 @@
-<div>
+<div data-ng-controller="SinglePostsCtrl" >
 	<a class="ab-item" data-ng-if="is_visible"
-	   ng-href="{{siteurl}}/wp-admin/post.php?post={{postId}}&action=edit">Edit Post</a>
+	   data-ng-href="{{siteurl}}/wp-admin/post.php?post={{postId}}&action=edit">Edit Post</a>
 
 	<article
 			class="post-{{postId}} post type-{{postType}} status-{{postStatus}} format-standard hentry category-uncategorized single"
@@ -12,7 +12,7 @@
 				<h1 class="entry-title" data-ng-bind="postTitle"></h1>
 			</header>
 
-			<div class="entry-content" data-ng-bind-html="postContent | unsafe"></div>
+			<div class="entry-content" data-ng-bind-html="postContent | unsafe" ></div>
 
 			<footer class="entry-footer" data-ng-hide="is_link_visible">
 
@@ -37,7 +37,7 @@
 				<div class="comments-link">
 					<i title="Comments" class="icon social foundicon-chat"></i>
 					<a title="Comment on {{postTitle}}"
-					   ng-href="{{postUrl}}#respond">
+					   data-ng-href="{{postUrl}}#respond">
 						<span class="leave-comment">Leave a Comment</span>
 					</a></div>
 
@@ -47,11 +47,12 @@
 
 	</article>
 
-	<nav class="nav-single">
+
+		<nav class="nav-single">
             <span data-ng-if="is_previous_visible" class="nav-previous alignleft">
-            <a rel="prev" ng-href="{{postPreviousUrl}}">
+            <a rel="prev" data-ng-href="{{postPreviousUrl}}">
 	            <span class="meta-nav">←</span>
-	            <span ng-bind="postPreviousUrl | fromUrlSlugToTitle"></span>
+	            <span data-ng-bind="postPreviousUrl | fromUrlSlugToTitle"></span>
             </a>
             </span>
 
@@ -61,5 +62,6 @@
 			    <span class="meta-nav">→</span>
 		    </a>
 		    </span>
-	</nav>
+		</nav>
+
 </div>

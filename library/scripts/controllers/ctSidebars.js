@@ -6,13 +6,18 @@ angularpressApp.controller("SidebarCtrl", function ($scope, $compile) {
 
 	$scope.$on('ngRepeatFinished', function () {
 		//Category
-//		angular.element(".widget_archive li a").css('color', 'blue');
-//		$compile(angular.element("li.cat-item a").attr('ng-click', 'filterCatItem()'))($scope);
-//		$compile(angular.element(".widget_archive li a").attr('ng-click', 'filterArchiveItem()'))($scope);
-//		$compile(angular.element(".widget_archive li a").attr('on-click-archive-item', ''))($scope);
+//		angular.element(".widget li a").css('color', 'blue');
+
+		$compile(angular.element(".widget li a, .tagcloud a").bind('click', function () {
+
+			$compile(angular.element(this).filter(function () {
+				$scope.$emit('linkText', angular.element(this).text());
+
+			}));
+
+		}))($scope);
+
 	});
-
-
 
 });
 
@@ -21,8 +26,16 @@ angularpressApp.controller("SidebarFooterCtrl", function ($scope, $compile) {
 
 	$scope.$on('ngRepeatFinished', function () {
 		//Category
-//		angular.element("li.cat-item a").css('color', 'blue');
-		$compile(angular.element("li.cat-item a").attr('ng-click', 'filterCatItem()'))($scope);
+//		angular.element(".widget li a,li .tagcloud a").css('color', 'blue');
+
+		$compile(angular.element(".widget li a,.tagcloud a").bind('click', function () {
+
+			$compile(angular.element(this).filter(function () {
+				$scope.$emit('linkText', angular.element(this).text());
+
+			}));
+
+		}))($scope);
 	});
 
 });
@@ -33,7 +46,38 @@ angularpressApp.controller("SidebarFrontpageCtrl", function ($scope, $compile) {
 	$scope.$on('ngRepeatFinished', function () {
 		//Category
 //		angular.element("li.cat-item a").css('color', 'blue');
-		$compile(angular.element("li.cat-item a").attr('ng-click', 'filterCatItem()'))($scope);
+
+		$compile(angular.element(".widget li a,.tagcloud a").bind('click', function () {
+
+			$compile(angular.element(this).filter(function () {
+				$scope.$emit('linkText', angular.element(this).text());
+
+			}));
+
+		}))($scope);
 	});
+
+});
+
+
+'use strict';
+angularpressApp.controller("SinglePostsCtrl", function ($scope, $compile) {
+
+/*
+	$scope.$on('ngRepeatFinished', function () {
+		//Category
+		angular.element("span a").css('color', 'blue');
+
+
+		$compile(angular.element("span a").bind('click', function () {
+
+			$compile(angular.element(this).filter(function () {
+				$scope.$emit('linkText', angular.element(this).text());
+
+			}));
+
+		}))($scope);
+	});
+*/
 
 });

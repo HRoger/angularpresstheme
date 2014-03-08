@@ -11,7 +11,7 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div class="entry-body">
+	<div class="entry-body" >
 		<header class="entry-header">
 			<?php reactor_post_header(); ?>
             <!--see content.posts.php-->

@@ -1,7 +1,7 @@
 /**
  * Created by ROGER on 20.12.13.
  */
-angularpressApp.directive('pagetitle', function (pageTitle, wpAjax) {
+angularpressApp.directive('pagetitle', function (page, wpAjax,$route) {
 
 	return{
 
@@ -13,17 +13,37 @@ angularpressApp.directive('pagetitle', function (pageTitle, wpAjax) {
 
 		templateUrl: wpAjax.themeLocation.templateDir + '/library/scripts/directives/partials/pagetitle.html',
 
-		link: function (scope, element, attrs) {
+		link: function (scope) {
 			//			console.info(pageTitle.get_page_title('home'));
-			console.info(attrs.name);
-			pageTitle.get_page_title(attrs.name).then(function (response) {
+//			console.info(attrs.name);
+			page.get_page_ID(function (data) {
 
-				console.info(response);
+				console.info(data);
 
-				//				scope.siteurl = siteUrl;
-				scope.title = response;
+				scope.title = data.page.title;
 
-			});
+
+
+			},$route.current.params.primaryNav);
+
+			scope.$on('$routeChangeSuccess', function () {
+				/*console.info(current);
+				 console.info(previous);
+				 console.info(next);*/
+				//			console.info(current.currentScope.$routeParams.primaryNav);
+				//			$scope.title =current.currentScope.$routeParams.primaryNav;
+				//			$scope.title = ;
+
+				scope.$on('linkText', function (event, data) {
+					scope.title = data;
+		 	console.info(data);
+					 console.info(event);
+
+				})
+
+
+			})
+
 
 		}
 	};

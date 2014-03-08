@@ -4,13 +4,55 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 
 	if (!angular.element('body').hasClass('wp-admin')) {
 
+
+
+
 		if (wpAjax.sessions.on_first_page_load !== null && $location.path() !== '/') {
 			//when page other than front-page loads for the first time
 			$window.location.href = wpAjax.themeLocation.siteUrl + $location.url();
 
 		}
 		/** @namespace $routeParams.primaryNav */
-		$scope.title = $routeParams.primaryNav;
+		$scope.title =  wpAjax.themeLocation.page_title;
+//		$scope.title =  $routeParams.primaryNav;
+
+		/*page.get_page_ID(function (data) {
+
+			console.info(data);
+
+			$scope.title = data.page.title
+
+			
+
+		},$route.current.params.primaryNav);*/
+
+		$scope.$on('$routeChangeSuccess', function (current,previous,next) {
+
+//			console.info(current.currentScope.$routeParams.primaryNav);
+//			$scope.title =current.currentScope.$routeParams.primaryNav;
+//			$scope.title = ;
+
+			$scope.$on('linkText', function (event, data) {
+				$scope.title = data;
+
+
+			})
+
+
+		});
+
+
+		$compile(angular.element("a").bind('click', function (event,data) {
+
+			$compile(angular.element(this).filter(function () {
+
+				$scope.title = angular.element(this).text();
+
+			}));
+
+
+		}))($scope);
+
 		$scope.templateDir = wpAjax.themeLocation.templateDir;
 		$scope.siteUrl = wpAjax.themeLocation.siteUrl;
 		$scope.$route = $route;

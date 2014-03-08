@@ -20,14 +20,17 @@ function reactor_do_reactor_head() {
 	?>
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<!--	<title>--><?php //wp_title('|', true, 'right'); ?><!--</title>-->
-	<!--	<pagetitle ng-bind="title"></pagetitle>-->
-	<title data-ng-bind="title"></title>
+<!--		<pagetitle ng-bind="title"></pagetitle>-->
+<!--	<title data-ng-bind="title"></title>-->
 
-	<!--		<pagetitle name="{{$root.title}}"></pagetitle>-->
+	<title  data-ng-bind-html="title"></title>
+
+<!--			<pagetitle name="{{$root.title}}"></pagetitle>-->
 
 	<!-- google chrome frame for ie -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="fragment" content="!">
+	<meta name="google-site-verification" content="5n1rlGu5W7ZrsmlXMbXp87fX98B_XP6UZ-gTughx21A" />
 	<!-- mobile meta -->
 	<meta name="HandheldFriendly" content="True">
 	<meta name="MobileOptimized" content="320">

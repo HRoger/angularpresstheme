@@ -12,6 +12,21 @@ angularpressApp.controller("angpPaginationCtrl", function ($scope, post, wpAjax)
 	$scope.itemsPerPage = wpAjax.readingSettings.posts_per_page;
 	$scope.currentPage = 2;
 
+/*	$scope.$on('ngRepeatFinished', function () {
+		//Category
+		angular.element(".nav-single a, .entry-title a, .entry-content a").css('color', 'blue');
+
+
+		$compile(angular.element(".nav-single a, .entry-title a, .entry-content a").bind('click', function () {
+
+			$compile(angular.element(this).filter(function () {
+				$scope.$emit('linkText', angular.element(this).text());
+
+			}));
+
+		}))($scope);
+	});*/
+
 	$scope.pageChanged = function (newPage) {
 
 		page = newPage;
@@ -34,7 +49,7 @@ angularpressApp.controller("angpPaginationCtrl", function ($scope, post, wpAjax)
 
 });
 
-angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post, wpAjax, $route) {
+angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post, wpAjax, $route,$compile) {
 
 	var status = 'publish';
 	var page = 1;//first page as default
@@ -42,6 +57,21 @@ angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post,
 	$scope.maxSize = 5;
 	$scope.itemsPerPage = wpAjax.readingSettings.posts_per_page;
 	$scope.currentPage = 2;
+
+	/*$scope.$on('ngRepeatFinished', function () {
+		//Category
+		angular.element(".nav-single a, .entry-title a, .entry-content a").css('color', 'blue');
+
+
+		$compile(angular.element(".nav-single a, .entry-title a, .entry-content a").bind('click', function () {
+
+			$compile(angular.element(this).filter(function () {
+				$scope.$emit('linkText', angular.element(this).text());
+
+			}));
+
+		}))($scope);
+	});*/
 
 	$scope.pageChanged = function (newPage) {
 
@@ -69,7 +99,7 @@ angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post,
 
 });
 
-angularpressApp.controller("angpPaginationTagCtrl", function ($scope, post, wpAjax, $route) {
+angularpressApp.controller("angpPaginationTagCtrl", function ($scope, post, wpAjax, $route,$compile) {
 
 	var status = 'publish';
 	var page = 1;//first page as default
@@ -77,6 +107,21 @@ angularpressApp.controller("angpPaginationTagCtrl", function ($scope, post, wpAj
 	$scope.maxSize = 5;
 	$scope.itemsPerPage = wpAjax.readingSettings.posts_per_page;
 	$scope.currentPage = 2;
+
+/*	$scope.$on('ngRepeatFinished', function () {
+		//Category
+		angular.element(".nav-single a, .entry-title a, .entry-content a").css('color', 'blue');
+
+
+		$compile(angular.element(".nav-single a, .entry-title a, .entry-content a").bind('click', function () {
+
+			$compile(angular.element(this).filter(function () {
+				$scope.$emit('linkText', angular.element(this).text());
+
+			}));
+
+		}))($scope);
+	});*/
 
 	$scope.pageChanged = function (newPage) {
 
