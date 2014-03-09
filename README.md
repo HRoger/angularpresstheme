@@ -11,7 +11,7 @@ II. Demo
 
 ###Note
 
->Search Bar, some Foundation components, responsive design,
+>Search Bar, some Foundation components, responsive design
 > are not working at this moment. See **Todo**.
 
 
