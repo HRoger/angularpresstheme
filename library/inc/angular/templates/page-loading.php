@@ -21,6 +21,7 @@ function angp_is_page_first_loaded() {
 
 add_action('init', 'angp_is_page_first_loaded', 10);
 
+
 /**
  * This tells the browser at the get_header hook phase to delete 'template_req_onload' after the
  * page is fully loaded, so that dont get into a redirection loop. It checks if $_COOKIE['is_page_loaded']
@@ -31,10 +32,10 @@ function destroy_session_index_onload() {
 	//cookie set in app.js
 	if (isset($_COOKIE['is_page_loaded']) || isset($_SESSION['page_loaded'])) {
 		unset($_SESSION['template_req_onload']);
-		unset($_COOKIE['is_page_loaded']);
-		unset($_SESSION['page_loaded']);
-		angp_set_session('index.php', 'template_req');
-		angp_set_session('index.php', 'template_req_pages');
+//		unset($_COOKIE['is_page_loaded']);
+//		unset($_SESSION['page_loaded']);
+//		angp_set_session('index.php', 'template_req');
+//		angp_set_session('index.php', 'template_req_pages');
 	}
 }
 

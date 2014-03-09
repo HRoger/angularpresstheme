@@ -11,7 +11,7 @@ II. Demo
 
 ###Note
 
->Search Bar, some Foundation components, site title, responsive design,
+>Search Bar, some Foundation components, responsive design,
 > are not working at this moment. See **Todo**.
 
 
@@ -144,19 +144,18 @@ VII. Known bugs
 VIII. Todo
 ==========
 
-* WP option for angularjs routing: admin, login and register page
 * Searchbar
+* WP option for angularjs routing: admin, login and register page
 * Reading Settings: set warning label to user update edit.php
-* Title tag
+* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
+* Google Analytics and WP SlimStat plugin
 * Comments form
 * Porfolio subpages
-* Google Analytics and WP SlimStat plugin
-* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 * Gmail and Youtube like routing
 * Contact form
 * Update foundation components and shortcodes to boostrap-ui
+* Use ob_start instead of HTTP_API
 * Update to foundation 5
-* Woocommerce compatible
 * Splash Screen design
 * WP option for angularjs routing: category base etc
 * Main Menu and Sidebar reactor menu
@@ -165,14 +164,15 @@ VIII. Todo
 * Publish page bulk action
 * Grunt
 * Requirejs and r.js on theme build
-* Use ob_start instead of HTTP_API
+* Rename post/page slug should rename angular template file
+* States: pending & draft
 * Reading Settings: date and time format
 * Responsive design: Work on mobile
 * Views folder on a CDN
 * Multisite compatible
 * Make preview for post or page
-* Rename post/page slug should rename angular template file
-* States: pending & draft
+* Woocommerce compatible
+* Buddypress compatible
 * Visibility: set private & set password
 * **WIP**- work in progress. Work offline and synch when back on. See John Papa's concept: [Code Camper](http://cc-ng-z.azurewebsites.net/#/sessions)
 * Accessibility

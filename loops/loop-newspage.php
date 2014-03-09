@@ -56,12 +56,12 @@ rewind_posts(); //end have_posts() check and rewind $post
 		<?php reactor_post_before(); ?>
 		<!--loop-newspage.php. Loop for the news-page template-->
 		<div data-spinner-post></div>
-			<?php if ($post_columns != 1) echo '<li   data-ng-repeat="item in posts">'; ?>
+		<?php if ($post_columns != 1) echo '<li  data-ng-repeat="item in posts" on-ang-repeat-finished>'; ?>
 
-			<?php // display newspage post format
-			get_template_part('post-formats/format', 'standard'); ?>
+		<?php // display newspage post format
+		get_template_part('post-formats/format', 'standard'); ?>
 
-			<?php if ($post_columns != 1) echo '</li>'; ?>
+		<?php if ($post_columns != 1) echo '</li>'; ?>
 
 		<?php reactor_post_after(); ?>
 

@@ -12,20 +12,16 @@ angularpressApp.controller("angpPaginationCtrl", function ($scope, post, wpAjax)
 	$scope.itemsPerPage = wpAjax.readingSettings.posts_per_page;
 	$scope.currentPage = 2;
 
-/*	$scope.$on('ngRepeatFinished', function () {
-		//Category
-		angular.element(".nav-single a, .entry-title a, .entry-content a").css('color', 'blue');
+	$scope.$on('ngRepeatFinished', function () {
+		// See: front-page.php,loop-frontpage.php,news-page.php,loop-newspage.php,loop.php
+		//angular.element(".entry-title a,.entry-tags a,.entry-meta a").css('color', 'blue');
 
+		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
+			$scope.$emit('linkText', angular.element(this).text());
 
-		$compile(angular.element(".nav-single a, .entry-title a, .entry-content a").bind('click', function () {
+		});
 
-			$compile(angular.element(this).filter(function () {
-				$scope.$emit('linkText', angular.element(this).text());
-
-			}));
-
-		}))($scope);
-	});*/
+	});
 
 	$scope.pageChanged = function (newPage) {
 
@@ -49,7 +45,7 @@ angularpressApp.controller("angpPaginationCtrl", function ($scope, post, wpAjax)
 
 });
 
-angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post, wpAjax, $route,$compile) {
+angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post, wpAjax, $route, $compile) {
 
 	var status = 'publish';
 	var page = 1;//first page as default
@@ -58,20 +54,16 @@ angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post,
 	$scope.itemsPerPage = wpAjax.readingSettings.posts_per_page;
 	$scope.currentPage = 2;
 
-	/*$scope.$on('ngRepeatFinished', function () {
+	$scope.$on('ngRepeatFinished', function () {
 		//Category
-		angular.element(".nav-single a, .entry-title a, .entry-content a").css('color', 'blue');
+		//		angular.element(".entry-title a,.entry-tags a,.entry-meta a").css('color', 'blue');
 
+		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
+			$scope.$emit('linkText', angular.element(this).text());
 
-		$compile(angular.element(".nav-single a, .entry-title a, .entry-content a").bind('click', function () {
+		});
 
-			$compile(angular.element(this).filter(function () {
-				$scope.$emit('linkText', angular.element(this).text());
-
-			}));
-
-		}))($scope);
-	});*/
+	});
 
 	$scope.pageChanged = function (newPage) {
 
@@ -99,7 +91,7 @@ angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post,
 
 });
 
-angularpressApp.controller("angpPaginationTagCtrl", function ($scope, post, wpAjax, $route,$compile) {
+angularpressApp.controller("angpPaginationTagCtrl", function ($scope, post, wpAjax, $route, $compile) {
 
 	var status = 'publish';
 	var page = 1;//first page as default
@@ -108,20 +100,16 @@ angularpressApp.controller("angpPaginationTagCtrl", function ($scope, post, wpAj
 	$scope.itemsPerPage = wpAjax.readingSettings.posts_per_page;
 	$scope.currentPage = 2;
 
-/*	$scope.$on('ngRepeatFinished', function () {
+	$scope.$on('ngRepeatFinished', function () {
 		//Category
-		angular.element(".nav-single a, .entry-title a, .entry-content a").css('color', 'blue');
+		//		angular.element(".entry-title a,.entry-tags a,.entry-meta a").css('color', 'blue');
 
+		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
+			$scope.$emit('linkText', angular.element(this).text());
 
-		$compile(angular.element(".nav-single a, .entry-title a, .entry-content a").bind('click', function () {
+		});
 
-			$compile(angular.element(this).filter(function () {
-				$scope.$emit('linkText', angular.element(this).text());
-
-			}));
-
-		}))($scope);
-	});*/
+	});
 
 	$scope.pageChanged = function (newPage) {
 
@@ -157,6 +145,17 @@ angularpressApp.controller("angpPaginationArchiveCtrl", function ($scope, post, 
 	$scope.maxSize = 5;
 	$scope.itemsPerPage = wpAjax.readingSettings.posts_per_page;
 	$scope.currentPage = 2;
+
+	$scope.$on('ngRepeatFinished', function () {
+		//Category
+		//		angular.element(".entry-title a,.entry-tags a,.entry-meta a").css('color', 'blue');
+
+		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
+			$scope.$emit('linkText', angular.element(this).text());
+
+		});
+
+	});
 
 	$scope.pageChanged = function (newPage) {
 

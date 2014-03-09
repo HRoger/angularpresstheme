@@ -21,7 +21,7 @@ $slider_category = reactor_option('newspage_slider_category', ''); ?>
 		<div id="content" role="main">
 			<div class="row">
 
-				<div class="<?php reactor_columns(); ?>">
+				<div class="<?php reactor_columns(); ?>" data-ng-cloak data-ng-controller="angpPaginationCtrl">
 
 					<?php reactor_inner_content_before(); ?>
 					<?php

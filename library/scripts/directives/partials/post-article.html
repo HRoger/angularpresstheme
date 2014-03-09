@@ -1,4 +1,4 @@
-<div data-ng-controller="SinglePostsCtrl" >
+<div>
 	<a class="ab-item" data-ng-if="is_visible"
 	   data-ng-href="{{siteurl}}/wp-admin/post.php?post={{postId}}&action=edit">Edit Post</a>
 
@@ -12,7 +12,7 @@
 				<h1 class="entry-title" data-ng-bind="postTitle"></h1>
 			</header>
 
-			<div class="entry-content" data-ng-bind-html="postContent | unsafe" ></div>
+			<div class="entry-content" data-ng-bind-html="postContent | unsafe"></div>
 
 			<footer class="entry-footer" data-ng-hide="is_link_visible">
 
@@ -47,8 +47,7 @@
 
 	</article>
 
-
-		<nav class="nav-single">
+	<nav class="nav-single">
             <span data-ng-if="is_previous_visible" class="nav-previous alignleft">
             <a rel="prev" data-ng-href="{{postPreviousUrl}}">
 	            <span class="meta-nav">←</span>
@@ -57,11 +56,11 @@
             </span>
 
 		    <span data-ng-if="is_next_visible" class="nav-next alignright">
-		    <a rel="next" ng-href="{{postNextUrl}}">
-			    <span ng-bind="postNextUrl | fromUrlSlugToTitle"></span>
+		    <a rel="next" data-ng-href="{{postNextUrl}}">
+			    <span data-ng-bind="postNextUrl | fromUrlSlugToTitle"></span>
 			    <span class="meta-nav">→</span>
 		    </a>
 		    </span>
-		</nav>
+	</nav>
 
 </div>

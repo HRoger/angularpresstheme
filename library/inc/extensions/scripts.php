@@ -106,7 +106,7 @@ function reactor_register_scripts() {
 	wp_register_script('directives-spinnerPost-js', get_template_directory_uri() . '/library/scripts/directives/dtSpinnerPost.js', array(), false, true);
 	wp_register_script('directives-displayFooter-js', get_template_directory_uri() . '/library/scripts/directives/dtDisplayFooter.js', array(), false, true);
 	wp_register_script('directives-postArticle-js', get_template_directory_uri() . '/library/scripts/directives/dtPostArticle.js', array(), false, true);
-	wp_register_script('directives-pagetitle-js', get_template_directory_uri() . '/library/scripts/directives/dtPagetitle.js', array(), false, true);
+
 	wp_register_script('directives-commentForm-js', get_template_directory_uri() . '/library/scripts/directives/dtCommentForm.js', array(), false, true);
 	wp_register_script('directives-navMarker-js', get_template_directory_uri() . '/library/scripts/directives/dtNavMarker.js', array(), false, true);
 
@@ -177,7 +177,6 @@ function reactor_enqueue_scripts() {
 		wp_enqueue_script('filters-convertToMonthYear-js');
 
 		wp_enqueue_script('directives-mixitup-js');
-		wp_enqueue_script('directives-pagetitle-js');
 		wp_enqueue_script('directives-contactform7-js');
 		wp_enqueue_script('directives-fancybox-js');
 		wp_enqueue_script('directives-adminbar-buttons-js');
@@ -239,10 +238,8 @@ function angularpress_localize_scripts($script) {
 	}
 
 	if (isset($_SESSION['delete_post_cache_key'])) {
-//		FB::info($_SESSION['delete_post_cache_key'], 'delete_post_cache_key');
 		$angp_session_delete_post_cache_key = $_SESSION['delete_post_cache_key'];
 	}
-
 
 
 	wp_localize_script(
@@ -257,7 +254,7 @@ function angularpress_localize_scripts($script) {
 			'angp_session_delete_post_cache_key' => $angp_session_delete_post_cache_key,
 			'page_for_posts' => get_option('page_for_posts'),
 			'posts_per_page' => get_option('posts_per_page'),
-		    'is_user_logged_in' =>  is_user_logged_in()
+			'is_user_logged_in' => is_user_logged_in()
 		)
 	);
 }

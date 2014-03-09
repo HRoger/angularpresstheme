@@ -29,14 +29,15 @@ if (current_theme_supports('reactor-breadcrumbs')) {
 									data-ng-href="{{siteUrl}}">Home</a></li>
 							<li data-ng-if="!isActive('/') && isActive($location.path
 							())"
-							    ng-class="{current:isActive('/'+$route.current.params.primaryNav+'/')}">
+							    data-ng-class="{current:isActive('/'+$route.current.params
+							    .primaryNav+'/')}">
 								<a
 									data-ng-href="{{siteUrl}}/{{$route.current.params
 									.primaryNav}}/"
 									data-ng-bind="$route.current.params.primaryNav"></a>
 							</li>
 							<li  data-ng-if="!isActive('/') && !isActive('/'+$route.current.params.primaryNav+'/') && isActive($location.path()) "
-							    ng-class="{current:isActive($location.path())}"><a
+							    data-ng-class="{current:isActive($location.path())}"><a
 									data-ng-href="{{siteUrl}}/{{$route.current.params.primaryNav}}/{{$route.current.params.secondaryNav}}/"
 									data-ng-bind="$route.current.params.secondaryNav"></a>
 							</li>

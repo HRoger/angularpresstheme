@@ -17,22 +17,22 @@
 		<div class="row">
 	<?php } ?>
 
-<!--{{asyncSelected}}-->
-<!--		<pre>Model: {{searchText |json}}</pre>-->
+
 	<div data-ng-cloak data-ng-controller="angpPaginationCtrl">
 
 		<ul class="multi-column">
 			<?php reactor_post_before(); ?>
 			<!--loop.php. Reading settings posts page-->
 			<div class="loading-spinner-posts"></div>
-			<?php echo '<li data-ng-repeat="item in posts" >'; ?>
+			<?php echo '<li data-ng-repeat="item in posts" on-ang-repeat-finished >'; ?>
 			<?php // get post format and display template for that format
 			if (!get_post_format()) : get_template_part('post-formats/format', 'standard');
 			else : get_template_part('post-formats/format', get_post_format()); endif; ?>
 			<?php echo '</li>'; ?>
 		</ul>
 
-		<pagination ng-hide="is_link_visible" total-items="totalItems" page="currentPage" max-size="maxSize"
+		<pagination data-ng-hide="is_link_visible" total-items="totalItems" page="currentPage"
+		            max-size="maxSize"
 		            on-select-page="pageChanged(page)" class="pagination"
 		            items-per-page="itemsPerPage" boundary-links="true"
 		            rotate="false" num-pages="numPages">

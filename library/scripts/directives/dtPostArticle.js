@@ -10,31 +10,40 @@ angularpressApp.directive('postArticle', function (post, wpAjax, $location, $roo
 			angular.element('.loading-spinner-single-posts').spin('large');
 			scope.is_link_visible = true;
 
-				scope.appendAdminBarEditPostButton();
+			scope.appendAdminBarEditPostButton();
 
-
-            //$http request
+			//$http request
 			post.get_post_ID(
-
 				function (data) {
 
 					//add  borderbottom for blog posts and remove on frontpage
 					angular.element(".entry-body").css({
 						borderBottom: "0.063em solid #DDDDDD"
 					});
+
 					$rootScope.$on('$routeChangeSuccess', function () {
 
 						if ($location.path() === '/') {
 							angular.element(".entry-body").css({borderBottom: "none"});
 						}
-
 					})
 
 					angular.element('.loading-spinner-single-posts').spin(false);
 
+					scope.$watch('$viewContentLoaded', function () {
+						//responsible to site <title> on posts. See MainCtrl. Related:SidebarCtrl
+						angular.element("nav a[rel=prev] span:nth-child(2),nav a[rel=next] span:nth-child(1)").on('click', function () {
+							scope.$emit('linkText', angular.element(this).text());
+
+						});
+
+					});
+
 					scope.siteurl = wpAjax.themeLocation.siteUrl;
 					scope.postUrl = scope.siteurl + $location.path();
+					/** @namespace data.previous_url */
 					scope.postPreviousUrl = data.previous_url;
+					/** @namespace data.next_url */
 					scope.postNextUrl = data.next_url;
 
 					scope.postId = data.post.id;

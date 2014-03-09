@@ -44,7 +44,7 @@ $frontpage_query = new WP_Query($args); ?>
 	<?php reactor_post_before(); ?>
 
 	<div data-spinner-post></div>
-	<?php if ($post_columns != 1) echo '<li data-ng-repeat="item in posts">'; ?>
+	<?php if ($post_columns != 1) echo '<li data-ng-repeat="item in posts" on-ang-repeat-finished>'; ?>
 
 	<?php // display frontpage post format
 	get_template_part('post-formats/format', 'standard'); ?>
