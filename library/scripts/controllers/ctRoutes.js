@@ -1,10 +1,8 @@
 'use strict';
 angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $location, $compile, $element, $window, wpAjax) {
-	//	window.scope = $scope;
 
 	if (!angular.element('body').hasClass('wp-admin')) {
 
-		//		console.info(wpAjax.sessions.on_first_page_load);
 		if (wpAjax.sessions.on_first_page_load !== null && $location.path() !== '/') {
 			//when page other than front-page loads for the first time
 			$window.location.href = wpAjax.themeLocation.siteUrl + $location.url();
@@ -13,21 +11,26 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 		/** @namespace $routeParams.primaryNav */
 		$scope.title = wpAjax.themeLocation.page_title;
 
-
 		$scope.$on('$routeChangeStart', function () {
 
 			$scope.$on('linkText', function (event, data) {
 				$scope.title = data;
-			})
-
+			});
+			angular.element(document).ready(function () {
+				$scope.onPageFullyLoaded = true;
+			});
 		});
 		$scope.$on('$viewContentLoaded', function () {
 
 			$scope.$on('linkText', function (event, data) {
 				$scope.title = data;
-			})
+			});
 
+			angular.element(document).ready(function () {
+				$scope.onPageFullyLoaded = true;
+			});
 		});
+
 		$compile(angular.element("a").bind('click', function (event, data) {
 
 			$compile(angular.element(this).filter(function () {
@@ -74,6 +77,10 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 				$window.location.href = wpAjax.themeLocation.siteUrl + '/wp-admin/';
 
 			}
+			else if (typeof $route.current.params.s !== 'undefined') {
+				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/search.html';
+
+			}
 			if ($location.path() === '/') {
 				$scope.menuId = 'root';
 
@@ -105,6 +112,7 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
 				}
+
 				else {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
 					//					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.primaryNav + '.html';
@@ -155,7 +163,9 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 	}
 );
 'use strict';
-angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $window, $location, $compile, $rootScope, wpAjax, post, $route) {
+angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $window, $location, $compile, $rootScope, wpAjax) {
+
+
 
 		if (!angular.element('body').hasClass('wp-admin')) {
 
@@ -181,7 +191,7 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 			$scope.menuId = '' + $routeParams.primaryNav;
 			$scope.pageId = 'subNav ' + $routeParams.secondaryNav;
 
-			if ($routeParams.primaryNav !== 'wp-admin' && $routeParams.primaryNav !== 'category' && $routeParams.primaryNav !== 'tag' && !isNumeric($routeParams.primaryNav) && $routeParams.secondaryNav !== '') {
+			if ($routeParams.primaryNav !== 'wp-admin' && $routeParams.primaryNav !== 'category' && $routeParams.primaryNav !== 'tag' && !isNumeric($routeParams.primaryNav) && typeof $routeParams.secondaryNav !== 'undefined') {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/single.html';
 
 			}
@@ -189,11 +199,11 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/archive.html';
 
 			}
-			else if ($routeParams.primaryNav === 'category' && $routeParams.secondaryNav !== '') {
+			else if ($routeParams.primaryNav === 'category' && typeof $routeParams.secondaryNav !== 'undefined') {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/category.html';
 
 			}
-			else if ($routeParams.primaryNav === 'tag' && $routeParams.secondaryNav !== '') {
+			else if ($routeParams.primaryNav === 'tag' && typeof $routeParams.secondaryNav !== 'undefined') {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/tag.html';
 
 			}

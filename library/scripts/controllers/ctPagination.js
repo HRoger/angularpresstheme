@@ -13,9 +13,9 @@ angularpressApp.controller("angpPaginationCtrl", function ($scope, post, wpAjax)
 	$scope.currentPage = 2;
 
 	$scope.$on('ngRepeatFinished', function () {
-		// See: front-page.php,loop-frontpage.php,news-page.php,loop-newspage.php,loop.php
-		//angular.element(".entry-title a,.entry-tags a,.entry-meta a").css('color', 'blue');
 
+		//see ctRoute.js MainCtrl. Responsible to send link text value to title
+		// See: front-page.php,loop-frontpage.php,news-page.php,loop-newspage.php,loop.php
 		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
 			$scope.$emit('linkText', angular.element(this).text());
 
@@ -55,9 +55,8 @@ angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post,
 	$scope.currentPage = 2;
 
 	$scope.$on('ngRepeatFinished', function () {
-		//Category
-		//		angular.element(".entry-title a,.entry-tags a,.entry-meta a").css('color', 'blue');
 
+		//see ctRoute.js MainCtrl. Responsible to send link text value to title
 		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
 			$scope.$emit('linkText', angular.element(this).text());
 
@@ -101,9 +100,8 @@ angularpressApp.controller("angpPaginationTagCtrl", function ($scope, post, wpAj
 	$scope.currentPage = 2;
 
 	$scope.$on('ngRepeatFinished', function () {
-		//Category
-		//		angular.element(".entry-title a,.entry-tags a,.entry-meta a").css('color', 'blue');
 
+		//see ctRoute.js MainCtrl. Responsible to send link text value to title
 		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
 			$scope.$emit('linkText', angular.element(this).text());
 
@@ -147,9 +145,8 @@ angularpressApp.controller("angpPaginationArchiveCtrl", function ($scope, post, 
 	$scope.currentPage = 2;
 
 	$scope.$on('ngRepeatFinished', function () {
-		//Category
-		//		angular.element(".entry-title a,.entry-tags a,.entry-meta a").css('color', 'blue');
 
+		//see ctRoute.js MainCtrl. Responsible to send link text value to title
 		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
 			$scope.$emit('linkText', angular.element(this).text());
 
@@ -179,6 +176,53 @@ angularpressApp.controller("angpPaginationArchiveCtrl", function ($scope, post, 
 				$scope.is_link_visible = false;
 
 			}, status, $route.current.params.primaryNav, $route.current.params.secondaryNav, page);
+
+	}
+
+});
+
+angularpressApp.controller("angpSearchCtrl", function ($scope, search, wpAjax, $route) {
+
+
+//	$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/search.html';
+
+	var status = 'publish';
+	var page = 1;//first page as default
+
+	$scope.maxSize = 5;
+	$scope.itemsPerPage = wpAjax.readingSettings.posts_per_page;
+	$scope.currentPage = 2;
+
+	$scope.$on('ngRepeatFinished', function () {
+		//see ctRoute.js MainCtrl. Responsible to send link text value to title
+		angular.element(".entry-title a,.entry-tags a,.entry-meta a").on('click', function () {
+			$scope.$emit('linkText', angular.element(this).text());
+
+		});
+
+	});
+
+	$scope.pageChanged = function (newPage) {
+
+		page = newPage;
+
+		angular.element('.loading-spinner-posts').spin('large-widgets');
+		$scope.is_link_visible = true;
+
+		search.get_results(
+			function (data) {
+console.info(data);
+				$scope.title = data.posts.title;
+
+				$scope.posts = data.posts;
+				$scope.numPages = data.pages;
+				/** @namespace data.category.count_total */
+				$scope.totalItems = data.count_total;
+
+				angular.element('.loading-spinner-posts').spin(false);
+				$scope.is_link_visible = false;
+
+			}, $route.current.params.s, page);
 
 	}
 

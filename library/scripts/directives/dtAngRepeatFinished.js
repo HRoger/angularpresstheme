@@ -16,5 +16,3 @@ angularpressApp.directive('onAngRepeatFinished', function ($timeout) {
 		}
 	}
 });
-
-

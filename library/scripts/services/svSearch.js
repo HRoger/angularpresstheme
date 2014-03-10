@@ -4,7 +4,7 @@
 angularpressApp.factory('search', function ($http, wpAjax) {
 
 	return{
-		get_results: function (successcb, inputValue) {
+		get_results: function (successcb, inputValue,page) {
 
 			$http(
 				{
@@ -14,12 +14,11 @@ angularpressApp.factory('search', function ($http, wpAjax) {
 					params: {
 						json       : 'get_search_results',
 						search     : inputValue,
+						page       : page,
 						date_format: 'F j, Y'
 					}
 				})
 				.success(function (data) {
-
-
 					return successcb(data);
 
 				})

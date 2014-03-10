@@ -61,7 +61,7 @@
 
 	<div display-footer>
 
-		<div class="angp-footer">
+		<div class="angp-footer"  >
 			<?php if (is_front_page() && get_option('show_on_front') !== 'posts') {
 				//when loading page is other than the frontpage and reading settings are set to 'pages'. See: dtDisplayFooter.js
 				angularpress_footer_inside();

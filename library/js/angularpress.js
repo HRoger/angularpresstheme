@@ -2,10 +2,7 @@
 'use strict';
 (function ($, document) {
 
-
-
 	$(document).ready(function () {
-
 
 
 		/* adds .button class to submit button on comment form */

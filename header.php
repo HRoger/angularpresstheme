@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 
 <!--[if gt IE 8]><!-->
-<html <?php language_attributes(); ?>  data-ng-controller="MainCtrl"  data-ng-cloak data-ng-app="angularpressApp">
+<html <?php language_attributes(); ?>  data-ng-controller="MainCtrl"   data-ng-app="angularpressApp">
 <!--<![endif]-->
 
 <head>

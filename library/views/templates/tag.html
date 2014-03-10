@@ -14,7 +14,7 @@
 						<!--loop.php. Reading settings posts page-->
 
 						<!--NGREPEAT LOOP-->
-						<li data-ng-repeat="item in posts"  on-ang-repeat-finished>
+						<li data-ng-repeat="item in posts" on-ang-repeat-finished>
 							<article id="post-188"
 							         class="post-188 post type-post status-publish format-standard  entry category-{{title}} ">
 								<div class="entry-body">
@@ -59,7 +59,7 @@
 													title="View all posts by {{item.author.name}}"
 													rel="author"
 													ng-bind-html="item.author.name"></a></span></span>-->
-										                        in
+											<span data-ng-if="item.categories.length!==0">in</span>
 											<span data-ng-repeat="category in item.categories"><a
 													data-ng-href="{{siteUrl}}/category/{{category.slug}}/"
 													title="View all posts in {{category.title}}"

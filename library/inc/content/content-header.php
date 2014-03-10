@@ -91,7 +91,8 @@ function reactor_do_title_logo() {
 						<a href="<?php echo esc_url(home_url('/')); ?>"
 						   title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>"
 						   rel="home"><?php bloginfo('name'); ?></a>
-						<iframe style="float:right;" width="60%" height="95" scrolling="no"
+						<iframe  style="float:right;margin-bottom:5px;" width="60%" height="95"
+						         scrolling="no"
 						        frameborder="no"
 						        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/23712435&amp;auto_play=false&amp;hide_related=false&amp;visual=false"></iframe>
 					</p>
