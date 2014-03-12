@@ -11,7 +11,7 @@ II. Demo
 
 ###Note
 
-Some Foundation components, responsive design are not working at this moment. See **Todo**.
+Some Foundation components and responsive design are not working at this moment. See **Todo**.
 
 
 III. Configuration
