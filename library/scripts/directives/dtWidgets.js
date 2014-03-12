@@ -1,6 +1,7 @@
 /**
  * Created by ROGER on 26.11.13.
  */
+
 'use strict';
 angularpressApp.directive('widgetFooter', function (widgetData, wpAjax) {
 
@@ -15,7 +16,6 @@ angularpressApp.directive('widgetFooter', function (widgetData, wpAjax) {
 			element.find('.loading-spinner').spin('large-widgets');
 
 			widgetData.getWidget(
-
 				function (data) {
 					element.find('.loading-spinner').spin(false);
 					scope.widgets = data.widgets;
@@ -40,7 +40,6 @@ angularpressApp.directive('widgetSidebar', function (widgetData, wpAjax) {
 			element.find('.loading-spinner').spin('large-widgets');
 
 			widgetData.getWidget(
-
 				function (data) {
 					element.find('.loading-spinner').spin(false);
 					scope.widgets = data.widgets;

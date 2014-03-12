@@ -77,9 +77,9 @@
 			<pre>$location.path() = {{$location.path() }}</pre>
 			<pre>$location.url() = {{ $location.url() }}</pre>
 			<pre>$location.absUrl() = {{ $location.absUrl() }}</pre>
+			<pre>$location.search() = {{ $location.search() }}</pre>
 			<pre>$route.current.locals = {{$route.current.locals}}</pre>
 			<pre>$route.current.params = {{$route.current.params}}</pre>
-			<pre>$route.current.params = {{$route.current.params.primaryNav===''}}</pre>
 			<pre>$route.current.scope= {{$route.current.scope}}</pre>
 			<pre>$route.current.controller= {{$route.current.controller}}</pre>
 			<pre>$route.current.templateUrl= {{$route.current.templateUrl}}</pre>

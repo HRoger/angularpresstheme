@@ -11,8 +11,7 @@ II. Demo
 
 ###Note
 
->Search Bar, some Foundation components, responsive design
-> are not working at this moment. See **Todo**.
+Some Foundation components, responsive design are not working at this moment. See **Todo**.
 
 
 III. Configuration
@@ -144,14 +143,13 @@ VII. Known bugs
 VIII. Todo
 ==========
 
-* Searchbar
+* Porfolio subpages
 * WP option for angularjs routing: admin, login and register page
 * Reading Settings: set warning label to user update edit.php
-* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 * Google Analytics and WP SlimStat plugin
-* Comments form
-* Porfolio subpages
+* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 * Gmail and Youtube like routing
+* Comments form
 * Contact form
 * Update foundation components and shortcodes to boostrap-ui
 * Use ob_start instead of HTTP_API

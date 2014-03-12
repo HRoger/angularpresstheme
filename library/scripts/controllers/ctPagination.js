@@ -181,12 +181,8 @@ angularpressApp.controller("angpPaginationArchiveCtrl", function ($scope, post, 
 
 });
 
-angularpressApp.controller("angpSearchCtrl", function ($scope, search, wpAjax, $route) {
+angularpressApp.controller("angpSearchCtrl", function ($scope, search, wpAjax, $route, lodash,$location) {
 
-
-//	$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/search.html';
-
-	var status = 'publish';
 	var page = 1;//first page as default
 
 	$scope.maxSize = 5;
@@ -211,8 +207,12 @@ angularpressApp.controller("angpSearchCtrl", function ($scope, search, wpAjax, $
 
 		search.get_results(
 			function (data) {
-console.info(data);
+
 				$scope.title = data.posts.title;
+
+				if (lodash.isEmpty(data.posts)) {
+					$location.path("/not-found/");
+				}
 
 				$scope.posts = data.posts;
 				$scope.numPages = data.pages;

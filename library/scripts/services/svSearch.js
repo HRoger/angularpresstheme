@@ -1,15 +1,15 @@
 /**
  * Created by ROGER on 19.01.14.
  */
-angularpressApp.factory('search', function ($http, wpAjax) {
-
+angularpressApp.factory('search', function ($http, wpAjax,$angularCacheFactory) {
+	var searchCache = $angularCacheFactory('searchCache', {storageMode: 'localStorage',verifyIntegrity: true});
 	return{
 		get_results: function (successcb, inputValue,page) {
 
 			$http(
 				{
 					method: 'GET',
-					cache : true,
+					cache : searchCache,
 					url   : wpAjax.themeLocation.siteUrl + '/api/',
 					params: {
 						json       : 'get_search_results',

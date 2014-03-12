@@ -2,7 +2,7 @@
  * Created by ROGER on 28.02.14.
  */
 'use strict';
-angularpressApp.controller("SidebarCtrl", function ($scope, $compile) {
+angularpressApp.controller("SidebarCtrl", function ($scope, $compile, $location) {
 
 	$scope.$on('ngRepeatFinished', function () {
 
@@ -11,18 +11,23 @@ angularpressApp.controller("SidebarCtrl", function ($scope, $compile) {
 			$scope.$emit('linkText', angular.element(this).text());
 		}))($scope);
 
-		$scope.test = function (data) {
+		//Search input widget
+		$scope.$watch($compile(angular.element("#searchform", function () {
+			$scope.submit = function () {
+				if ($scope.text) {
+					$location.path("/search/").search({'s': $scope.text});
 
-			console.info(data);
+				}
+			}
 
-		}
+		}))($scope));
 
 	});
 
 });
 
 'use strict';
-angularpressApp.controller("SidebarFooterCtrl", function ($scope, $compile) {
+angularpressApp.controller("SidebarFooterCtrl", function ($scope, $compile, $location) {
 
 	$scope.$on('ngRepeatFinished', function () {
 
@@ -30,12 +35,23 @@ angularpressApp.controller("SidebarFooterCtrl", function ($scope, $compile) {
 		$compile(angular.element(".widget li a, .tagcloud a").on('click', function () {
 			$scope.$emit('linkText', angular.element(this).text());
 		}))($scope);
+
+		//Search input widget
+		$scope.$watch($compile(angular.element("#searchform", function () {
+			$scope.submit = function () {
+				if ($scope.text) {
+					$location.path("/search/").search({'s': $scope.text});
+
+				}
+			}
+
+		}))($scope));
 	});
 
 });
 
 'use strict';
-angularpressApp.controller("SidebarFrontpageCtrl", function ($scope, $compile) {
+angularpressApp.controller("SidebarFrontpageCtrl", function ($scope, $compile, $location) {
 
 	//see ctRoute.js MainCtrl. Responsible to send link text value to title
 	$scope.$on('ngRepeatFinished', function () {
@@ -43,6 +59,17 @@ angularpressApp.controller("SidebarFrontpageCtrl", function ($scope, $compile) {
 		$compile(angular.element(".widget li a, .tagcloud a").on('click', function () {
 			$scope.$emit('linkText', angular.element(this).text());
 		}))($scope);
+
+		//Search input widget
+		$scope.$watch($compile(angular.element("#searchform", function () {
+			$scope.submit = function () {
+				if ($scope.text) {
+					$location.path("/search/").search({'s': $scope.text});
+
+				}
+			}
+
+		}))($scope));
 	});
 
 });

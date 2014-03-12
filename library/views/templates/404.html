@@ -1,4 +1,4 @@
- <!--error404-->
+<!--error404-->
 <div class="site-content" id="content">
 
 	<div class="content-area" id="primary">
@@ -12,22 +12,19 @@
 							<h1 class="entry-title">This is somewhat embarrassing, isn’t it?</h1>
 						</header>
 
-						<div class="entry-content panel">
+						<div class="entry-content panel" data-ng-controller="NotFoundCtrl">
 							<p>It seems we can’t find what you’re looking for. Perhaps searching will help.</p>
 
-							<form action="http://angularpress.localhost" id="searchform"
-							      method="get" role="search">
+							<form id="searchform" data-ng-submit="submit()">
 								<div class="row collapse">
-									<label for="s"
-									       class="screen-reader-text">Search for:</label>
 
 									<div class="large-9 small-9 columns">
-										<input type="text" placeholder="Search" id="s" name="s"
-										       value="">
+										<input data-ng-model="text" type="text" name="s" id="s" placeholder="Search"/>
 									</div>
 									<div class="large-3 small-3 columns end">
-										<input type="submit" value="Search" id="searchsubmit"
-										       class="button prefix">
+										<button class="button prefix"
+										        type="submit">Search
+										</button>
 									</div>
 								</div>
 							</form>
@@ -38,15 +35,10 @@
 
 				</div>
 
-
 			</div>
 
 		</main>
 
-
 	</div>
-
-
-
 
 </div>

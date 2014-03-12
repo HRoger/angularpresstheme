@@ -25,16 +25,19 @@
 											<a
 													data-ng-href="{{siteUrl}}/uncategorized/{{item.slug}}/"
 													title="{{item.title}}" rel="bookmark"
-													data-ng-bind="item.title"></a>
+													data-ng-bind="item.title">
+											</a>
 										</h2>
 
 										<h2 class="entry-title">
+                                                  <span data-ng-repeat="category in item.categories "
+                                                        data-ng-if="$last">
 
-              <span data-ng-repeat="category in item.categories "
-                    data-ng-if="$last">
-				<a data-ng-href="{{siteUrl}}/{{category.slug}}/{{item.slug}}/"
-				   title="{{item.title}}" rel="bookmark" data-ng-bind="item.title"></a>
-              </span>
+			                                     	<a data-ng-href="{{siteUrl}}/{{category.slug}}/{{item.slug}}/"
+			                                           title="{{item.title}}" rel="bookmark"
+			                                           data-ng-bind="item.title"></a>
+
+                                                  </span>
 										</h2>
 										<!--see content.posts.php-->
 									</header>
@@ -85,10 +88,8 @@
 
 				</a>
 			</span>
-
 										</div>
-										<!-- .comments-link -->
-										<!--see content.posts.php-->
+
 									</footer>
 
 								</div>
@@ -107,9 +108,7 @@
 
 				</div>
 			</div>
-
 			<!-- .columns -->
-
 			<div id="sidebar" class="sidebar large-4 columns"
 			     role="complementary" data-ng-controller="SidebarCtrl">
 

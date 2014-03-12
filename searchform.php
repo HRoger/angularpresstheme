@@ -8,14 +8,21 @@
  */
 ?>
 
-<form role="search" method="get" id="searchform" action="<?php echo home_url(); ?>">
+<form id="searchform" data-ng-submit="submit()">
 	<div class="row collapse">
 		<label class="screen-reader-text" for="s"><?php _e('Search for:', 'reactor'); ?></label>
-		<div class="<?php reactor_columns( array(9, 9) ) ?>">
-			<input data-ng-model="searchText" type="text" value="<?php get_search_query(); ?>" name="s" id="s" placeholder="<?php echo esc_attr__('Search', 'reactor'); ?>" />
+
+		<div class="<?php reactor_columns(array(9, 9)) ?>">
+			<input data-ng-model="text" type="text" name="s" id="s" placeholder="<?php echo
+			esc_attr__('Search', 'reactor'); ?>"/>
 		</div>
-		<div class="<?php reactor_columns( array(3, 3) ) ?> end">
-			<input data-ng-click="test()" class="button prefix" type="submit" id="searchsubmit" value="<?php echo esc_attr__('Clear', 'reactor'); ?>" />
+		<div class="<?php reactor_columns(array(3, 3)) ?> end">
+			<button class="button prefix"
+			        type="submit"><?php echo esc_attr__('Search', 'reactor'); ?>
+			</button>
 		</div>
 	</div>
 </form>
+
+
+

@@ -77,15 +77,12 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 				$window.location.href = wpAjax.themeLocation.siteUrl + '/wp-admin/';
 
 			}
-			else if (typeof $route.current.params.s !== 'undefined') {
-				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/search.html';
 
-			}
 			if ($location.path() === '/') {
 				$scope.menuId = 'root';
 
 			}
-			else if ($routeParams.primaryNav === '404') {
+			 else if ($routeParams.primaryNav === '404') {
 				$scope.menuId = 'error404';
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
@@ -104,6 +101,15 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/archive.html';
 
 				}
+				else if ($routeParams.primaryNav === 'search') {
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/search.html';
+
+				}
+				else if ($routeParams.primaryNav === 'not-found') {
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/not-found.html';
+
+				}
+
 				else if ($routeParams.primaryNav === 'category') {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
@@ -114,8 +120,8 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 				}
 
 				else {
-					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
-					//					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.primaryNav + '.html';
+					//					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.primaryNav + '.html';
 
 				}
 
@@ -165,8 +171,6 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 'use strict';
 angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $window, $location, $compile, $rootScope, wpAjax) {
 
-
-
 		if (!angular.element('body').hasClass('wp-admin')) {
 
 			//refactor this
@@ -195,6 +199,7 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/single.html';
 
 			}
+
 			else if ($routeParams.primaryNav !== 'wp-admin' && isNumeric($routeParams.primaryNav) && isNumeric($routeParams.secondaryNav)) {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/archive.html';
 
@@ -212,8 +217,8 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 
 			}
 			else {
-				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.secondaryNav + '.html';
-				//				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.secondaryNav + '.html';
+				//				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.secondaryNav + '.html';
+				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.secondaryNav + '.html';
 
 			}
 
