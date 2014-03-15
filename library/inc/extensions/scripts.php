@@ -87,7 +87,7 @@ function reactor_register_scripts() {
 	wp_register_script('controllers-breadcrumbs-js', get_template_directory_uri() .
 		'/library/scripts/controllers/ctBreadcrumbs.js', array(), false, true);
 
-wp_register_script('controllers-notFound-js', get_template_directory_uri() .
+	wp_register_script('controllers-notFound-js', get_template_directory_uri() .
 		'/library/scripts/controllers/ctNotFound.js', array(), false, true);
 
 
@@ -220,7 +220,7 @@ add_action('admin_enqueue_scripts', 'my_enqueue');
 
 
 function angularpress_localize_scripts($script) {
-	global $angpress_session_onload, $angp_session_delete_post_cache_key;
+	global $angpress_session_onload, $angp_session_delete_post_cache_key, $angp_is_first_load;
 
 	/*FB::info(isset($_SESSION['template_req']),'template_req is here?');
 	FB::info(isset($_SESSION['template_req_pages']),'template_req_pages is here?');
@@ -234,11 +234,16 @@ function angularpress_localize_scripts($script) {
 	echo "</br>";
 	var_dump(session_id(),'session_id');
 	echo "</br>";*/
+	/*	add_action('wp_ajax_get_portfolio_posts', 'angp_portfolio_posts');
+		add_action('wp_ajax_nopriv_get_portfolio_posts', 'angp_portfolio_posts');*/
 
+
+	if (isset($_SESSION['template_req'])) {
+		$angp_is_first_load = $_SESSION['template_req'];
+	}
 	if (isset($_SESSION['template_req_onload'])) {
 		$angpress_session_onload = $_SESSION['template_req_onload'];
 	}
-
 	if (isset($_SESSION['delete_post_cache_key'])) {
 		$angp_session_delete_post_cache_key = $_SESSION['delete_post_cache_key'];
 	}
@@ -252,6 +257,7 @@ function angularpress_localize_scripts($script) {
 			'url' => get_bloginfo('wpurl'),
 			'page_title' => get_the_title(),
 			'_wpnonce' => wp_logout_url(),
+			'is_first_load' => $angp_is_first_load,
 			'on_first_page_load' => $angpress_session_onload,
 			'angp_session_delete_post_cache_key' => $angp_session_delete_post_cache_key,
 			'page_for_posts' => get_option('page_for_posts'),

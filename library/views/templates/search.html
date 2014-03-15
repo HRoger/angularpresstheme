@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="large-8 columns">
 				<div data-ng-cloak data-ng-controller="angpSearchCtrl">
-					<h2>Search Results for:
+					<h2>Search Results for: <span data-ng-bind="searchText"></span>
 						<span data-ng-hide="is_link_visible" data-ng-bind-html="title"></span>
 					</h2>
 					<div class="loading-spinner-posts"></div>

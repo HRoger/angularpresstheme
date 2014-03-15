@@ -8,7 +8,7 @@
  */
 ?>
 </content>
-<?php echo '<div data-ng-if=\'onPageFullyLoaded\' >'; ?>
+<?php //echo '<div data-ng-if=\'onPageFullyLoaded\' >'; ?>
 <?php reactor_footer_before(); ?>
 
 <footer data-ng-cloak id="footer" class="site-footer"
@@ -19,7 +19,7 @@
 </footer><!-- #footer -->
 
 <?php reactor_footer_after(); ?>
-<?php echo "</div>"; ?>
+<?php //echo "</div>"; ?>
 </div><!-- #main -->
 </div><!-- #page -->
 

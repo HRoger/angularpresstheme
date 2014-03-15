@@ -15,7 +15,9 @@ $show_titles = reactor_option('portfolio_show_titles', 1);
 /** @noinspection PhpParamsInspection */
 $link_titles = reactor_option('portfolio_link_titles', 1);
 /** @noinspection PhpParamsInspection */
-$post_meta = reactor_option('portfolio_post_meta', 0); ?>
+$post_meta = reactor_option('portfolio_post_meta', 0);
+
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="entry-body">

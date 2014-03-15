@@ -3,6 +3,7 @@
  */
 'use strict';
 angularpressApp.controller("NotFoundCtrl", function ($scope, $compile, $location) {
+
 	//Search input widget
 	$scope.$watch($compile(angular.element("#searchform", function () {
 		$scope.submit = function () {

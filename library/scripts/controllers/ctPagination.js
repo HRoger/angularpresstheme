@@ -45,7 +45,7 @@ angularpressApp.controller("angpPaginationCtrl", function ($scope, post, wpAjax)
 
 });
 
-angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post, wpAjax, $route, $compile) {
+angularpressApp.controller("angpPaginationCategoryCtrl", function ($scope, post, wpAjax, $route) {
 
 	var status = 'publish';
 	var page = 1;//first page as default
@@ -181,7 +181,7 @@ angularpressApp.controller("angpPaginationArchiveCtrl", function ($scope, post, 
 
 });
 
-angularpressApp.controller("angpSearchCtrl", function ($scope, search, wpAjax, $route, lodash,$location) {
+angularpressApp.controller("angpSearchCtrl", function ($scope, search, wpAjax, $route, lodash, $location, $rootScope) {
 
 	var page = 1;//first page as default
 
@@ -208,6 +208,7 @@ angularpressApp.controller("angpSearchCtrl", function ($scope, search, wpAjax, $
 		search.get_results(
 			function (data) {
 
+				$scope.searchText = $route.current.params.s;
 				$scope.title = data.posts.title;
 
 				if (lodash.isEmpty(data.posts)) {

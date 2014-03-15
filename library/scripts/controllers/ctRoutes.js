@@ -59,6 +59,7 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 		}
 
 	}
+
 });
 'use strict';
 angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $location, $window, $route, $compile, $rootScope, wpAjax) {
@@ -77,12 +78,11 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 				$window.location.href = wpAjax.themeLocation.siteUrl + '/wp-admin/';
 
 			}
-
 			if ($location.path() === '/') {
 				$scope.menuId = 'root';
 
 			}
-			 else if ($routeParams.primaryNav === '404') {
+			else if ($routeParams.primaryNav === '404') {
 				$scope.menuId = 'error404';
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
@@ -118,10 +118,8 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
 				}
-
 				else {
-					//					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
-					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.primaryNav + '.html';
+					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
 
 				}
 
@@ -199,7 +197,6 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/single.html';
 
 			}
-
 			else if ($routeParams.primaryNav !== 'wp-admin' && isNumeric($routeParams.primaryNav) && isNumeric($routeParams.secondaryNav)) {
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/archive.html';
 
@@ -217,8 +214,7 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 
 			}
 			else {
-				//				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.secondaryNav + '.html';
-				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $route.current.params.secondaryNav + '.html';
+				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.secondaryNav + '.html';
 
 			}
 

@@ -41,15 +41,15 @@ angularpressApp.directive('editpage', function (page, wpAjax, $location) {
 
 				if (angular.element('body').hasClass('admin-bar')) {
 					element.find('.loading-spinner').spin('small');
-					page.get_page_ID(
 
+					page.get_page_ID(
 						function (data) {
 
 							scope.siteurl = wpAjax.themeLocation.siteUrl;
 							scope.pageid = data.page.id;
 
 							element.find('.loading-spinner').spin(false);
-							scope.is_button_visible = angular.element('body').hasClass('admin-bar') && scope.pageid !== '';
+							scope.is_button_visible = angular.element('body').hasClass('admin-bar') && typeof scope.pageid !== 'undefined';
 							//remove duplicated editpage button
 							angular.element("#wp-admin-bar-root-default li.angp-admin-bar-edit:nth-last-child(2)").remove();
 							if ($location.path() === '/')
@@ -78,13 +78,12 @@ angularpressApp.directive('editpagelink', function (page, wpAjax) {
 				scope.appendAdminBarEditButton();
 
 				page.get_page_ID(
-
 					function (data) {
 						element.find('.loading-spinner').spin(false);
 						scope.siteurl = wpAjax.themeLocation.siteUrl;
 						scope.pageid = data.page.id;
 
-						scope.is_visible = angular.element('body').hasClass('admin-bar') && scope.pageid !== '';
+						scope.is_visible = angular.element('body').hasClass('admin-bar') && typeof scope.pageid !== 'undefined';
 
 					}, attrs.name);
 
@@ -95,7 +94,7 @@ angularpressApp.directive('editpagelink', function (page, wpAjax) {
 
 });
 
-angularpressApp.directive('editpost', function (post, wpAjax, $location) {
+angularpressApp.directive('editpost', function (post, wpAjax, $location, $routeParams) {
 	//admin menu button Edit Page
 	//related files: dtPostArticle.js and ctRoutes.js
 	return{
@@ -117,23 +116,43 @@ angularpressApp.directive('editpost', function (post, wpAjax, $location) {
 				if (angular.element('body').hasClass('admin-bar')) {
 					element.find('.loading-spinner').spin('small');
 
-					post.get_post_ID(
+					if ($routeParams.primaryNav !== 'portfolio-post') {
+						post.get_post_ID(
+							function (data) {
 
-						function (data) {
+								scope.siteurl = wpAjax.themeLocation.siteUrl;
+								scope.postid = data.post.id;
 
-							scope.siteurl = wpAjax.themeLocation.siteUrl;
-							scope.postid = data.post.id;
+								element.find('.loading-spinner').spin(false);
+								scope.is_button_visible = angular.element('body').hasClass('admin-bar') && typeof scope.postid !== 'undefined';
 
-							element.find('.loading-spinner').spin(false);
-							scope.is_button_visible = angular.element('body').hasClass('admin-bar') && scope.postid !== '';
+								//remove duplicated editpage button
+								angular.element("#wp-admin-bar-root-default li.angp-admin-bar-edit:nth-last-child(2)").remove();
 
-							//remove duplicated editpage button
-							angular.element("#wp-admin-bar-root-default li.angp-admin-bar-edit:nth-last-child(2)").remove();
+								if ($location.path() === '/')
+									scope.is_button_visible = false;
 
-							if ($location.path() === '/')
-								scope.is_button_visible = false;
+							}, attrs.name);
+					} else {
 
-						}, attrs.name);
+						post.get_portfolio_post(
+							function (data) {
+
+								scope.siteurl = wpAjax.themeLocation.siteUrl;
+								scope.postid = data.posts[0].id;
+
+								element.find('.loading-spinner').spin(false);
+								scope.is_button_visible = angular.element('body').hasClass('admin-bar') && typeof scope.postid !== 'undefined';
+
+								//remove duplicated editpage button
+								angular.element("#wp-admin-bar-root-default li.angp-admin-bar-edit:nth-last-child(2)").remove();
+
+								if ($location.path() === '/')
+									scope.is_button_visible = false;
+
+							}, attrs.name);
+
+					}
 				}
 			}
 		}

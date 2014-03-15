@@ -4,7 +4,6 @@
 
 	$(document).ready(function () {
 
-
 		/* adds .button class to submit button on comment form */
 		$('#commentform').find('input#submit').addClass('button').addClass('small');
 

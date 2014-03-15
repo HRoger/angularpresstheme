@@ -143,38 +143,40 @@ VII. Known bugs
 VIII. Todo
 ==========
 
-* Porfolio subpages
 * WP option for angularjs routing: admin, login and register page
 * Reading Settings: set warning label to user update edit.php
 * Google Analytics and WP SlimStat plugin
 * SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
+
+>FIX BUGS
+
+* Use ob_start instead of HTTP_API
+* Update to foundation 5
+* Update foundation components and shortcodes to boostrap-ui
 * Gmail and Youtube like routing
 * Comments form
 * Contact form
-* Update foundation components and shortcodes to boostrap-ui
-* Use ob_start instead of HTTP_API
-* Update to foundation 5
 * Splash Screen design
-* WP option for angularjs routing: category base etc
+* WP option for angularjs routing: category base, portfolio post name, etc
 * Main Menu and Sidebar reactor menu
-* Security
 * Blog "posted" Date Href and Time tag (datetime)
 * Publish page bulk action
 * Grunt
 * Requirejs and r.js on theme build
 * Rename post/page slug should rename angular template file
 * States: pending & draft
+* Visibility: set private & set password
 * Reading Settings: date and time format
 * Responsive design: Work on mobile
-* Views folder on a CDN
 * Multisite compatible
+* Views folder on a CDN
 * Make preview for post or page
-* Woocommerce compatible
-* Buddypress compatible
-* Visibility: set private & set password
-* **WIP**- work in progress. Work offline and synch when back on. See John Papa's concept: [Code Camper](http://cc-ng-z.azurewebsites.net/#/sessions)
+* Security
 * Accessibility
 * Child Theme
+* Woocommerce compatible
+* Buddypress compatible
+* **WIP**- work in progress. Work offline and synch when back on. See John Papa's concept: [Code Camper](http://cc-ng-z.azurewebsites.net/#/sessions)
 
 
 IX. License

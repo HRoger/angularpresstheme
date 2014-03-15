@@ -169,8 +169,28 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
 						throw new Error('Network error. Post date not loaded.');
 				})
 
-		}
+		},
+		get_portfolio_post          : function (successcb, slug) {
+			$http(
+				{
+					method: 'GET',
+					cache : postCache,
+					url   : wpAjax.themeLocation.siteUrl + '/api/portfolio/get_portfolio_post/',
+					params: {
+						slug: slug
+					}
+				})
+				.success(function (data) {
+					return successcb(data);
 
+				})
+				.error(function () {
+					if (wpAjax.sessions.on_first_page_load === null)
+					//if something went wrong after the first page load throw error
+						throw new Error('Network error. PageID factory not loaded.');
+
+				})
+		}
 	}
 
 });
