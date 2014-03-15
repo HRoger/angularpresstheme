@@ -139,7 +139,7 @@ angularpressApp.directive('editpost', function (post, wpAjax, $location, $routeP
 							function (data) {
 
 								scope.siteurl = wpAjax.themeLocation.siteUrl;
-								scope.postid = data.posts[0].id;
+								scope.postid = data.posts[0].ID;
 
 								element.find('.loading-spinner').spin(false);
 								scope.is_button_visible = angular.element('body').hasClass('admin-bar') && typeof scope.postid !== 'undefined';
