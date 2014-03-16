@@ -70,7 +70,7 @@
 			?>
 
 		</div>
-	</div>
+</div>
 
 	<div class="row">
 		<div class="small-6 small-offset-1">

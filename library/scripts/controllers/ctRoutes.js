@@ -193,7 +193,7 @@ angularpressApp.controller('SecondaryNavCtrl', function ($scope, $routeParams, $
 			$scope.menuId = '' + $routeParams.primaryNav;
 			$scope.pageId = 'subNav ' + $routeParams.secondaryNav;
 
-			if ($routeParams.primaryNav !== 'wp-admin' && $routeParams.primaryNav !== 'category' && $routeParams.primaryNav !== 'tag' && !isNumeric($routeParams.primaryNav) && typeof $routeParams.secondaryNav !== 'undefined') {
+			if ($routeParams.primaryNav !== 'wp-admin' && $routeParams.primaryNav !== 'category' && $routeParams.primaryNav !== 'tag' && !isNumeric($routeParams.primaryNav) && typeof $routeParams.secondaryNav !== 'undefined') {//refactor: use wordpress options for portfolio-posts and blog
 				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/single.html';
 
 			}

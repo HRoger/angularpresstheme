@@ -20,6 +20,7 @@ class Angularpress extends Reactor {
 		add_action('after_setup_theme', array(&$this, 'angular_functions'), 14);
 		add_action('after_setup_theme', array(&$this, 'angular_templates'), 16);
 		add_action('after_setup_theme', array(&$this, 'angular_admin'), 17);
+		add_action('after_setup_theme', array(&$this, 'angular_jsonapi'), 18);
 
 	}
 
@@ -28,9 +29,7 @@ class Angularpress extends Reactor {
 		if (!session_id() && !is_admin()) {
 			session_set_cookie_params(time() + 2 * 7 * 24 * 60 * 60);
 			session_start();
-//			session_name('angpSession');
-//			session_regenerate_id(true);
-//			setcookie(session_name('angpSession'), session_id(), time() + 2 * 7 * 24 * 60 * 60);
+
 		}
 
 	}
@@ -67,6 +66,13 @@ class Angularpress extends Reactor {
 		require_once locate_template('/library/inc/angular/admin/admin-bar.php');
 		/** @noinspection PhpIncludeInspection */
 		require_once locate_template('/library/inc/angular/admin/cache-post.php');
+		/** @noinspection PhpIncludeInspection */
+		require_once locate_template('/library/inc/angular/admin/reading-settings.php');
+	}
+
+	public function angular_jsonapi() {
+		/** @noinspection PhpIncludeInspection */
+		require_once locate_template('/library/inc/angular/json-api/path-controller.php');
 
 	}
 

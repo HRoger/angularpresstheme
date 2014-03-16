@@ -57,6 +57,9 @@ class JSON_API_Portfolio_Controller {
 			);
 		}
 
+		/*
+		 * todo thumbnails next and previous posts
+		*/
 		$portfolio_query = new WP_Query($args);
 
 		return array(
@@ -67,3 +70,24 @@ class JSON_API_Portfolio_Controller {
 
 
 }
+
+/*public function get_post() {
+	global $json_api, $post;
+	$post = $json_api->introspector->get_current_post();
+	if ($post) {
+		$previous = get_adjacent_post(false, '', true);
+		$next = get_adjacent_post(false, '', false);
+		$response = array(
+			'post' => new JSON_API_Post($post)
+		);
+		if ($previous) {
+			$response['previous_url'] = get_permalink($previous->ID);
+		}
+		if ($next) {
+			$response['next_url'] = get_permalink($next->ID);
+		}
+		return $response;
+	} else {
+		$json_api->error("Not found.");
+	}
+}*/

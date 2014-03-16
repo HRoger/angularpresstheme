@@ -14,14 +14,9 @@ require locate_template('/library/reactor.php');
 require locate_template('/library/angularpress.php');
 new Angularpress();
 
-function add_portfolio_controller($controllers) {
-	$controllers[] = 'portfolio';
-	return $controllers;
-}
-add_filter('json_api_controllers', 'add_portfolio_controller');
 
-//FB::info(get_template_directory(),'gettemplate');
-function set_portfolio_controller_path() {
-	return  get_template_directory()."/library/inc/angular/json-api/portfolio.php";
-}
-add_filter('json_api_portfolio_controller_path', 'set_portfolio_controller_path');
+
+
+
+
+

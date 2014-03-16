@@ -144,16 +144,16 @@ VIII. Todo
 ==========
 
 * WP option for angularjs routing: admin, login and register page
-* Reading Settings: set warning label to user update edit.php
 * Google Analytics and WP SlimStat plugin
 * SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 
 >FIX BUGS
 
 * Use ob_start instead of HTTP_API
+* Responsive design: Build mobile site
+* Gmail and Youtube like routing
 * Update to foundation 5
 * Update foundation components and shortcodes to boostrap-ui
-* Gmail and Youtube like routing
 * Comments form
 * Contact form
 * Splash Screen design
@@ -167,7 +167,6 @@ VIII. Todo
 * States: pending & draft
 * Visibility: set private & set password
 * Reading Settings: date and time format
-* Responsive design: Work on mobile
 * Multisite compatible
 * Views folder on a CDN
 * Make preview for post or page
