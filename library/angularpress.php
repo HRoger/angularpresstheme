@@ -16,7 +16,10 @@ class Angularpress extends Reactor {
 
 		parent::__construct();
 		add_action('init', array(&$this, 'init_session'), 1);
+		add_action('after_setup_theme', array(&$this, 'angular_redux'), 8);
+//		add_action('after_setup_theme', array(&$this, 'angular_redux_demo'), 9);
 		add_action('after_setup_theme', array(&$this, 'theme_setup'), 10);
+		add_action('after_setup_theme', array(&$this, 'angular_tgm'), 11);
 		add_action('after_setup_theme', array(&$this, 'angular_functions'), 14);
 		add_action('after_setup_theme', array(&$this, 'angular_templates'), 16);
 		add_action('after_setup_theme', array(&$this, 'angular_admin'), 17);
@@ -34,6 +37,43 @@ class Angularpress extends Reactor {
 
 	}
 
+	public function angular_tgm() {
+		/** @noinspection PhpIncludeInspection */
+		require_once locate_template('/library/inc/angular/tgm/tgm.php');
+
+	}
+
+	public function angular_redux() {
+
+		if (!class_exists('ReduxFramework') && file_exists(locate_template(
+				'/library/inc/angular/redux-framework/ReduxCore/framework.php'))
+		) {
+			/** @noinspection PhpIncludeInspection */
+			require_once locate_template('/library/inc/angular/redux-framework/ReduxCore/framework.php');
+		}
+		if (!isset($angularpress_option) && file_exists(locate_template('/library/inc/angular/redux-framework/angp-theme-config.php'))) {
+			/** @noinspection PhpIncludeInspection */
+			require_once locate_template('/library/inc/angular/redux-framework/angp-theme-config.php');
+		}
+
+	}
+
+	public function angular_redux_demo() {
+
+		if (!class_exists('ReduxFramework') && file_exists(locate_template(
+				'/library/inc/angular/redux-framework/ReduxCore/framework.php'))
+		) {
+			/** @noinspection PhpIncludeInspection */
+			require_once locate_template('/library/inc/angular/redux-framework/ReduxCore/framework.php');
+		}
+		if (!isset($redux_demo) && file_exists(locate_template
+			('/library/inc/angular/redux-framework/sample-config.php'))) {
+			/** @noinspection PhpIncludeInspection */
+			require_once locate_template('/library/inc/angular/redux-framework/sample-config
+			.php');
+		}
+
+	}
 
 	public function angular_functions() {
 

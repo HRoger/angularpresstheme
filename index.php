@@ -30,8 +30,9 @@
 				if (get_option('page_for_posts') == 0) {
 					get_template_part('loops/loop', 'index');
 
-				} elseif (is_page($angp_slug_page_on_front)) {
+				} elseif (is_page($angp_slug_page_on_front) && $template_slug !== '') {
 					/** @noinspection PhpIncludeInspection */
+
 					include(locate_template($template_slug));
 				}
 			?>
@@ -61,7 +62,7 @@
 
 	<div display-footer>
 
-		<div class="angp-footer"  >
+		<div class="angp-footer">
 			<?php if (is_front_page() && get_option('show_on_front') !== 'posts') {
 				//when loading page is other than the frontpage and reading settings are set to 'pages'. See: dtDisplayFooter.js
 				angularpress_footer_inside();
@@ -70,9 +71,9 @@
 			?>
 
 		</div>
-</div>
+	</div>
 
-	<div class="row">
+	<!--<div class="row">
 		<div class="small-6 small-offset-1">
 			<pre>$location.path() = {{$location.path() }}</pre>
 			<pre>$location.url() = {{ $location.url() }}</pre>
@@ -90,7 +91,7 @@
 			<pre>siteUrl: {{siteUrl}}</pre>
 			<pre>templateDir: {{templateDir}}</pre>
 			<?php
-			echo "<pre>" . var_dump(isset($_SESSION['template_req']), 'template_req') .
+/*			echo "<pre>" . var_dump(isset($_SESSION['template_req']), 'template_req') .
 				"</pre>";
 			echo "<pre>" . var_dump(isset($_SESSION['template_req_pages']), 'template_req_pages') .
 				"</pre>";
@@ -104,9 +105,9 @@
 			echo "<pre>" . var_dump(session_name()) .
 				"</pre>";
 			echo "</br>";
-			?>
+			*/?>
 		</div>
-	</div>
+	</div>-->
 </div>
 <!--WP-READING-SETTINGS-->
 

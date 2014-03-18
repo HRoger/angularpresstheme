@@ -82,11 +82,7 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 				$scope.menuId = 'root';
 
 			}
-			else if ($routeParams.primaryNav === '404') {
-				$scope.menuId = 'error404';
-				$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
-			}
 			else {
 
 				$scope.menuId = '' + $routeParams.primaryNav;
@@ -105,19 +101,16 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/search.html';
 
 				}
-				else if ($routeParams.primaryNav === 'not-found') {
+				else if ($routeParams.primaryNav === 'not-found' ) {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/not-found.html';
 
 				}
-
-				else if ($routeParams.primaryNav === 'category') {
+				else if ($routeParams.primaryNav === 'category' || $routeParams.primaryNav === 'tag' || $routeParams.primaryNav === 'not_found' || $routeParams.primaryNav === '404') {
+					$scope.menuId = 'error404';
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
 				}
-				else if ($routeParams.primaryNav === 'tag') {
-					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
-				}
 				else {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
 
@@ -143,7 +136,7 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 						}
 						angular.element("#wp-admin-bar-root-default").append(editPageDirective);
 					}
-				}
+				};
 
 				$scope.appendAdminBarEditPostButton = function () {
 					//see dtPostArticle.js
@@ -160,7 +153,7 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 						}
 						angular.element("#wp-admin-bar-root-default").append(editPostDirective);
 					}
-				}
+				};
 
 			}
 		}

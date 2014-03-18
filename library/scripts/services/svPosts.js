@@ -3,23 +3,25 @@
  */
 'use strict';
 
-angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax) {
+angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax, $cacheFactory) {
+	if (wpAjax.authentication.is_user_logged_in === '') {
+		if (wpAjax.sessions.on_first_page_load === null) {
 
-	if (wpAjax.sessions.on_first_page_load === null) {
+			var postCache = $angularCacheFactory('postCache', {
+				maxAge            : 900000,
+				deleteOnExpire    : 'aggressive',
+				storageMode       : 'localStorage',
+				recycleFreq       : 10000,
+				cacheFlushInterval: 3600000,
+				verifyIntegrity   : true
+			});
 
-		var postCache = $angularCacheFactory('postCache', {
-			maxAge            : 900000,
-			deleteOnExpire    : 'aggressive',
-			storageMode       : 'localStorage',
-			recycleFreq       : 10000,
-			cacheFlushInterval: 3600000,
-			verifyIntegrity   : true
-		});
-
-		if (wpAjax.sessions.angp_session_delete_post_cache_key !== null) {
-			postCache.removeAll();
+			if (wpAjax.sessions.angp_session_delete_post_cache_key !== null) {
+				postCache.removeAll();
+			}
 		}
-
+	} else {
+		postCache = $cacheFactory('postCache');
 	}
 
 	return{

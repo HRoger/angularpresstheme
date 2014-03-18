@@ -7,19 +7,29 @@
  */
 
 add_action('admin_notices', 'my_admin_notice');
+//add_action('wp_loaded', 'my_admin_notice');
 
 function my_admin_notice() {
 
 	$set_errors = get_settings_errors();
 
-	if (current_user_can('manage_options') && !empty($set_errors)) {
+	if (current_user_can('manage_options') && !empty($set_errors) &&
+		$_SERVER['PHP_SELF'] === '/wp-admin/options-reading.php'
+	) {
 
-		if ($set_errors[0]['code'] == 'settings_updated' && isset($_GET['settings-updated'])) {
+		if ($set_errors[0]['code'] == 'settings_updated' && isset($_GET['settings-updated']) &&
+			($_COOKIE['page_for_posts'] !== get_option('page_for_posts') ||
+				$_COOKIE['page_on_front'] !== get_option('page_on_front'))
+		) {
+
+			setcookie('page_for_posts', get_option('page_for_posts'));
+			setcookie('page_on_front', get_option('page_on_front'));
 
 			if (get_option('show_on_front') == 'page') {
 
 				echo '<div id="message" class="updated ">
-                <p>Don\'t forget update your Blog page! Click here: <a href="' . admin_url
+                <p>Please, don\'t forget to update your Blog page. Click here: <a href="' .
+					admin_url
 					('edit.php?post_type=page') .
 					'">Edit Pages</a> </p>
 						 </div>';
@@ -27,7 +37,8 @@ function my_admin_notice() {
 			} else {
 
 				echo '<div id="message" class="updated ">
-                <p>Don\'t forget update Front and Posts pages! Click here: <a href="' . admin_url
+                <p>Please, don\'t forget to update Front and Posts pages. Click here: <a href="' .
+					admin_url
 					('edit.php?post_type=page') .
 					'">Edit Pages</a> </p>
 						 </div>';

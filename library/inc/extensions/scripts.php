@@ -50,12 +50,12 @@ function reactor_register_scripts() {
 	wp_register_script('fancybox-thumbs-js', get_template_directory_uri() . '/library/js/vendor/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"', array(), false, true);
 
 
-	wp_register_script('angular-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular.js', false, '1.3.0-beta.1', true);
-	wp_register_script('angular-resource-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-resource.js', false, '1.3.0-beta.1', true);
-	wp_register_script('angular-route-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-route.js', false, '1.3.0-beta.1', true);
-	wp_register_script('angular-sanitize-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-sanitize.js', false, '1.3.0-beta.1', true);
-	wp_register_script('angular-animate-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-animate.js', false, '1.3.0-beta.1', true);
-	wp_register_script('angular-cookies-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.1/angular-cookies.js', false, '1.3.0-beta.1', true);
+	wp_register_script('angular-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular.js', false, '1.3.0-beta.2', true);
+	wp_register_script('angular-resource-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular-resource.js', false, '1.3.0-beta.2', true);
+	wp_register_script('angular-route-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular-route.js', false, '1.3.0-beta.2', true);
+	wp_register_script('angular-sanitize-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular-sanitize.js', false, '1.3.0-beta.2', true);
+	wp_register_script('angular-animate-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular-animate.js', false, '1.3.0-beta.2', true);
+	wp_register_script('angular-cookies-js', 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.2/angular-cookies.js', false, '1.3.0-beta.2', true);
 	wp_register_script('ui-bootstrap-js', get_template_directory_uri() . '/library/scripts/modules/ui-bootstrap-tpls-0.10.0.js', array(), false, true);
 
 	wp_register_script('angular-ui-utils-js', get_template_directory_uri() . '/library/js/vendor/angular-ui-utils.min.js', false, '0.0.4', true);
@@ -220,7 +220,9 @@ add_action('admin_enqueue_scripts', 'my_enqueue');
 
 
 function angularpress_localize_scripts($script) {
-	global $angpress_session_onload, $angp_session_delete_post_cache_key, $angp_is_first_load;
+	global $angpress_session_onload, $angp_session_delete_post_cache_key, $angp_is_first_load, $angularpress_option;
+
+
 
 	/*FB::info(isset($_SESSION['template_req']),'template_req is here?');
 	FB::info(isset($_SESSION['template_req_pages']),'template_req_pages is here?');
@@ -236,6 +238,10 @@ function angularpress_localize_scripts($script) {
 	echo "</br>";*/
 	/*	add_action('wp_ajax_get_portfolio_posts', 'angp_portfolio_posts');
 		add_action('wp_ajax_nopriv_get_portfolio_posts', 'angp_portfolio_posts');*/
+
+//	FB::info( $angularpress_option['opt-text-login-slug'],' opt-text-login-slug');
+//	FB::info( $angularpress_option['opt-text-secret-key'],' opt-text-secret-key');
+//	FB::info( $angularpress_option['opt-text-admin-slug'],' opt-text-admin-slug');
 
 
 	if (isset($_SESSION['template_req'])) {
@@ -262,7 +268,11 @@ function angularpress_localize_scripts($script) {
 			'angp_session_delete_post_cache_key' => $angp_session_delete_post_cache_key,
 			'page_for_posts' => get_option('page_for_posts'),
 			'posts_per_page' => get_option('posts_per_page'),
-			'is_user_logged_in' => is_user_logged_in()
+			'is_user_logged_in' => is_user_logged_in(),
+			'login_slug' => $angularpress_option['opt-text-login-slug'],
+			'register_slug' => $angularpress_option['opt-text-register-slug'],
+			'admin_slug' => $angularpress_option['opt-text-admin-slug'],
+			'key_slug' => $angularpress_option['opt-text-secret-key']
 		)
 	);
 }
