@@ -268,11 +268,7 @@ function angularpress_localize_scripts($script) {
 			'angp_session_delete_post_cache_key' => $angp_session_delete_post_cache_key,
 			'page_for_posts' => get_option('page_for_posts'),
 			'posts_per_page' => get_option('posts_per_page'),
-			'is_user_logged_in' => is_user_logged_in(),
-			'login_slug' => $angularpress_option['opt-text-login-slug'],
-			'register_slug' => $angularpress_option['opt-text-register-slug'],
-			'admin_slug' => $angularpress_option['opt-text-admin-slug'],
-			'key_slug' => $angularpress_option['opt-text-secret-key']
+			'is_user_logged_in' => is_user_logged_in()
 		)
 	);
 }

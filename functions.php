@@ -14,7 +14,7 @@ require locate_template('/library/reactor.php');
 require locate_template('/library/angularpress.php');
 new Angularpress();
 
-
+/*
 function test() {
 
 	global $angularpress_option;
@@ -25,4 +25,4 @@ function test() {
 
 }
 
-add_action('admin_init', 'test');
+add_action('admin_init', 'test');*/
