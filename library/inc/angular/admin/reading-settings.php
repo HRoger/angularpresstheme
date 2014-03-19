@@ -1,4 +1,7 @@
 <?php
+if (!session_start()) {
+	session_Start();
+}
 /**
  * Created by PhpStorm.
  * User: ROGER
@@ -7,23 +10,28 @@
  */
 
 add_action('admin_notices', 'my_admin_notice');
-//add_action('wp_loaded', 'my_admin_notice');
 
 function my_admin_notice() {
 
 	$set_errors = get_settings_errors();
+
+	if (!isset($_SESSION['page_for_posts']) || !isset($_SESSION['page_on_front'])) {
+
+		$_SESSION['page_for_posts'] = get_option('page_for_posts');
+		$_SESSION['page_on_front'] = get_option('page_on_front');
+	}
 
 	if (current_user_can('manage_options') && !empty($set_errors) &&
 		$_SERVER['PHP_SELF'] === '/wp-admin/options-reading.php'
 	) {
 
 		if ($set_errors[0]['code'] == 'settings_updated' && isset($_GET['settings-updated']) &&
-			($_COOKIE['page_for_posts'] !== get_option('page_for_posts') ||
-				$_COOKIE['page_on_front'] !== get_option('page_on_front'))
+			($_SESSION['page_for_posts'] !== get_option('page_for_posts') ||
+				$_SESSION['page_on_front'] !== get_option('page_on_front'))
 		) {
 
-			setcookie('page_for_posts', get_option('page_for_posts'));
-			setcookie('page_on_front', get_option('page_on_front'));
+			$_SESSION['page_for_posts'] = get_option('page_for_posts');
+			$_SESSION['page_on_front'] = get_option('page_on_front');
 
 			if (get_option('show_on_front') == 'page') {
 

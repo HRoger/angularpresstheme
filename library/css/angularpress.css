@@ -24,11 +24,16 @@ div.ng-isolate-scope ul li div.widget ul li {
   }
 
 /*orbit*/
-div.orbit-container {
-  height : 400px;
+
+
+ div.orbit-container {
+  height : 410px;
   }
 
-div.slideshow-wrapper {
+#news div.orbit-container {
+  height : 266px;
+  }
+ div.slideshow-wrapper {
   margin-top    : 15px;
   margin-bottom : 35px;
   }

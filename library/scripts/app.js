@@ -28,8 +28,7 @@ angularpressApp.config(['$routeProvider', '$locationProvider', 'cfpLoadingBarPro
 
 	$locationProvider.html5Mode(true);
 
-}])
-;
+}]);
 
 angularpressApp.run(['$rootScope', '$route', '$http', '$log', '$window', '$cookies', '$anchorScroll', function ($rootScope, $route, $http, $log, $window, $cookies, $anchorScroll) {
 
@@ -41,7 +40,6 @@ angularpressApp.run(['$rootScope', '$route', '$http', '$log', '$window', '$cooki
 	});
 
 	$cookies.is_page_loaded = "pageLoaded";//see page-loading.php
-
 
 	angular.element('.fancybox').fancybox({
 		openEffect : 'elastic',

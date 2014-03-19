@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Reactor Theme Functions
  *
