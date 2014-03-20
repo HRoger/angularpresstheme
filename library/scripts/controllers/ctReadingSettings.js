@@ -3,7 +3,7 @@
  */
 'use strict';
 angularpressApp.controller("angpReadingSettingsCtrl", function ($scope, $rootScope, $location, wpAjax) {
-	$scope.is_home_visible = true;
+	$scope.is_home_visible = false;//newsloop
 	$scope.is_include_visible = false;
 
 	$rootScope.$on("$routeChangeStart", function () {
