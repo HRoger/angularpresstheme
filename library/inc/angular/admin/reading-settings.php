@@ -1,7 +1,4 @@
 <?php
-if (!session_start()) {
-	session_Start();
-}
 /**
  * Created by PhpStorm.
  * User: ROGER

@@ -42,7 +42,10 @@ angularpressApp.directive('widgetSidebar', function (widgetData, wpAjax) {
 			widgetData.getWidget(
 				function (data) {
 					element.find('.loading-spinner').spin(false);
+
+
 					scope.widgets = data.widgets;
+
 
 				}, attrs.name);
 

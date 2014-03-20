@@ -16,9 +16,7 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 			$scope.$on('linkText', function (event, data) {
 				$scope.title = data;
 			});
-			angular.element(document).ready(function () {
-				$scope.onPageFullyLoaded = true;
-			});
+
 		});
 		$scope.$on('$viewContentLoaded', function () {
 

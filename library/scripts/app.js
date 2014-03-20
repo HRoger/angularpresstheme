@@ -19,7 +19,7 @@ angularpressApp.config(['$routeProvider', '$locationProvider', 'cfpLoadingBarPro
 		}).
 		when('/:primaryNav/:secondaryNav/', {
 			controller: 'SecondaryNavCtrl',
-			template  : '<div ng-include="templateUrl" ng-cloak>Loading...</div>'
+			template  : '<div ng-include="templateUrl"  ng-cloak>Loading...</div>'
 
 		}).
 		otherwise({
@@ -32,8 +32,8 @@ angularpressApp.config(['$routeProvider', '$locationProvider', 'cfpLoadingBarPro
 
 angularpressApp.run(['$rootScope', '$route', '$http', '$log', '$window', '$cookies', '$anchorScroll', function ($rootScope, $route, $http, $log, $window, $cookies, $anchorScroll) {
 
-	//	$rootScope.$apply(angular.element("content").contents().unwrap());
-	//	$rootScope.$apply(angular.element("homenewsloop").contents().unwrap());
+//		$rootScope.$apply(angular.element("content").contents().unwrap());
+//		$rootScope.$apply(angular.element("homenewsloop").contents().unwrap());
 
 	$rootScope.$on('$routeChangeSuccess', function () {
 		$anchorScroll();
@@ -48,8 +48,6 @@ angularpressApp.run(['$rootScope', '$route', '$http', '$log', '$window', '$cooki
 		prevEffect : 'none',
 		arrows     : 'true'
 	});
-
-	$rootScope.$apply(angular.element($window.document).foundation());
 
 	$rootScope.$log = $log;
 

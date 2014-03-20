@@ -196,4 +196,3 @@ angularpressApp.factory('post', function ($http, $angularCacheFactory, wpAjax, $
 	}
 
 });
-

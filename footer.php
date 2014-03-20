@@ -9,15 +9,18 @@
 ?>
 </content>
 
-<?php reactor_footer_before(); ?>
+<div ng-show="onPageFullyLoaded">
 
-<footer data-ng-cloak id="footer" class="site-footer"
-        role="contentinfo">
+	<?php reactor_footer_before(); ?>
 
-	<?php reactor_footer_inside(); ?>
+	<footer data-ng-cloak id="footer" class="site-footer"
+	        role="contentinfo">
 
-</footer><!-- #footer -->
+		<?php reactor_footer_inside(); ?>
 
+	</footer>
+	<!-- #footer -->
+</div>
 <?php reactor_footer_after(); ?>
 
 </div><!-- #main -->

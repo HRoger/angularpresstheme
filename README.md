@@ -143,15 +143,14 @@ VII. Known bugs
 VIII. Todo
 ==========
 
-* WP option for angularjs routing: admin, login and register page
-* Google Analytics and WP SlimStat plugin
-* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
+* create redirect/publish html plugin
 
 >FIX BUGS
 
-* Use ob_start instead of HTTP_API
 * Responsive design: Build mobile site
 * Gmail and Youtube like routing
+* SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
+* Google Analytics and WP SlimStat plugin
 * Update to foundation 5
 * Update foundation components and shortcodes to boostrap-ui
 * Comments form

@@ -3,12 +3,12 @@
  */
 	//'use strict';
 
-angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, $cacheFactory,wpAjax) {
+angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, $cacheFactory, wpAjax) {
 
 	//when first page load or user is logged in don't use cache for sidebar widgets
-	if(wpAjax.authentication.is_user_logged_in === ''){
+	if (wpAjax.authentication.is_user_logged_in === '') {
 
-		if (wpAjax.sessions.on_first_page_load === null ) {
+		if (wpAjax.sessions.on_first_page_load === null) {
 			var widgetCache = $angularCacheFactory('widgetCache', {
 				maxAge            : 90000,
 				deleteOnExpire    : 'aggressive',
@@ -20,11 +20,10 @@ angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, $ca
 
 		}
 
-	}else{
+	} else {
 		widgetCache = $cacheFactory('widgetCache');
 
 	}
-
 
 	return{
 
@@ -38,8 +37,8 @@ angularpressApp.factory('widgetData', function ($http, $angularCacheFactory, $ca
 				}
 			})
 				.success(function (data) {
-					return successcb(data);
 
+					return successcb(data);
 				})
 				.error(function () {
 					if (wpAjax.sessions.on_first_page_load === null)
