@@ -43,4 +43,4 @@ function angp_set_index_for_pages_redirect() {
 }
 
 add_action('wp_head', 'angp_set_index_for_pages_redirect');
-add_action('get_header', 'angp_set_index_for_pages_redirect', 10);
+add_action('get_header', 'angp_set_index_for_pages_redirect', 20);

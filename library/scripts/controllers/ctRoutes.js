@@ -5,7 +5,8 @@ angularpressApp.controller('MainCtrl', function ($scope, $route, $routeParams, $
 
 		if (wpAjax.sessions.on_first_page_load !== null && $location.path() !== '/') {
 			//when page other than front-page loads for the first time
-			$window.location.href = wpAjax.themeLocation.siteUrl + $location.url();
+				$window.location.href = wpAjax.themeLocation.siteUrl + $location.url();
+
 
 		}
 		/** @namespace $routeParams.primaryNav */
@@ -108,7 +109,6 @@ angularpressApp.controller('PrimaryNavCtrl', function ($scope, $routeParams, $lo
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/templates/404.html';
 
 				}
-
 				else {
 					$scope.templateUrl = wpAjax.themeLocation.templateDir + '/library/views/pages/' + $routeParams.primaryNav + '.html';
 

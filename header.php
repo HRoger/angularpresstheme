@@ -1,5 +1,4 @@
 <?php
-
 /**
  * The template for displaying the header
  *
@@ -9,10 +8,8 @@
  */
 ?>
 <!DOCTYPE html>
-
-<!--[if gt IE 8]><!-->
 <html <?php language_attributes(); ?>  data-ng-controller="MainCtrl"   data-ng-app="angularpressApp">
-<!--<![endif]-->
+
 
 <head>
 	<!-- WordPress head -->

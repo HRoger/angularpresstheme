@@ -1,6 +1,5 @@
 <?php
 if (!session_id() ) {
-	session_set_cookie_params(time() + 2 * 7 * 24 * 60 * 60);
 	session_start();
 }
 /**
