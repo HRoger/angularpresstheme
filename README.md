@@ -11,7 +11,7 @@ II. Demo
 
 ###Note
 
-Some Foundation components and responsive design are not working at this moment. See **Todo**.
+Foundation components and responsive design are not working at the moment. See **Todo**.
 
 
 III. Configuration
@@ -137,22 +137,19 @@ VII. Known bugs
 
 * Cant go back from admin area to preview page/posts
 * Reactor menu dont disappear when set visibility to private or state to pending or draft
-* Bug Alo Newsletter confirmation page
 * When opening browser after some hours routing not working anymore
 
 VIII. Todo
 ==========
 
-* create redirect/publish html plugin
-
 >FIX BUGS
 
-* Responsive design: Build mobile site
 * Gmail and Youtube like routing
 * SEO with [PhantomJS](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 * Google Analytics and WP SlimStat plugin
 * Update to foundation 5
 * Update foundation components and shortcodes to boostrap-ui
+* Responsive design: Build mobile site
 * Comments form
 * Contact form
 * Splash Screen design
