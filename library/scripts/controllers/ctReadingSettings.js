@@ -10,7 +10,7 @@ angularpressApp.controller("angpReadingSettingsCtrl", function ($scope, $rootSco
 
 		if ($location.path() === '/' && angular.element('body').hasClass('page_for_posts')) {
 
-			if (wpAjax.readingSettings.page_for_posts !== 0) {
+			if (wpAjax.readingSettings.page_for_posts !== 0) {//reading settings frontpage
 				$scope.is_home_visible = true;
 				$scope.is_include_visible = true;
 			}
@@ -18,7 +18,7 @@ angularpressApp.controller("angpReadingSettingsCtrl", function ($scope, $rootSco
 		} else {
 			$scope.is_include_visible = true;
 		}
-		if ($location.path() !== '/') {
+		if ($location.path() !== '/') {//when start loading page from /
 			$scope.is_home_visible = false;
 			$scope.is_include_visible = false;
 			$scope.is_footer_hidden = true;

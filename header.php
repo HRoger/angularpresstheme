@@ -1,4 +1,7 @@
 <?php
+if (!session_id() ) {
+	session_start();
+}
 /**
  * The template for displaying the header
  *

@@ -1,4 +1,7 @@
 <?php
+if (!session_id() ) {
+	session_start();
+}
 /**
  * Created by PhpStorm.
  * User: ROGER
@@ -21,7 +24,6 @@ function angp_set_index_for_redirect() {
 		angp_set_session('index.php', 'template_req');
 	}
 }
-
 add_action('template_redirect', 'angp_set_index_for_redirect', 10);
 
 
