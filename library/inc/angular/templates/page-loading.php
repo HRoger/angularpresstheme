@@ -22,7 +22,7 @@ function angp_is_page_first_loaded() {
 	}
 }
 
-//add_action('init', 'angp_is_page_first_loaded', 10);
+add_action('init', 'angp_is_page_first_loaded', 10);
 
 
 /**
@@ -42,7 +42,7 @@ function destroy_session_index_onload() {
 	}
 }
 
-//add_action('get_header', 'destroy_session_index_onload', 20);
+add_action('get_header', 'destroy_session_index_onload', 20);
 
 /**
  * Set session page_loaded when page is fully loaded
@@ -53,6 +53,6 @@ function destroy_session_index_onload() {
 function angp_page_fully_loaded() {
 	angp_set_session('page_loaded', 'page_loaded');
 }
-//add_action('wp_footer', 'angp_page_fully_loaded');
-//add_action('get_footer', 'angp_page_fully_loaded', 20);
+add_action('wp_footer', 'angp_page_fully_loaded');
+add_action('get_footer', 'angp_page_fully_loaded', 20);
 
