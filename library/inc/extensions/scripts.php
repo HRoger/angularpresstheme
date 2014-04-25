@@ -224,12 +224,12 @@ function angularpress_localize_scripts($script) {
 
 
 
-	/*FB::info(isset($_SESSION['template_req']),'template_req is here?');
-	FB::info(isset($_SESSION['template_req_pages']),'template_req_pages is here?');
-	FB::info(isset($_COOKIE['is_page_loaded']),'cookie page loaded');
-	FB::info(isset($_SESSION['page_loaded']),'session page_loaded');
-	FB::info(session_id(),'session_id');
-	var_dump(isset($_SESSION['template_req']),'template_req is here?');
+//	FB::info(isset($_SESSION['template_req']),'template_req is here?');
+//	FB::info(isset($_SESSION['template_req_pages']),'template_req_pages is here?');
+//	FB::info(isset($_COOKIE['is_page_loaded']),'cookie page loaded');
+//	FB::info(isset($_SESSION['page_loaded']),'session page_loaded');
+//	FB::info(session_id(),'session_id');
+/*	var_dump(isset($_SESSION['template_req']),'template_req is here?');
 	var_dump(isset($_SESSION['template_req_pages']),'template_req_pages is here?');
 	var_dump(isset($_COOKIE['is_page_loaded']),'cookie page loaded');
 	var_dump(isset($_SESSION['page_loaded']),'session page_loaded');
@@ -242,6 +242,7 @@ function angularpress_localize_scripts($script) {
 //	FB::info( $angularpress_option['opt-text-login-slug'],' opt-text-login-slug');
 //	FB::info( $angularpress_option['opt-text-secret-key'],' opt-text-secret-key');
 //	FB::info( $angularpress_option['opt-text-admin-slug'],' opt-text-admin-slug');
+
 
 
 	if (isset($_SESSION['template_req'])) {
