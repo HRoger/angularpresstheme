@@ -4,17 +4,10 @@ I. Angularpresstheme: Angularjs + Wordpress + Zurb Foundation
 Angularjs, Wordpress and Zurb Foundation. This theme turns Wordpress into a Single Page
 Application CMS.
 
-II. Demo
-========
-
-[angularpresstheme.com](http://angularpresstheme.com/)
-
-###Note
-
-Foundation components and responsive design are not working at the moment. See **Todo**.
 
 
-III. Configuration
+
+II. Configuration
 ==================
 
 * Install [json api plugin](http://wordpress.org/plugins/json-api/) . Go to **settings/json
@@ -65,7 +58,7 @@ tag base or custom structure are structured like these:
 
 * Check that your  angularpress/library/views is writable
 
-IV. How to use It
+III. How to use It
 ================
 
 Create a new page, choose a template and click publish. An angularjs html template will be
@@ -91,7 +84,7 @@ If you do the opposite way, say from **a static page** to **your latest posts** 
 the same thing and update Home and Blog again.
 
 
-V. Note about WP plugins
+IV. Note about WP plugins
 =========================
 
 Most WP plugins should work. But some of them will need some tweaks in order to work and others
@@ -105,7 +98,7 @@ button on your contact page.
 
 Really Simple Captcha will not work, because it is not ajax made.
 
-VI. Note about jQuery plugins
+V. Note about jQuery plugins
 ==============================
 
 ###Foundation jQuery components
@@ -132,14 +125,14 @@ angularpressApp.directive('mixitup', function () {
 
 
 
-VII. Known bugs
+VI. Known bugs
 ================
 
 * Cant go back from admin area to preview page/posts
 * Reactor menu dont disappear when set visibility to private or state to pending or draft
 * When opening browser after some hours routing not working anymore
 
-VIII. Todo
+VII. Todo
 ==========
 
 >FIX BUGS
@@ -174,7 +167,7 @@ VIII. Todo
 * **WIP**- work in progress. Work offline and synch when back on. See John Papa's concept: [Code Camper](http://cc-ng-z.azurewebsites.net/#/sessions)
 
 
-IX. License
+VIII. License
 ===========
 
 Angularpresstheme is GPLv2  - http://www.gnu.org/licenses/gpl-2.0.html<br/>
