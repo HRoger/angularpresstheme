@@ -64,7 +64,7 @@ III. How to use It
 Create a new page, choose a template and click publish. An angularjs html template will be
 generated in library/views folder.
 
-###Changing page-templates
+### Changing page-templates
 
 If you make changes to any page-template you will need to update its respective angularjs
 template by clicking on the publish/update button in menu/pages/all pages.
@@ -72,7 +72,7 @@ template by clicking on the publish/update button in menu/pages/all pages.
 **Example:** if change something on the contact.php template you need to update the page that use
 that template in order to preview your changes.
 
-###Reading Settings
+### Reading Settings
 
 >**Important**: Each time you change **front page displays** you will need to rebuild angularjs
 >html templates as well.
@@ -90,7 +90,7 @@ IV. Note about WP plugins
 Most WP plugins should work. But some of them will need some tweaks in order to work and others
 probably won't work at all.
 
-###Example:Contact form 7
+### Example:Contact form 7
 
 Put shortcode at line 90 on page-templates/contact.php
 Generate contact.html : go to pages and generate contact.html by clicking on update or publish
@@ -101,10 +101,10 @@ Really Simple Captcha will not work, because it is not ajax made.
 V. Note about jQuery plugins
 ==============================
 
-###Foundation jQuery components
+### Foundation jQuery components
  Most of them won't work at all. They will be replaced by an angulajs bootstrap-ui version.
 
-###Mixitup and others
+### Mixitup and others
 
  You will need to make a simple directive for example:
 
